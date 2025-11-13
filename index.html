@@ -26,6 +26,9 @@
             brand: { DEFAULT: '#0ea5e9', dark: '#0369a1' }, 
             base: '#0f172a', 
             accent: '#f59e0b' 
+          },
+          scrollMargin: {
+            consultation: '100px'
           }
         }
       }
@@ -695,7 +698,7 @@
 
             <li><a href="#about" style="color: white; text-decoration: none; font-weight: 500; transition: all 0.2s; padding: 0.5rem 1rem; border-radius: 0.375rem; font-size: 0.9375rem; white-space: nowrap;" onmouseover="this.style.backgroundColor='rgba(255,255,255,0.15)';" onmouseout="this.style.backgroundColor='transparent';">About</a></li>
             <li><a href="#pricing" style="color: white; text-decoration: none; font-weight: 500; transition: all 0.2s; padding: 0.5rem 1rem; border-radius: 0.375rem; font-size: 0.9375rem; white-space: nowrap;" onmouseover="this.style.backgroundColor='rgba(255,255,255,0.15)';" onmouseout="this.style.backgroundColor='transparent';">Pricing</a></li>
-            <li><a href="#contact" style="color: white; text-decoration: none; font-weight: 500; transition: all 0.2s; padding: 0.5rem 1rem; border-radius: 0.375rem; font-size: 0.9375rem; white-space: nowrap;" onmouseover="this.style.backgroundColor='rgba(255,255,255,0.15)';" onmouseout="this.style.backgroundColor='transparent';">Contact</a></li>
+            <li><a href="#consultation" style="color: white; text-decoration: none; font-weight: 500; transition: all 0.2s; padding: 0.5rem 1rem; border-radius: 0.375rem; font-size: 0.9375rem; white-space: nowrap;" onmouseover="this.style.backgroundColor='rgba(255,255,255,0.15)';" onmouseout="this.style.backgroundColor='transparent';">Contact</a></li>
         </ul>
 
         <!-- CTA Buttons -->
@@ -740,7 +743,7 @@
         <li><a href="electrical-services.html" style="display: block; padding: 16px 20px; color: white; text-decoration: none; border-bottom: 1px solid rgba(255,255,255,0.1);" onclick="toggleMobileMenu()">⚡ Electrical Services</a></li>
         <li><a href="#about" style="display: block; padding: 16px 20px; color: white; text-decoration: none; border-bottom: 1px solid rgba(255,255,255,0.1);" onclick="toggleMobileMenu()">ℹ️ About</a></li>
         <li><a href="#pricing" style="display: block; padding: 16px 20px; color: white; text-decoration: none; border-bottom: 1px solid rgba(255,255,255,0.1);" onclick="toggleMobileMenu()">💰 Pricing</a></li>
-        <li><a href="#contact" style="display: block; padding: 16px 20px; color: white; text-decoration: none; border-bottom: 1px solid rgba(255,255,255,0.1);" onclick="toggleMobileMenu()">📞 Contact</a></li>
+        <li><a href="#consultation" style="display: block; padding: 16px 20px; color: white; text-decoration: none; border-bottom: 1px solid rgba(255,255,255,0.1);" onclick="toggleMobileMenu()">📞 Contact</a></li>
         <li style="padding: 20px;">
             <a href="https://api.whatsapp.com/send?phone=971563536545" target="_blank" rel="noopener" style="display: block; background: linear-gradient(135deg, #0ea5e9, #06b6d4); color: white; padding: 12px; border-radius: 8px; text-align: center; text-decoration: none; font-weight: 600; margin-bottom: 10px;">
               <span style="display:inline-flex; align-items:center; gap:8px; justify-content:center;">
@@ -1160,47 +1163,98 @@
         </div>
       </div>
 
-      <div class="mt-10 max-w-2xl mx-auto">
-        <div class="card bg-gradient-to-br from-white/10 to-brand/5">
-          <div class="text-center mb-6">
-            <div class="feature-icon text-2xl mx-auto">💬</div>
-            <h3 class="text-2xl font-bold mb-2">Request a Callback</h3>
-            <p class="text-slate-300">Get a response within 2 hours</p>
+      
+    </div>
+  </section>
+
+  <!-- Get in Touch -->
+  <div id="contact" style="position: relative; top: -80px; height: 0; overflow: hidden;"></div>
+  <section id="consultation" class="section bg-white/5">
+    <div class="max-w-7xl mx-auto px-4">
+      <h2 class="section-title text-center">Get in Touch</h2>
+      <p class="section-subtitle text-center">Fast response within 2 hours during business hours</p>
+
+      <div class="mt-8 grid md:grid-cols-2 gap-10 items-start">
+        <div>
+          <h3 class="font-bold mb-4">Contact Information</h3>
+          <div class="space-y-4">
+            <div class="flex items-start gap-3">
+              <div class="w-10 h-10 bg-white/10 rounded-lg flex items-center justify-center">📱</div>
+              <div>
+                <div class="text-slate-300 font-semibold">Phone / WhatsApp</div>
+                <a href="https://wa.me/971563536545" class="text-brand hover:underline">+971563536545</a>
+              </div>
+            </div>
+            <div class="flex items-start gap-3">
+              <div class="w-10 h-10 bg-white/10 rounded-lg flex items-center justify-center">✉️</div>
+              <div>
+                <div class="text-slate-300 font-semibold">Email</div>
+                <a href="mailto:info@auxonium.com" class="text-brand hover:underline">info@auxonium.com</a>
+              </div>
+            </div>
+            <div class="flex items-start gap-3">
+              <div class="w-10 h-10 bg-white/10 rounded-lg flex items-center justify-center">🌐</div>
+              <div>
+                <div class="text-slate-300 font-semibold">Website</div>
+                <a href="https://www.auxonium.com" class="text-brand hover:underline">www.auxonium.com</a>
+              </div>
+            </div>
+            <div class="flex items-start gap-3">
+              <div class="w-10 h-10 bg-white/10 rounded-lg flex items-center justify-center">📍</div>
+              <div>
+                <div class="text-slate-300 font-semibold">Coverage</div>
+                <div class="text-slate-400">All Emirates across UAE</div>
+              </div>
+            </div>
           </div>
-          <form id="contactForm" class="space-y-4" action="https://formsubmit.co/info@auxonium.com" method="POST">
-            <input type="hidden" name="_subject" value="Website Enquiry - Request a Callback">
-            <input type="hidden" name="_template" value="table">
-            <input type="hidden" name="_captcha" value="false">
-            <input type="hidden" name="_next" value="https://auxonium.com/thank-you.html">
-            <input type="hidden" name="_autoresponse" value="Thank you for contacting Auxonium Group. We have received your request and will get back to you shortly.">
-            <input type="hidden" name="_replyto" value="">
-            <input type="text" name="_honey" style="display:none">
-            <div class="grid grid-cols-1 gap-4">
-              <input type="text" name="name" placeholder="Your full name" class="form-input" required>
+          <div class="mt-5 flex gap-3">
+            <a href="https://wa.me/971563536545" class="btn btn-primary">💬 WhatsApp</a>
+            <a href="#consultation" class="btn btn-secondary">📝 Request Quote</a>
+          </div>
+        </div>
+
+        <div>
+          <div class="card bg-gradient-to-br from-white/10 to-brand/5">
+            <div class="text-center mb-6">
+              <div class="feature-icon text-2xl mx-auto">💬</div>
+              <h3 class="text-2xl font-bold mb-2">Request a Callback</h3>
+              <p class="text-slate-300">Get a response within 2 hours</p>
             </div>
-            <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
-              <input type="email" name="email" placeholder="Your email address" class="form-input" required>
-              <input type="tel" name="phone" placeholder="Phone or WhatsApp" class="form-input" required>
-            </div>
-            <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
-              <select name="service" id="contactService" class="form-input" required>
-                <option value="">Select service</option>
-                <option value="IT Solutions">IT Solutions</option>
-                <option value="AC Mechanics">AC Mechanics</option>
-                <option value="Electrical Works">Electrical Works</option>
-              </select>
-              <select name="subservice" id="contactSubservice" class="form-input">
-                <option value="">Select specific service</option>
-              </select>
-            </div>
-            <textarea name="message" placeholder="Tell us about your requirements..." rows="4" class="form-input" required></textarea>
-            <button type="submit" class="btn btn-primary w-full">
-              <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
-                <path d="M2 5c0-1.1.9-2 2-2h16a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V5zm2 0l8 5 8-5H4zm16 2.3l-8 5-8-5V19h16V7.3z"/>
-              </svg>
-              Send Request
-            </button>
-          </form>
+            <form id="contactForm" class="space-y-4" action="https://formsubmit.co/info@auxonium.com" method="POST">
+              <input type="hidden" name="_subject" value="Website Enquiry - Request a Callback">
+              <input type="hidden" name="_template" value="table">
+              <input type="hidden" name="_captcha" value="false">
+              <input type="hidden" name="_next" value="https://auxonium.com/thank-you.html">
+              <input type="hidden" name="_autoresponse" value="Thank you for contacting Auxonium Group. We have received your request and will get back to you shortly.">
+              <input type="hidden" name="_replyto" value="">
+              <input type="text" name="_honey" style="display:none">
+              <div class="grid grid-cols-1 gap-4">
+                <input type="text" name="name" placeholder="Your full name" class="form-input" required>
+              </div>
+              <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                <input type="email" name="email" placeholder="Your email address" class="form-input" required>
+                <input type="tel" name="phone" placeholder="Phone or WhatsApp" class="form-input" required>
+              </div>
+              <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                <select name="service" id="contactService" class="form-input" required>
+                  <option value="">Select service</option>
+                  <option value="IT Solutions">IT Solutions</option>
+                  <option value="AC Mechanics">AC Mechanics</option>
+                  <option value="Electrical Works">Electrical Works</option>
+                </select>
+                <select name="subservice" id="contactSubservice" class="form-input">
+                  <option value="">Select specific service</option>
+                </select>
+              </div>
+              <textarea name="message" placeholder="Tell us about your requirements..." rows="4" class="form-input" required></textarea>
+              <button type="submit" class="btn btn-primary w-full">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+                  <path d="M2 5c0-1.1.9-2 2-2h16a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V5zm2 0l8 5 8-5H4zm16 2.3l-8 5-8-5V19h16V7.3z"/>
+                </svg>
+                Send Request
+              </button>
+            </form>
+          </div>
         </div>
       </div>
     </div>
@@ -1226,7 +1280,7 @@
           <div class="space-y-2">
             <a href="index.html#services" class="block text-slate-400 hover:text-brand transition-colors">Services</a>
             <a href="index.html#about" class="block text-slate-400 hover:text-brand transition-colors">About Us</a>
-            <a href="index.html#consultation" class="block text-slate-400 hover:text-brand transition-colors">Get a Quote</a>
+            <a href="#consultation" class="block text-slate-400 hover:text-brand transition-colors">Get a Quote</a>
             <a href="assets-credits.txt" download class="block text-slate-400 hover:text-brand transition-colors">Assets & Credits</a>
           </div>
         </div>
@@ -1605,16 +1659,34 @@
   </script>
 
   <script>
-    // Auto-open drawer when coming from sub-sites with #consultation
-    window.addEventListener('DOMContentLoaded', function() {
-      if (window.location.hash === '#consultation') {
-        setTimeout(function() {
-          if (typeof openDrawer === 'function') {
-            openDrawer();
-            // Remove hash from URL
-            history.replaceState(null, null, window.location.pathname);
-          }
-        }, 300);
+    // Anchor scrolling to Get in Touch section (supports #consultation and legacy #contact)
+    function scrollToConsultation() {
+      const h = window.location.hash;
+      if (h === '#consultation' || h === '#contact') {
+        const target = document.getElementById('consultation');
+        if (target) {
+          setTimeout(function() {
+            target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+          }, 100);
+          // Fallback after content settles
+          setTimeout(function() {
+            target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+          }, 400);
+        }
+      }
+    }
+    window.addEventListener('DOMContentLoaded', scrollToConsultation);
+    window.addEventListener('hashchange', scrollToConsultation);
+
+    // Intercept in-page #contact clicks to scroll to #consultation
+    document.addEventListener('click', function(e) {
+      const a = e.target.closest('a[href="#contact"]');
+      if (a) {
+        e.preventDefault();
+        const target = document.getElementById('consultation');
+        if (target) target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+        // Update hash to #consultation for consistency
+        history.pushState(null, '', '#consultation');
       }
     });
 
