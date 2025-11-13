@@ -1,0 +1,40 @@
+Assets & Image Credits (Downloadable)
+====================================
+
+This website uses royalty-free images sourced from Unsplash. Below are the primary images and their purposes. All images are used under the Unsplash License.
+
+Updated/Replaced in this change:
+- Cybersecurity (IT Services): https://images.unsplash.com/photo-1510511459019-5dda7724fd87?auto=format&fit=crop&w=1200&q=70
+  Description: Padlock on keyboard (cybersecurity theme).
+
+- Electrical – Wiring & Panel Works: https://images.unsplash.com/photo-1621905252507-b35492cc74b4?auto=format&fit=crop&w=1200&q=70
+  Description: Electrician working on panel.
+
+- Electrical – Compliance & Safety: https://images.unsplash.com/photo-1544197150-b99a580bb7a8?auto=format&fit=crop&w=1200&q=70
+  Description: Server aisle/compliance visuals (represents organized infrastructure and compliance).
+
+Other representative images used across the site (for reference):
+- IT Solutions hero/office: https://images.unsplash.com/photo-1497366216548-37526070297c?auto=format&fit=crop&w=1200&q=70
+- Cloud solutions: https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=1200&q=70
+- Backup/DR: https://images.unsplash.com/photo-1544197150-b99a580bb7a8?auto=format&fit=crop&w=1200&q=70
+- CCTV & Biometrics: https://images.unsplash.com/photo-1580894908361-967195033215?auto=format&fit=crop&w=1200&q=70
+- Servers & Virtualization: https://images.unsplash.com/photo-1558494949-ef010cbdcc31?auto=format&fit=crop&w=1200&q=70
+- Hardware & OS: https://images.unsplash.com/photo-1629654297299-c8506221ca97?auto=format&fit=crop&w=1200&q=70
+
+- AC Mechanics hero: https://images.unsplash.com/photo-1581094794329-c8112a89af12?auto=format&fit=crop&w=1740&q=80
+- AC Services images: 
+  - https://images.unsplash.com/photo-1578662996442-48f60103fc96?auto=format&fit=crop&w=1200&q=70
+  - https://images.unsplash.com/photo-1621905252507-b35492cc74b4?auto=format&fit=crop&w=1200&q=70
+  - https://images.unsplash.com/photo-1581093458791-9d42e20b6a6d?auto=format&fit=crop&w=1200&q=70
+
+- Electrical hero: https://images.unsplash.com/photo-1621905251189-08b45d6a269e?auto=format&fit=crop&w=1200&q=70
+- Lighting & Fixtures: https://images.unsplash.com/photo-1558618666-fcd25c85cd64?auto=format&fit=crop&w=1200&q=70
+- Emergency Electrical: https://images.unsplash.com/photo-1563986768609-322da13575f3?auto=format&fit=crop&w=1200&q=70
+- Commercial Electrical: https://images.unsplash.com/photo-1558494949-ef010cbdcc31?auto=format&fit=crop&w=1200&q=70
+- Residential Electrical: https://images.unsplash.com/photo-1560472354-b33ff0c44a43?auto=format&fit=crop&w=1200&q=70
+
+How to use this file:
+- You can download this file directly from the website footer links (Assets & Image Credits).
+- Keep this file in the same folder as your HTML pages so that the “download” links continue to work.
+
+Note: If you replace any image later, kindly update this list to maintain licensing transparency.

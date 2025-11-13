@@ -1,0 +1,664 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=5, user-scalable=yes">
+  <title>Electrical Works | Auxonium Group - UAE</title>
+  <meta name="description" content="Professional electrical services: wiring, panel works, lighting, compliance testing and emergency call-outs across UAE.">
+  <meta name="theme-color" content="#0f172a">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: { 
+            brand: { DEFAULT: '#0ea5e9', dark: '#0369a1' }, 
+            base: '#0f172a'
+          }
+        }
+      }
+    }
+  </script>
+  <style>
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    html { -webkit-text-size-adjust: 100%; -webkit-font-smoothing: antialiased; }
+    body { 
+      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+      background: #0f172a;
+      color: #f1f5f9;
+    }
+    .header {
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+      backdrop-filter: blur(12px);
+      background: rgba(15,23,42,0.85);
+      border-bottom: 1px solid rgba(255,255,255,0.1);
+    }
+    .logo {
+      width: 2.5rem;
+      height: 2.5rem;
+      background-image: url('logo.png');
+      background-repeat: no-repeat;
+      background-position: center;
+      background-size: contain;
+      border-radius: 0.5rem;
+    }
+    /* Mobile toggle visibility */
+    .mobile-menu-toggle { display: none; }
+    @media (max-width: 768px) {
+      .mobile-menu-toggle { display: flex !important; }
+      .desktop-nav { display: none; }
+    }
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 0.5rem;
+      padding: 0.875rem 1.75rem;
+      border-radius: 0.75rem;
+      font-weight: 600;
+      transition: all 0.3s ease;
+      cursor: pointer;
+      text-decoration: none;
+    }
+    .btn-primary {
+      background: linear-gradient(135deg, #0ea5e9 0%, #0284c7 100%);
+      color: white;
+      box-shadow: 0 10px 25px rgba(14,165,233,0.3);
+    }
+    .btn-primary:hover {
+      background: linear-gradient(135deg, #0284c7 0%, #0369a1 100%);
+      transform: translateY(-2px);
+    }
+    .btn-secondary {
+      background: transparent;
+      color: white;
+      border: 2px solid rgba(255,255,255,0.3);
+    }
+    .btn-secondary:hover {
+      background: rgba(255,255,255,0.1);
+      border-color: rgba(255,255,255,0.5);
+    }
+    .hero-section {
+      background: linear-gradient(135deg, #0f172a 0%, #1e293b 100%);
+      position: relative;
+      padding: 7.5rem 0 6rem;
+    }
+    .hero-bg {
+      position: absolute;
+      inset: 0;
+      background-image: url('https://images.unsplash.com/photo-1473341304170-971dccb5ac1e?auto=format&fit=crop&w=1740&q=80');
+      background-size: cover;
+      background-position: center;
+      opacity: 0.1;
+      z-index: 0;
+    }
+    .section { padding: 4rem 0; }
+    .section-title {
+      font-size: 2.5rem;
+      font-weight: 800;
+      margin-bottom: 1rem;
+      background: linear-gradient(135deg, #ffffff 0%, #e2e8f0 100%);
+      -webkit-background-clip: text;
+      background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+    .card {
+      background: rgba(255,255,255,0.05);
+      border: 1px solid rgba(255,255,255,0.1);
+      border-radius: 1rem;
+      padding: 2rem;
+      transition: all 0.3s ease;
+    }
+    .card:hover {
+      background: rgba(255,255,255,0.08);
+      border-color: rgba(14,165,233,0.3);
+      transform: translateY(-4px);
+    }
+    .service-image {
+      width: 100%;
+      height: 10rem;
+      object-fit: cover;
+      border-radius: 0.75rem;
+      margin-bottom: 1rem;
+    }
+    details {
+      background: rgba(255,255,255,0.03);
+      border: 1px solid rgba(255,255,255,0.08);
+      border-radius: 0.5rem;
+      padding: 0.75rem;
+      margin-top: 1rem;
+    }
+    summary {
+      cursor: pointer;
+      color: #0ea5e9;
+      font-weight: 600;
+      padding: 0.5rem;
+    }
+    summary:hover {
+      color: #38bdf8;
+    }
+    details[open] summary {
+      margin-bottom: 0.75rem;
+      border-bottom: 1px solid rgba(255,255,255,0.1);
+    }
+    .feature-box {
+      background: rgba(14,165,233,0.1);
+      border: 1px solid rgba(14,165,233,0.3);
+      border-radius: 0.75rem;
+      padding: 1.5rem;
+      text-align: center;
+    }
+    /* Mobile Navigation */
+    .mobile-menu-toggle {
+      display: none;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      width: 2.5rem;
+      height: 2.5rem;
+      background: rgba(255,255,255,0.1);
+      border: none;
+      border-radius: 0.5rem;
+      padding: 0.5rem;
+      cursor: pointer;
+      transition: all 0.2s ease;
+    }
+
+    .mobile-menu-toggle:hover {
+      background: rgba(255,255,255,0.2);
+    }
+
+    .mobile-menu-toggle:active {
+      transform: scale(0.95);
+    }
+
+    .mobile-menu {
+      display: none;
+      position: fixed;
+      top: 0;
+      right: -100%;
+      width: 80%;
+      max-width: 300px;
+      height: 100vh;
+      background: linear-gradient(135deg, #003366 0%, #004080 100%);
+      box-shadow: -5px 0 15px rgba(0,0,0,0.3);
+      transition: right 0.3s ease;
+      z-index: 9999;
+      overflow-y: auto;
+    }
+
+    .mobile-menu.active {
+      right: 0;
+    }
+
+    .mobile-overlay {
+      display: none;
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100vh;
+      background: rgba(0,0,0,0.5);
+      z-index: 9998;
+    }
+
+    .mobile-overlay.active {
+      display: block;
+    }
+
+    @media (max-width: 768px) {
+      .hero-section {
+        min-height: auto;
+        padding: 3rem 0 2rem;
+      }
+
+      .section {
+        padding: 3rem 0;
+      }
+
+      .section-title {
+        font-size: 1.75rem;
+        line-height: 1.3;
+      }
+
+      .mobile-menu-toggle {
+        display: flex;
+      }
+
+      .btn {
+        padding: 0.75rem 1.25rem;
+        font-size: 0.875rem;
+        white-space: nowrap;
+      }
+
+      nav > div {
+        padding: 0.875rem 1rem !important;
+      }
+
+      .desktop-nav {
+        display: none !important;
+      }
+
+      .logo-text {
+        font-size: 1.125rem;
+      }
+
+      .mobile-menu {
+        display: block;
+      }
+
+      .grid {
+        gap: 1.5rem !important;
+      }
+
+      .card {
+        padding: 1.5rem !important;
+      }
+    }
+  </style>
+</head>
+<body>
+  <!-- Header -->
+  <nav class="header">
+    <div style="max-width: 1400px; margin: 0 auto; padding: 0 1.5rem;">
+      <div class="flex justify-between items-center" style="padding: 1rem 0;">
+        <div class="flex items-center">
+          <a href="index.html" class="flex-shrink-0 flex items-center">
+            <div class="logo"></div>
+            <span class="ml-3 text-xl font-bold text-white">Auxonium Group</span>
+          </a>
+        </div>
+        <!-- Desktop Navigation -->
+        <ul class="desktop-nav" style="list-style: none; display: flex; gap: 0.5rem; margin: 0; padding: 0; align-items: center;">
+          <li><a href="index.html" style="color: white; text-decoration: none; font-weight: 500; transition: all 0.2s; padding: 0.5rem 1rem; border-radius: 0.375rem; font-size: 0.9375rem; white-space: nowrap;" onmouseover="this.style.backgroundColor='rgba(255,255,255,0.15)';" onmouseout="this.style.backgroundColor='transparent';">Home</a></li>
+          
+          <!-- Services Dropdown -->
+          <li style="position: relative;">
+            <a href="index.html#services" style="color: white; text-decoration: none; font-weight: 500; transition: all 0.2s; padding: 0.5rem 1rem; border-radius: 0.375rem; font-size: 0.9375rem; display: flex; align-items: center; gap: 0.25rem; white-space: nowrap;" onmouseover="this.style.backgroundColor='rgba(255,255,255,0.15)'; this.nextElementSibling.style.display='block';" onmouseout="this.style.backgroundColor='transparent';">Services <span style="font-size: 0.75rem;">▼</span></a>
+            <div style="display: none; position: absolute; top: 100%; left: 0; background: white; box-shadow: 0 4px 20px rgba(0,0,0,0.15); border-radius: 0.5rem; margin-top: 0.5rem; min-width: 220px; overflow: hidden; z-index: 1001;" onmouseover="this.style.display='block';" onmouseout="this.style.display='none';">
+              <a href="it-services.html" style="display: block; padding: 0.875rem 1.25rem; color: #003366; text-decoration: none; transition: all 0.2s; border-bottom: 1px solid #f0f0f0;" onmouseover="this.style.backgroundColor='#f8f9fa'; this.style.paddingLeft='1.5rem';" onmouseout="this.style.backgroundColor='white'; this.style.paddingLeft='1.25rem';"><strong style="font-size: 0.9375rem;">💻 IT Services</strong><br><small style="color: #666; font-size: 0.8125rem;">Infrastructure & Cloud</small></a>
+              <a href="ac-services.html" style="display: block; padding: 0.875rem 1.25rem; color: #003366; text-decoration: none; transition: all 0.2s; border-bottom: 1px solid #f0f0f0;" onmouseover="this.style.backgroundColor='#f8f9fa'; this.style.paddingLeft='1.5rem';" onmouseout="this.style.backgroundColor='white'; this.style.paddingLeft='1.25rem';"><strong style="font-size: 0.9375rem;">❄️ AC Services</strong><br><small style="color: #666; font-size: 0.8125rem;">Installation & Maintenance</small></a>
+              <a href="electrical-services.html" style="display: block; padding: 0.875rem 1.25rem; color: #003366; text-decoration: none; transition: all 0.2s;" onmouseover="this.style.backgroundColor='#f8f9fa'; this.style.paddingLeft='1.5rem';" onmouseout="this.style.backgroundColor='white'; this.style.paddingLeft='1.25rem';"><strong style="font-size: 0.9375rem;">⚡ Electrical Services</strong><br><small style="color: #666; font-size: 0.8125rem;">Wiring & Lighting</small></a>
+            </div>
+          </li>
+
+          <li><a href="index.html#about" style="color: white; text-decoration: none; font-weight: 500; transition: all 0.2s; padding: 0.5rem 1rem; border-radius: 0.375rem; font-size: 0.9375rem; white-space: nowrap;" onmouseover="this.style.backgroundColor='rgba(255,255,255,0.15)';" onmouseout="this.style.backgroundColor='transparent';">About</a></li>
+          <li><a href="index.html#pricing" style="color: white; text-decoration: none; font-weight: 500; transition: all 0.2s; padding: 0.5rem 1rem; border-radius: 0.375rem; font-size: 0.9375rem; white-space: nowrap;" onmouseover="this.style.backgroundColor='rgba(255,255,255,0.15)';" onmouseout="this.style.backgroundColor='transparent';">Pricing</a></li>
+          <li><a href="index.html#contact" style="color: white; text-decoration: none; font-weight: 500; transition: all 0.2s; padding: 0.5rem 1rem; border-radius: 0.375rem; font-size: 0.9375rem; white-space: nowrap;" onmouseover="this.style.backgroundColor='rgba(255,255,255,0.15)';" onmouseout="this.style.backgroundColor='transparent';">Contact</a></li>
+        </ul>
+
+        <!-- CTA Buttons -->
+        <div class="desktop-nav" style="display: flex; gap: 0.75rem; align-items: center; flex-shrink: 0;">
+            <a href="https://api.whatsapp.com/send?phone=971563536545" target="_blank" rel="noopener" style="background: linear-gradient(135deg, #0ea5e9, #06b6d4); color: white; padding: 0.625rem 1.25rem; border-radius: 0.5rem; text-decoration: none; font-weight: 600; display: flex; align-items: center; gap: 0.5rem; transition: all 0.2s; box-shadow: 0 2px 8px rgba(14, 165, 233, 0.3); font-size: 0.875rem; white-space: nowrap;" onmouseover="this.style.background='linear-gradient(135deg, #0284c7, #0891b2)'; this.style.transform='translateY(-1px)'; this.style.boxShadow='0 4px 12px rgba(14, 165, 233, 0.4)';" onmouseout="this.style.background='linear-gradient(135deg, #0ea5e9, #06b6d4)'; this.style.transform='translateY(0)'; this.style.boxShadow='0 2px 8px rgba(14, 165, 233, 0.3)';">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+                  <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893A11.821 11.821 0 0020.885 3.488"/>
+                </svg>
+                <span>WhatsApp</span>
+            </a>
+            <a href="index.html#consultation" style="background: linear-gradient(135deg, #10b981, #059669); color: white; padding: 0.625rem 1.5rem; border-radius: 0.5rem; text-decoration: none; font-weight: 600; transition: all 0.2s; box-shadow: 0 2px 8px rgba(16, 185, 129, 0.3); font-size: 0.875rem; white-space: nowrap; display: inline-block;" onmouseover="this.style.background='linear-gradient(135deg, #059669, #047857)'; this.style.transform='translateY(-1px)'; this.style.boxShadow='0 4px 12px rgba(16, 185, 129, 0.4)';" onmouseout="this.style.background='linear-gradient(135deg, #10b981, #059669)'; this.style.transform='translateY(0)'; this.style.boxShadow='0 2px 8px rgba(16, 185, 129, 0.3)';">🎯 Get Quote</a>
+        </div>
+
+        <!-- Mobile Menu Toggle -->
+        <div class="-mr-2 flex md:hidden">
+          <button type="button" class="inline-flex items-center justify-center p-2 rounded-md text-gray-400 hover:text-white hover:bg-gray-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-offset-gray-800 focus:ring-white" aria-controls="mobile-menu" aria-expanded="false" onclick="toggleMobileMenu()">
+            <span class="sr-only">Open main menu</span>
+            <svg class="block h-6 w-6" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
+            </svg>
+            <svg class="hidden h-6 w-6" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" />
+            </svg>
+          </button>
+        </div>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Mobile menu, show/hide based on menu state. -->
+  <div class="md:hidden hidden" id="mobileMenu">
+    <div class="px-2 pt-2 pb-3 space-y-1 sm:px-3">
+      <a href="index.html" class="block px-3 py-2 text-base font-medium text-white hover:bg-gray-700">🏠 Home</a>
+      <a href="it-services.html" class="block px-3 py-2 text-base font-medium text-gray-300 hover:text-white hover:bg-gray-700">💻 IT Services</a>
+      <a href="ac-services.html" class="block px-3 py-2 text-base font-medium text-gray-300 hover:text-white hover:bg-gray-700">❄️ AC Services</a>
+      <a href="electrical-services.html" class="block px-3 py-2 text-base font-medium text-gray-300 hover:text-white hover:bg-gray-700">⚡ Electrical Services</a>
+      <a href="index.html#about" class="block px-3 py-2 text-base font-medium text-gray-300 hover:text-white hover:bg-gray-700">ℹ️ About Us</a>
+      <a href="index.html#pricing" class="block px-3 py-2 text-base font-medium text-gray-300 hover:text-white hover:bg-gray-700">💰 Pricing</a>
+      <a href="index.html#contact" class="block px-3 py-2 text-base font-medium text-gray-300 hover:text-white hover:bg-gray-700">📞 Contact</a>
+      <div class="pt-4 pb-3 border-t border-gray-700">
+        <a href="https://wa.me/971563536545" class="block w-full text-center px-4 py-2 text-base font-medium text-white bg-brand hover:bg-brand-dark rounded-md">
+          💬 WhatsApp Us
+        </a>
+      </div>
+    </div>
+  </div>
+
+  <!-- Hero Section -->
+  <section class="hero-section relative overflow-hidden" style="background: linear-gradient(135deg, rgba(15,23,42,0.95) 0%, rgba(30,41,59,0.95) 100%); padding: 7.5rem 0 6rem;">
+    <div class="hero-bg"></div>
+    <div class="max-w-7xl mx-auto px-4 relative z-10 hero-inner">
+      <div class="grid md:grid-cols-2 gap-8 items-center">
+        <div>
+          <h1 class="text-4xl md:text-5xl font-extrabold mb-4 text-white" style="background: linear-gradient(135deg, #ffffff 0%, #e2e8f0 100%); -webkit-background-clip: text; background-clip: text; -webkit-text-fill-color: transparent;">Electrical Works</h1>
+          <p class="text-xl text-slate-300 mb-6 leading-relaxed">
+            Certified electricians for commercial and residential projects across the UAE. Safe, reliable, and compliant electrical solutions for all your needs.
+          </p>
+          <div class="flex gap-4">
+            <a href="https://api.whatsapp.com/send?phone=971563536545" class="btn btn-primary">
+              Chat on WhatsApp
+            </a>
+            <a href="index.html#consultation" class="btn btn-secondary">
+              Request Consultation
+            </a>
+          </div>
+        </div>
+        <div class="relative">
+          <img src="https://images.unsplash.com/photo-1621905251918-48416bd8575a?auto=format&fit=crop&w=1200&q=85" alt="Licensed Electrician at Work" class="w-full h-80 object-cover rounded-2xl shadow-2xl" loading="lazy" decoding="async">
+          <div class="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent rounded-2xl"></div>
+          <div class="absolute bottom-6 left-6 text-white">
+            <div class="font-bold text-xl">Professional Installation</div>
+            <div class="text-sm opacity-90">Licensed Electricians</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Electrical Details Section -->
+  <section id="electrical-details" class="section">
+    <div class="max-w-7xl mx-auto px-4">
+      <h2 class="section-title text-center mb-12">Comprehensive Electrical Services</h2>
+      
+      <div class="grid md:grid-cols-2 gap-8">
+        <!-- Wiring & Panel Works -->
+        <div class="card">
+          <img src="https://images.unsplash.com/photo-1473341304170-971dccb5ac1e?auto=format&fit=crop&w=1200&q=80" alt="Electrical Panel and Wiring Installation" class="service-image" loading="lazy" decoding="async">
+          <h3 class="text-2xl font-bold mb-3">Wiring & Panel Works</h3>
+          <p class="text-slate-300 mb-4">Professional electrical wiring and panel installation with proper load distribution, safety switches, and code compliance. Ensure safe and reliable power distribution throughout your property.</p>
+          <details>
+            <summary>What you get</summary>
+            <ul class="mt-3 space-y-2 text-slate-300">
+              <li>✓ New circuit installations and upgrades</li>
+              <li>✓ Electrical panelboards and distribution</li>
+              <li>✓ Proper earthing and grounding systems</li>
+              <li>✓ Load balancing and capacity planning</li>
+              <li>✓ Safety switches and protection devices</li>
+              <li>✓ Code compliance and inspections</li>
+            </ul>
+          </details>
+        </div>
+
+        <!-- Lighting & Fixtures -->
+        <div class="card">
+          <img src="https://images.unsplash.com/photo-1524484485831-a92ffc0de03f?auto=format&fit=crop&w=1200&q=80" alt="Modern Lighting Installation and Design" class="service-image" loading="lazy" decoding="async">
+          <h3 class="text-2xl font-bold mb-3">Lighting & Fixtures</h3>
+          <p class="text-slate-300 mb-4">Professional lighting design and installation with energy-efficient LED solutions, smart controls, and emergency lighting. Create the perfect ambiance while reducing energy costs by up to 70%.</p>
+          <details>
+            <summary>Installation services</summary>
+            <ul class="mt-3 space-y-2 text-slate-300">
+              <li>✓ Indoor and outdoor lighting systems</li>
+              <li>✓ LED retrofits and energy upgrades</li>
+              <li>✓ Emergency lighting and exit signs</li>
+              <li>✓ Smart lighting controls and automation</li>
+              <li>✓ Decorative and architectural lighting</li>
+              <li>✓ Landscape and security lighting</li>
+            </ul>
+          </details>
+        </div>
+
+        <!-- Emergency Services -->
+        <div class="card">
+          <img src="https://images.unsplash.com/photo-1581092160562-40aa08e78837?auto=format&fit=crop&w=1200&q=80" alt="Emergency Electrical Repair Service" class="service-image" loading="lazy" decoding="async">
+          <h3 class="text-2xl font-bold mb-3">Emergency Services</h3>
+          <p class="text-slate-300 mb-4">24/7 emergency electrical response team ready to handle power outages, electrical faults, and safety hazards. Same-day service with licensed electricians arriving within 2 hours across all Emirates.</p>
+          <details>
+            <summary>24/7 response</summary>
+            <ul class="mt-3 space-y-2 text-slate-300">
+              <li>✓ Power outage diagnosis and restoration</li>
+              <li>✓ Electrical fault finding and repair</li>
+              <li>✓ Safety hazard identification</li>
+              <li>✓ Circuit breaker and fuse replacements</li>
+              <li>✓ Emergency generator connections</li>
+              <li>✓ Same-day emergency call-outs</li>
+            </ul>
+          </details>
+        </div>
+
+        <!-- Commercial Electrical -->
+        <div class="card">
+          <img src="https://images.unsplash.com/photo-1497366811353-6870744d04b2?auto=format&fit=crop&w=1200&q=80" alt="Commercial Building Electrical Systems" class="service-image" loading="lazy" decoding="async">
+          <h3 class="text-2xl font-bold mb-3">Commercial Electrical</h3>
+          <p class="text-slate-300 mb-4">Enterprise electrical solutions for offices, retail spaces, warehouses, and industrial facilities. Complete power distribution systems, backup power, and electrical load management for business continuity.</p>
+          <details>
+            <summary>Enterprise solutions</summary>
+            <ul class="mt-3 space-y-2 text-slate-300">
+              <li>✓ Office building electrical systems</li>
+              <li>✓ Retail and warehouse installations</li>
+              <li>✓ Industrial electrical maintenance</li>
+              <li>✓ Data center power solutions</li>
+              <li>✓ Backup power and UPS systems</li>
+              <li>✓ Electrical load management</li>
+            </ul>
+          </details>
+        </div>
+
+        <!-- Residential Services -->
+        <div class="card">
+          <img src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&w=1200&q=80" alt="Residential Home Electrical Services" class="service-image" loading="lazy" decoding="async">
+          <h3 class="text-2xl font-bold mb-3">Residential Services</h3>
+          <p class="text-slate-300 mb-4">Complete electrical solutions for homes, villas, and apartments including rewiring, kitchen/bathroom electrical, ceiling fans, and home automation. Keep your family safe with certified electrical installations.</p>
+          <details>
+            <summary>Home solutions</summary>
+            <ul class="mt-3 space-y-2 text-slate-300">
+              <li>✓ House wiring and rewiring</li>
+              <li>✓ Kitchen and bathroom electrical</li>
+              <li>✓ Ceiling fan installations</li>
+              <li>✓ Outdoor electrical outlets</li>
+              <li>✓ Electrical safety inspections</li>
+              <li>✓ Home automation systems</li>
+            </ul>
+          </details>
+        </div>
+
+        <!-- Compliance & Safety -->
+        <div class="card">
+          <img src="https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?auto=format&fit=crop&w=1200&q=80" alt="Electrical Safety Compliance Testing" class="service-image" loading="lazy" decoding="async">
+          <h3 class="text-2xl font-bold mb-3">Compliance & Safety</h3>
+          <p class="text-slate-300 mb-4">Comprehensive electrical safety inspections, code compliance testing, and certification services. Ensure your electrical systems meet UAE regulations with proper documentation and electrical installation certificates.</p>
+          <details>
+            <summary>Certification services</summary>
+            <ul class="mt-3 space-y-2 text-slate-300">
+              <li>✓ Electrical safety inspections</li>
+              <li>✓ Code compliance testing</li>
+              <li>✓ Certification and documentation</li>
+              <li>✓ Ground fault testing</li>
+              <li>✓ Insulation resistance testing</li>
+              <li>✓ Electrical installation certificates</li>
+            </ul>
+          </details>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Why Choose Us -->
+  <section class="section bg-white/5">
+    <div class="max-w-7xl mx-auto px-4">
+      <h2 class="section-title text-center mb-12">Why Choose Auxonium Group for Electrical Services</h2>
+      <div class="grid md:grid-cols-3 gap-8">
+        <div class="feature-box">
+          <div class="text-4xl mb-3">⚡</div>
+          <h3 class="text-xl font-bold mb-3">Licensed Professionals</h3>
+          <p class="text-slate-300">Certified electricians with proper licensing and compliance documentation for all work.</p>
+        </div>
+        <div class="feature-box">
+          <div class="text-4xl mb-3">🔒</div>
+          <h3 class="text-xl font-bold mb-3">Safety First</h3>
+          <p class="text-slate-300">Quality materials, neat installations, and comprehensive safety protocols with warranty.</p>
+        </div>
+        <div class="feature-box">
+          <div class="text-4xl mb-3">🚀</div>
+          <h3 class="text-xl font-bold mb-3">Rapid Response</h3>
+          <p class="text-slate-300">All Emirates coverage with rapid dispatch and emergency call-out services.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA Section -->
+  <section class="section">
+    <div class="max-w-4xl mx-auto px-4 text-center">
+      <h2 class="text-3xl font-bold mb-4">Need Electrical Services?</h2>
+      <p class="text-xl text-slate-300 mb-8">Get a free consultation and quote for your electrical requirements.</p>
+      <div class="flex flex-col sm:flex-row gap-4 justify-center">
+        <a href="https://api.whatsapp.com/send?phone=971563536545" class="btn btn-primary text-lg">
+          💬 Chat on WhatsApp
+        </a>
+        <a href="index.html#consultation" class="btn btn-secondary text-lg">
+          📝 Request Quote
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="py-12 border-t border-white/10">
+    <div class="max-w-7xl mx-auto px-4">
+      <div class="grid md:grid-cols-3 gap-8 mb-8 items-start">
+        <div>
+          <div class="flex items-center justify-center gap-3 mb-2">
+            <div class="logo"></div>
+            <span class="font-extrabold text-xl">Auxonium Group</span>
+          </div>
+          <p class="text-slate-400 mb-4 text-center"> IT Solutions • AC Mechanics • Electrical Works </p>
+          <div class="flex gap-3 justify-center">
+            <div class="w-10 h-10 bg-white/10 rounded-lg flex items-center justify-center hover:bg-white/20 cursor-pointer transition-colors">📱</div>
+            <div class="w-10 h-10 bg-white/10 rounded-lg flex items-center justify-center hover:bg-white/20 cursor-pointer transition-colors">✉️</div>
+          </div>
+        </div>
+        <div class="text-center">
+          <h4 class="font-bold mb-4">Quick Links</h4>
+          <div class="space-y-2">
+            <a href="index.html#services" class="block text-slate-400 hover:text-brand transition-colors">Services</a>
+            <a href="index.html#about" class="block text-slate-400 hover:text-brand transition-colors">About Us</a>
+            <a href="index.html#consultation" class="block text-slate-400 hover:text-brand transition-colors">Get a Quote</a>
+            <a href="assets-credits.txt" download class="block text-slate-400 hover:text-brand transition-colors">Assets & Credits</a>
+          </div>
+        </div>
+        <div class="text-center">
+          <h4 class="font-bold mb-4">Coverage Areas</h4>
+          <div class="flex flex-wrap gap-2 gap-y-2 items-center justify-center">
+            <span class="px-3 py-1 bg-white/10 rounded-full text-sm">Dubai</span>
+            <span class="px-3 py-1 bg-white/10 rounded-full text-sm">Abu Dhabi</span>
+            <span class="px-3 py-1 bg-white/10 rounded-full text-sm">Sharjah</span>
+            <span class="px-3 py-1 bg-white/10 rounded-full text-sm">Ajman</span>
+            <span class="px-3 py-1 bg-white/10 rounded-full text-sm">All UAE</span>
+          </div>
+        </div>
+      </div>
+      <div class="text-slate-500 text-sm text-center">
+        © <span id="year"></span> Auxonium General Contracting LLC - S.P.C. All rights reserved.
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    document.getElementById('year').textContent = new Date().getFullYear();
+
+    // Mobile menu toggle
+    function toggleMobileMenu() {
+      const menu = document.getElementById('mobileMenu');
+      const overlay = document.getElementById('mobileOverlay');
+      menu.classList.toggle('active');
+      overlay.classList.toggle('active');
+      document.body.style.overflow = menu.classList.contains('active') ? 'hidden' : '';
+    }
+
+  </script>
+
+  <!-- Chatbot Styles -->
+  <style>
+    .chatbot-container { position: fixed; bottom: 1.5rem; right: 1.5rem; z-index: 9999; }
+    .chatbot-toggle { width: 4rem; height: 4rem; border-radius: 50%; background: linear-gradient(135deg, #0ea5e9 0%, #0284c7 100%); color: white; border: none; box-shadow: 0 8px 25px rgba(14,165,233,0.4); cursor: pointer; display: flex; align-items: center; justify-content: center; font-size: 1.75rem; transition: all 0.3s ease; }
+    .chatbot-toggle:hover { transform: scale(1.1); box-shadow: 0 12px 35px rgba(14,165,233,0.5); }
+    .chatbot-panel { position: fixed; bottom: 6.5rem; right: 1.5rem; width: 26rem; max-width: calc(100vw - 3rem); height: 40rem; max-height: calc(100vh - 10rem); background: rgba(15,23,42,0.98); backdrop-filter: blur(20px); border: 1px solid rgba(255,255,255,0.15); border-radius: 1.25rem; box-shadow: 0 20px 50px rgba(0,0,0,0.6); display: flex; flex-direction: column; overflow: hidden; transition: all 0.3s ease; }
+    .chatbot-panel.hidden { opacity: 0; visibility: hidden; transform: translateY(20px); pointer-events: none; }
+    .chatbot-header { padding: 1.25rem; background: linear-gradient(135deg, rgba(14,165,233,0.15) 0%, rgba(16,185,129,0.15) 100%); border-bottom: 1px solid rgba(255,255,255,0.1); display: flex; align-items: center; justify-content: space-between; flex-shrink: 0; }
+    .chatbot-messages { flex: 1; overflow-y: auto; padding: 1.25rem; display: flex; flex-direction: column; gap: 0.75rem; }
+    .chat-message { padding: 0.875rem 1.125rem; border-radius: 1rem; max-width: 85%; word-wrap: break-word; font-size: 0.925rem; line-height: 1.5; }
+    .chat-message.bot { background: rgba(14,165,233,0.15); border: 1px solid rgba(14,165,233,0.3); align-self: flex-start; }
+    .chat-message.user { background: rgba(255,255,255,0.1); border: 1px solid rgba(255,255,255,0.2); align-self: flex-end; }
+    .chatbot-suggestions { padding: 1rem 1.25rem; border-top: 1px solid rgba(255,255,255,0.1); display: flex; flex-wrap: wrap; gap: 0.5rem; flex-shrink: 0; }
+    .suggestion-btn { padding: 0.5rem 1rem; background: rgba(255,255,255,0.08); border: 1px solid rgba(255,255,255,0.15); border-radius: 999px; color: #cbd5e1; font-size: 0.85rem; cursor: pointer; transition: all 0.2s ease; }
+    .suggestion-btn:hover { background: rgba(255,255,255,0.15); color: white; }
+    .chatbot-input-container { padding: 1rem 1.25rem; border-top: 1px solid rgba(255,255,255,0.1); display: flex; gap: 0.75rem; }
+    .chatbot-input { flex: 1; padding: 0.875rem 1rem; background: rgba(255,255,255,0.08); border: 1px solid rgba(255,255,255,0.15); border-radius: 0.75rem; color: white; font-size: 0.925rem; }
+    @media (max-width: 768px) { 
+      .chatbot-container{ bottom:1rem; right:1rem; } 
+      .chatbot-toggle{ width:3.5rem; height:3.5rem; font-size:1.5rem;}
+      .chatbot-panel{ width:calc(100vw - 2rem); right:0.25rem; bottom:calc(7.5rem + env(safe-area-inset-bottom)); height:calc(100vh - 8rem);} 
+      .chatbot-input-container{ position: sticky; bottom: 0; align-items:center; gap:0.375rem; padding: 0.75rem 0.75rem; padding-bottom: calc(0.75rem + env(safe-area-inset-bottom)); }
+      .chatbot-input { padding: 0.625rem 0.75rem; }
+      .chatbot-input-container .btn { flex: 0 0 auto; padding: 0.5rem 0.875rem; font-size: 0.9rem; white-space: nowrap; }
+    }
+  </style>
+
+  <!-- Chatbot -->
+  <div class="chatbot-container">
+    <button id="chatToggle" class="chatbot-toggle" onclick="toggleChat()">💬</button>
+    <div id="chatPanel" class="chatbot-panel hidden">
+      <div class="chatbot-header">
+        <div class="flex items-center gap-3"><div class="logo"></div><span class="font-semibold">Auxonium Group Assistant</span></div>
+        <button onclick="toggleChat()" class="w-8 h-8 flex items-center justify-center bg-white/10 rounded-lg hover:bg-white/20 transition-colors">✕</button>
+      </div>
+      <div id="chatMessages" class="chatbot-messages"><div class="chat-message bot">Hi! 👋 How can I help you today? Ask me about our IT solutions, AC services, or Electrical works.</div></div>
+      <div class="chatbot-suggestions">
+        <button class="suggestion-btn" onclick="sendSuggestion('Office setup')">Office setup</button>
+        <button class="suggestion-btn" onclick="sendSuggestion('CCTV installation')">CCTV installation</button>
+        <button class="suggestion-btn" onclick="sendSuggestion('AC service')">AC service</button>
+        <button class="suggestion-btn" onclick="sendSuggestion('Electrical repair')">Electrical repair</button>
+      </div>
+      <form id="chatForm" class="chatbot-input-container" onsubmit="sendMessage(event)">
+        <input id="chatInput" type="text" placeholder="Type your message..." class="chatbot-input" autocomplete="off">
+        <button type="submit" class="btn btn-primary">Send</button>
+      </form>
+    </div>
+  </div>
+
+  <script>
+    // Chatbot functions
+    function toggleChat() {
+      const panel = document.getElementById('chatPanel');
+      const toggle = document.getElementById('chatToggle');
+      if (panel.classList.contains('hidden')) { panel.classList.remove('hidden'); toggle.style.display = 'none'; document.getElementById('chatInput')?.focus(); }
+      else { panel.classList.add('hidden'); toggle.style.display = 'flex'; }
+    }
+    function addMessage(text, type = 'bot') {
+      const messages = document.getElementById('chatMessages');
+      const msg = document.createElement('div'); msg.className = `chat-message ${type}`; msg.textContent = text; messages.appendChild(msg); messages.scrollTop = messages.scrollHeight;
+    }
+    function sendSuggestion(text) {
+      document.getElementById('chatInput').value = text;
+      document.getElementById('chatForm').dispatchEvent(new Event('submit', { cancelable: true, bubbles: true }));
+    }
+    function sendMessage(e) {
+      e.preventDefault();
+      const input = document.getElementById('chatInput');
+      const message = input.value.trim(); if (!message) return; addMessage(message, 'user'); input.value='';
+      setTimeout(() => {
+        const lowerMsg = message.toLowerCase(); let response='';
+        if (lowerMsg.includes('office')||lowerMsg.includes('setup')) response='We handle complete office IT setup including networking, cabling, Wi‑Fi, servers, and security. Would you like to discuss your requirements?';
+        else if (lowerMsg.includes('cctv')||lowerMsg.includes('camera')) response='We provide CCTV installation, remote access, NVR setup, and access control integration. Can you share your location for a quick quote?';
+        else if (lowerMsg.includes('ac')||lowerMsg.includes('air')||lowerMsg.includes('cool')) response='Our AC services include installation, maintenance, gas refill, ducting, and emergency repairs. What type of AC service do you need?';
+        else if (lowerMsg.includes('electric')||lowerMsg.includes('wiring')) response='We handle electrical wiring, panel works, lighting, safety checks, and emergency call-outs. How can we help with your electrical needs?';
+        else if (lowerMsg.includes('quote')||lowerMsg.includes('price')||lowerMsg.includes('cost')) response='I can help you get a quick quote! Please share your location and service requirements, or click "Request Quote" above.';
+        else response='Thanks for your message! Please share more details about your requirement, or contact us on WhatsApp at +971563536545.';
+        addMessage(response, 'bot');
+      }, 500);
+    }
+    // Close chat when clicking outside
+    document.addEventListener('click', function(e){ const chatPanel=document.getElementById('chatPanel'); const container=document.querySelector('.chatbot-container'); if(chatPanel && !chatPanel.classList.contains('hidden')){ if(!container.contains(e.target)) toggleChat(); }});
+  </script>
+</body>
+</html>
