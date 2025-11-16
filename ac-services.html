@@ -293,6 +293,10 @@
                         <strong style="font-size: 0.9375rem;">⚡ Electrical Services</strong><br>
                         <small style="color: #666; font-size: 0.8125rem;">Wiring & Lighting</small>
                     </a>
+                    <a href="fitout-services.html" style="display: block; padding: 0.875rem 1.25rem; color: #003366; text-decoration: none; transition: all 0.2s;" onmouseover="this.style.backgroundColor='#f8f9fa'; this.style.paddingLeft='1.5rem';" onmouseout="this.style.backgroundColor='white'; this.style.paddingLeft='1.25rem';">
+                        <strong style="font-size: 0.9375rem;">🧱 Fitout Services</strong><br>
+                        <small style="color: #666; font-size: 0.8125rem;">Interior, Gypsum, Glass & Partitions</small>
+                    </a>
                 </div>
             </li>
 
@@ -341,6 +345,7 @@
         <li><a href="it-services.html" style="display: block; padding: 16px 20px; color: white; text-decoration: none; border-bottom: 1px solid rgba(255,255,255,0.1);" onclick="toggleMobileMenu()">💻 IT Services</a></li>
         <li><a href="ac-services.html" style="display: block; padding: 16px 20px; color: white; text-decoration: none; border-bottom: 1px solid rgba(255,255,255,0.1);" onclick="toggleMobileMenu()">❄️ AC Services</a></li>
         <li><a href="electrical-services.html" style="display: block; padding: 16px 20px; color: white; text-decoration: none; border-bottom: 1px solid rgba(255,255,255,0.1);" onclick="toggleMobileMenu()">⚡ Electrical Services</a></li>
+        <li><a href="fitout-services.html" style="display: block; padding: 16px 20px; color: white; text-decoration: none; border-bottom: 1px solid rgba(255,255,255,0.1);" onclick="toggleMobileMenu()">🧱 Fitout Services</a></li>
         <li><a href="index.html#about" style="display: block; padding: 16px 20px; color: white; text-decoration: none; border-bottom: 1px solid rgba(255,255,255,0.1);" onclick="toggleMobileMenu()">ℹ️ About</a></li>
         <li><a href="index.html#pricing" style="display: block; padding: 16px 20px; color: white; text-decoration: none; border-bottom: 1px solid rgba(255,255,255,0.1);" onclick="toggleMobileMenu()">💰 Pricing</a></li>
         <li><a href="index.html#consultation" style="display: block; padding: 16px 20px; color: white; text-decoration: none; border-bottom: 1px solid rgba(255,255,255,0.1);" onclick="toggleMobileMenu()">📞 Contact</a></li>
@@ -537,8 +542,7 @@
         </a>
         <a href="index.html#consultation" class="btn btn-secondary text-lg">
           📝 Request Quote
-        </a>
-      </div>
+        </a></div>
     </div>
   </section>
 
@@ -551,11 +555,7 @@
             <div class="logo"></div>
             <span class="font-extrabold text-xl">Auxonium Group </span>
           </div>
-          <p class="text-slate-400 mb-4 text-center"> IT Solutions • AC Mechanics • Electrical Works </p>
-          <div class="flex gap-3 justify-center">
-            <div class="w-10 h-10 bg-white/10 rounded-lg flex items-center justify-center hover:bg-white/20 cursor-pointer transition-colors">📱</div>
-            <div class="w-10 h-10 bg-white/10 rounded-lg flex items-center justify-center hover:bg-white/20 cursor-pointer transition-colors">✉️</div>
-          </div>
+          <p class="text-slate-400 mb-4 text-center"> IT Solutions • AC Mechanics • Electrical Works • Fitouts </p>
         </div>
         <div class="text-center">
           <h4 class="font-bold mb-4">Quick Links</h4>
@@ -631,12 +631,15 @@
         <div class="flex items-center gap-3"><div class="logo"></div><span class="font-semibold">Auxonium Group Assistant</span></div>
         <button onclick="toggleChat()" class="w-8 h-8 flex items-center justify-center bg-white/10 rounded-lg hover:bg-white/20 transition-colors">✕</button>
       </div>
-      <div id="chatMessages" class="chatbot-messages"><div class="chat-message bot">Hi! 👋 How can I help you today? Ask me about our IT solutions, AC services, or Electrical works.</div></div>
+      <div id="chatMessages" class="chatbot-messages"><div class="chat-message bot">Hi! 👋 How can we help with your AC needs? Choose an option below.</div></div>
       <div class="chatbot-suggestions">
-        <button class="suggestion-btn" onclick="sendSuggestion('Office setup')">Office setup</button>
-        <button class="suggestion-btn" onclick="sendSuggestion('CCTV installation')">CCTV installation</button>
-        <button class="suggestion-btn" onclick="sendSuggestion('AC service')">AC service</button>
-        <button class="suggestion-btn" onclick="sendSuggestion('Electrical repair')">Electrical repair</button>
+        <button class="suggestion-btn" onclick="sendSuggestion('AC installation and commissioning')">Installation</button>
+        <button class="suggestion-btn" onclick="sendSuggestion('Preventive AC maintenance')">Maintenance</button>
+        <button class="suggestion-btn" onclick="sendSuggestion('Emergency AC repair')">Emergency repair</button>
+        <button class="suggestion-btn" onclick="sendSuggestion('Ducting and ventilation')">Ducting & ventilation</button>
+        <button class="suggestion-btn" onclick="sendSuggestion('AC gas refill')">Gas refill</button>
+        <button class="suggestion-btn" onclick="sendSuggestion('Annual maintenance contract')">AMC</button>
+        <button class="suggestion-btn" onclick="sendSuggestion('Request an AC quote')">Request quote</button>
       </div>
       <form id="chatForm" class="chatbot-input-container" onsubmit="sendMessage(event)">
         <input id="chatInput" type="text" placeholder="Type your message..." class="chatbot-input" autocomplete="off">
@@ -667,12 +670,14 @@
       const message = input.value.trim(); if (!message) return; addMessage(message, 'user'); input.value='';
       setTimeout(() => {
         const lowerMsg = message.toLowerCase(); let response='';
-        if (lowerMsg.includes('office')||lowerMsg.includes('setup')) response='We handle complete office IT setup including networking, cabling, Wi‑Fi, servers, and security. Would you like to discuss your requirements?';
-        else if (lowerMsg.includes('cctv')||lowerMsg.includes('camera')) response='We provide CCTV installation, remote access, NVR setup, and access control integration. Can you share your location for a quick quote?';
-        else if (lowerMsg.includes('ac')||lowerMsg.includes('air')||lowerMsg.includes('cool')) response='Our AC services include installation, maintenance, gas refill, ducting, and emergency repairs. What type of AC service do you need?';
-        else if (lowerMsg.includes('electric')||lowerMsg.includes('wiring')) response='We handle electrical wiring, panel works, lighting, safety checks, and emergency call-outs. How can we help with your electrical needs?';
-        else if (lowerMsg.includes('quote')||lowerMsg.includes('price')||lowerMsg.includes('cost')) response='I can help you get a quick quote! Please share your location and service requirements, or click "Request Quote" above.';
-        else response='Thanks for your message! Please share more details about your requirement, or contact us on WhatsApp at +971563536545.';
+        if (lowerMsg.includes('install')||lowerMsg.includes('commission')) response='Installation & Commissioning: Split/ducted/cassette/VRF sizing, refrigerant charging, electrical/safety checks, testing & handover. Share unit type, tonnage and location.';
+        else if (lowerMsg.includes('mainten')||lowerMsg.includes('service')) response='Preventive Maintenance: Filters, coils, belts, electrical inspections and performance tests. How many units and preferred schedule?';
+        else if (lowerMsg.includes('emergency')||lowerMsg.includes('repair')||lowerMsg.includes('fault')||lowerMsg.includes('not cooling')) response='Emergency Repair: Same-day response across UAE. Please send your location and a callback number; we will dispatch a technician.';
+        else if (lowerMsg.includes('duct')||lowerMsg.includes('vent')) response='Ducting & Ventilation: Design, fabrication, installation and balancing. Share drawings or approximate lengths and sizes to estimate.';
+        else if (lowerMsg.includes('gas')||lowerMsg.includes('recharge')||lowerMsg.includes('refill')) response='Gas Refill: Leak check, proper refrigerant recharge and performance verification. What unit type/tonnage and current symptoms?';
+        else if (lowerMsg.includes('amc')||lowerMsg.includes('annual')||lowerMsg.includes('contract')) response='AMC: Annual maintenance contracts tailored to site and units. How many units and site location?';
+        else if (lowerMsg.includes('quote')||lowerMsg.includes('estimate')||lowerMsg.includes('price')||lowerMsg.includes('cost')) response='Great! Please share your location, unit types/count, and timeline—or click "Request Quote" above.';
+        else response='Thanks! Please describe your AC need (installation, maintenance, emergency, ducting, gas refill, or AMC) and your location.';
         addMessage(response, 'bot');
       }, 500);
     }

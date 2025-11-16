@@ -281,6 +281,7 @@
               <a href="it-services.html" style="display: block; padding: 0.875rem 1.25rem; color: #003366; text-decoration: none; transition: all 0.2s; border-bottom: 1px solid #f0f0f0;" onmouseover="this.style.backgroundColor='#f8f9fa'; this.style.paddingLeft='1.5rem';" onmouseout="this.style.backgroundColor='white'; this.style.paddingLeft='1.25rem';"><strong style="font-size: 0.9375rem;">💻 IT Services</strong><br><small style="color: #666; font-size: 0.8125rem;">Infrastructure & Cloud</small></a>
               <a href="ac-services.html" style="display: block; padding: 0.875rem 1.25rem; color: #003366; text-decoration: none; transition: all 0.2s; border-bottom: 1px solid #f0f0f0;" onmouseover="this.style.backgroundColor='#f8f9fa'; this.style.paddingLeft='1.5rem';" onmouseout="this.style.backgroundColor='white'; this.style.paddingLeft='1.25rem';"><strong style="font-size: 0.9375rem;">❄️ AC Services</strong><br><small style="color: #666; font-size: 0.8125rem;">Installation & Maintenance</small></a>
               <a href="electrical-services.html" style="display: block; padding: 0.875rem 1.25rem; color: #003366; text-decoration: none; transition: all 0.2s;" onmouseover="this.style.backgroundColor='#f8f9fa'; this.style.paddingLeft='1.5rem';" onmouseout="this.style.backgroundColor='white'; this.style.paddingLeft='1.25rem';"><strong style="font-size: 0.9375rem;">⚡ Electrical Services</strong><br><small style="color: #666; font-size: 0.8125rem;">Wiring & Lighting</small></a>
+              <a href="fitout-services.html" style="display: block; padding: 0.875rem 1.25rem; color: #003366; text-decoration: none; transition: all 0.2s;" onmouseover="this.style.backgroundColor='#f8f9fa'; this.style.paddingLeft='1.5rem';" onmouseout="this.style.backgroundColor='white'; this.style.paddingLeft='1.25rem';"><strong style="font-size: 0.9375rem;">🧱 Fitout Services</strong><br><small style="color: #666; font-size: 0.8125rem;">Interior, Gypsum, Glass & Partitions</small></a>
             </div>
           </li>
 
@@ -323,6 +324,7 @@
       <a href="it-services.html" class="block px-3 py-2 text-base font-medium text-gray-300 hover:text-white hover:bg-gray-700">💻 IT Services</a>
       <a href="ac-services.html" class="block px-3 py-2 text-base font-medium text-gray-300 hover:text-white hover:bg-gray-700">❄️ AC Services</a>
       <a href="electrical-services.html" class="block px-3 py-2 text-base font-medium text-gray-300 hover:text-white hover:bg-gray-700">⚡ Electrical Services</a>
+      <a href="fitout-services.html" class="block px-3 py-2 text-base font-medium text-gray-300 hover:text-white hover:bg-gray-700">🧱 Fitout Services</a>
       <a href="index.html#about" class="block px-3 py-2 text-base font-medium text-gray-300 hover:text-white hover:bg-gray-700">ℹ️ About Us</a>
       <a href="index.html#pricing" class="block px-3 py-2 text-base font-medium text-gray-300 hover:text-white hover:bg-gray-700">💰 Pricing</a>
       <a href="index.html#consultation" class="block px-3 py-2 text-base font-medium text-gray-300 hover:text-white hover:bg-gray-700">📞 Contact</a>
@@ -522,6 +524,8 @@
     </div>
   </section>
 
+  
+
   <!-- Footer -->
   <footer class="py-12 border-t border-white/10">
     <div class="max-w-7xl mx-auto px-4">
@@ -531,11 +535,7 @@
             <div class="logo"></div>
             <span class="font-extrabold text-xl">Auxonium Group</span>
           </div>
-          <p class="text-slate-400 mb-4 text-center"> IT Solutions • AC Mechanics • Electrical Works </p>
-          <div class="flex gap-3 justify-center">
-            <div class="w-10 h-10 bg-white/10 rounded-lg flex items-center justify-center hover:bg-white/20 cursor-pointer transition-colors">📱</div>
-            <div class="w-10 h-10 bg-white/10 rounded-lg flex items-center justify-center hover:bg-white/20 cursor-pointer transition-colors">✉️</div>
-          </div>
+          <p class="text-slate-400 mb-4 text-center"> IT Solutions • AC Mechanics • Electrical Works • Fitouts </p>
         </div>
         <div class="text-center">
           <h4 class="font-bold mb-4">Quick Links</h4>
@@ -612,12 +612,15 @@
         <div class="flex items-center gap-3"><div class="logo"></div><span class="font-semibold">Auxonium Group Assistant</span></div>
         <button onclick="toggleChat()" class="w-8 h-8 flex items-center justify-center bg-white/10 rounded-lg hover:bg-white/20 transition-colors">✕</button>
       </div>
-      <div id="chatMessages" class="chatbot-messages"><div class="chat-message bot">Hi! 👋 How can I help you today? Ask me about our IT solutions, AC services, or Electrical works.</div></div>
+      <div id="chatMessages" class="chatbot-messages"><div class="chat-message bot">Hi! 👋 How can I help you today? Ask me about our electrical services.</div></div>
       <div class="chatbot-suggestions">
-        <button class="suggestion-btn" onclick="sendSuggestion('Office setup')">Office setup</button>
-        <button class="suggestion-btn" onclick="sendSuggestion('CCTV installation')">CCTV installation</button>
-        <button class="suggestion-btn" onclick="sendSuggestion('AC service')">AC service</button>
-        <button class="suggestion-btn" onclick="sendSuggestion('Electrical repair')">Electrical repair</button>
+        <button class="suggestion-btn" onclick="sendSuggestion('Wiring and panel works')">Wiring & panel</button>
+        <button class="suggestion-btn" onclick="sendSuggestion('Lighting installation')">Lighting & fixtures</button>
+        <button class="suggestion-btn" onclick="sendSuggestion('Emergency electrical fault')">Emergency service</button>
+        <button class="suggestion-btn" onclick="sendSuggestion('Commercial electrical')">Commercial</button>
+        <button class="suggestion-btn" onclick="sendSuggestion('Residential electrical')">Residential</button>
+        <button class="suggestion-btn" onclick="sendSuggestion('Compliance and safety testing')">Compliance & safety</button>
+        <button class="suggestion-btn" onclick="sendSuggestion('Request an electrical quote')">Request quote</button>
       </div>
       <form id="chatForm" class="chatbot-input-container" onsubmit="sendMessage(event)">
         <input id="chatInput" type="text" placeholder="Type your message..." class="chatbot-input" autocomplete="off">
@@ -626,39 +629,41 @@
     </div>
   </div>
 
-  <script>
-    // Chatbot functions
-    function toggleChat() {
-      const panel = document.getElementById('chatPanel');
-      const toggle = document.getElementById('chatToggle');
-      if (panel.classList.contains('hidden')) { panel.classList.remove('hidden'); toggle.style.display = 'none'; document.getElementById('chatInput')?.focus(); }
-      else { panel.classList.add('hidden'); toggle.style.display = 'flex'; }
-    }
-    function addMessage(text, type = 'bot') {
-      const messages = document.getElementById('chatMessages');
-      const msg = document.createElement('div'); msg.className = `chat-message ${type}`; msg.textContent = text; messages.appendChild(msg); messages.scrollTop = messages.scrollHeight;
-    }
-    function sendSuggestion(text) {
-      document.getElementById('chatInput').value = text;
-      document.getElementById('chatForm').dispatchEvent(new Event('submit', { cancelable: true, bubbles: true }));
-    }
-    function sendMessage(e) {
-      e.preventDefault();
-      const input = document.getElementById('chatInput');
-      const message = input.value.trim(); if (!message) return; addMessage(message, 'user'); input.value='';
-      setTimeout(() => {
-        const lowerMsg = message.toLowerCase(); let response='';
-        if (lowerMsg.includes('office')||lowerMsg.includes('setup')) response='We handle complete office IT setup including networking, cabling, Wi‑Fi, servers, and security. Would you like to discuss your requirements?';
-        else if (lowerMsg.includes('cctv')||lowerMsg.includes('camera')) response='We provide CCTV installation, remote access, NVR setup, and access control integration. Can you share your location for a quick quote?';
-        else if (lowerMsg.includes('ac')||lowerMsg.includes('air')||lowerMsg.includes('cool')) response='Our AC services include installation, maintenance, gas refill, ducting, and emergency repairs. What type of AC service do you need?';
-        else if (lowerMsg.includes('electric')||lowerMsg.includes('wiring')) response='We handle electrical wiring, panel works, lighting, safety checks, and emergency call-outs. How can we help with your electrical needs?';
-        else if (lowerMsg.includes('quote')||lowerMsg.includes('price')||lowerMsg.includes('cost')) response='I can help you get a quick quote! Please share your location and service requirements, or click "Request Quote" above.';
-        else response='Thanks for your message! Please share more details about your requirement, or contact us on WhatsApp at +971563536545.';
-        addMessage(response, 'bot');
-      }, 500);
-    }
-    // Close chat when clicking outside
-    document.addEventListener('click', function(e){ const chatPanel=document.getElementById('chatPanel'); const container=document.querySelector('.chatbot-container'); if(chatPanel && !chatPanel.classList.contains('hidden')){ if(!container.contains(e.target)) toggleChat(); }});
-  </script>
+<script>
+  // Chatbot functions
+  function toggleChat() {
+    const panel = document.getElementById('chatPanel');
+    const toggle = document.getElementById('chatToggle');
+    if (panel.classList.contains('hidden')) { panel.classList.remove('hidden'); toggle.style.display = 'none'; document.getElementById('chatInput')?.focus(); }
+    else { panel.classList.add('hidden'); toggle.style.display = 'flex'; }
+  }
+  function addMessage(text, type = 'bot') {
+    const messages = document.getElementById('chatMessages');
+    const msg = document.createElement('div'); msg.className = `chat-message ${type}`; msg.textContent = text; messages.appendChild(msg); messages.scrollTop = messages.scrollHeight;
+  }
+  function sendSuggestion(text) {
+    document.getElementById('chatInput').value = text;
+    document.getElementById('chatForm').dispatchEvent(new Event('submit', { cancelable: true, bubbles: true }));
+  }
+  function sendMessage(e) {
+    e.preventDefault();
+    const input = document.getElementById('chatInput');
+    const message = input.value.trim(); if (!message) return; addMessage(message, 'user'); input.value='';
+    setTimeout(() => {
+      const lowerMsg = message.toLowerCase(); let response='';
+      if (lowerMsg.includes('wiring')||lowerMsg.includes('panel')) response='Wiring & Panel: New circuits, panelboards, grounding, load balancing and safety devices. Share your load or issue details and location.';
+      else if (lowerMsg.includes('light')||lowerMsg.includes('fixture')||lowerMsg.includes('led')) response='Lighting & Fixtures: Indoor/outdoor, LED upgrades, emergency lighting, smart controls. Tell us the area and type of lighting you need.';
+      else if (lowerMsg.includes('emergency')||lowerMsg.includes('fault')||lowerMsg.includes('outage')) response='Emergency Service: 24/7 call-out for outages and faults. Please share your location and a callback number for immediate dispatch.';
+      else if (lowerMsg.includes('commercial')||lowerMsg.includes('office')||lowerMsg.includes('warehouse')) response='Commercial Electrical: Power distribution, backup power, load management for offices/retail/warehouses. Describe your facility and scope.';
+      else if (lowerMsg.includes('residential')||lowerMsg.includes('home')||lowerMsg.includes('villa')||lowerMsg.includes('apartment')) response='Residential Electrical: Rewiring, kitchen/bath, ceiling fans, outdoor outlets. Which room/area and what issue or upgrade?';
+      else if (lowerMsg.includes('compliance')||lowerMsg.includes('safety')||lowerMsg.includes('certificate')||lowerMsg.includes('testing')) response='Compliance & Safety: Inspections, testing, certification, ground fault and IR testing. When can we schedule an inspection?';
+      else if (lowerMsg.includes('quote')||lowerMsg.includes('estimate')||lowerMsg.includes('price')||lowerMsg.includes('cost')) response='Great! Please share your location, scope (wiring/lighting/emergency/commercial/residential/compliance) and timeline, or click "Request Quote" above.';
+      else response='Thanks! Please describe your electrical requirement (wiring, lighting, emergency, commercial, residential, or compliance) and location.';
+      addMessage(response, 'bot');
+    }, 500);
+  }
+  // Close chat when clicking outside
+  document.addEventListener('click', function(e){ const chatPanel=document.getElementById('chatPanel'); const container=document.querySelector('.chatbot-container'); if(chatPanel && !chatPanel.classList.contains('hidden')){ if(!container.contains(e.target)) toggleChat(); }});
+</script>
 </body>
 </html>
