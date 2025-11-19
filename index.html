@@ -1,31 +1,36 @@
 <!doctype html>
 <html lang="en">
+
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=5, user-scalable=yes">
   <title>Auxonium Group | IT, AC, Electrical Services across UAE</title>
-  <meta name="description" content="Auxonium Group provides end-to-end IT solutions, AC mechanics and electrical works across the UAE. Professional services for businesses and residences.">
+  <meta name="description"
+    content="Auxonium Group provides end-to-end IT solutions, AC mechanics and electrical works across the UAE. Professional services for businesses and residences.">
   <link rel="canonical" href="https://auxonium.com/">
   <link rel="icon" href="https://i.pinimg.com/736x/a2/9a/d6/a29ad619cdf3e3e55bf0f709abecbb8e.jpg">
   <meta property="og:type" content="website">
   <meta property="og:title" content="Auxonium Group | IT, AC, Electrical Services across UAE">
-  <meta property="og:description" content="IT solutions, AC mechanics, and electrical works across the UAE with rapid on-site support.">
+  <meta property="og:description"
+    content="IT solutions, AC mechanics, and electrical works across the UAE with rapid on-site support.">
   <meta property="og:url" content="https://auxonium.com/">
-  <meta property="og:image" content="https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?auto=format&fit=crop&w=1200&q=80">
+  <meta property="og:image"
+    content="https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?auto=format&fit=crop&w=1200&q=80">
   <meta name="twitter:card" content="summary_large_image">
   <meta name="twitter:title" content="Auxonium Group | IT, AC, Electrical Services across UAE">
   <meta name="twitter:description" content="End-to-end delivery with rapid on-site support across all Emirates.">
-  <meta name="twitter:image" content="https://images.unsplash.com/photo-1531482615713-2afd69097998?auto=format&fit=crop&w=1200&q=80">
+  <meta name="twitter:image"
+    content="https://images.unsplash.com/photo-1531482615713-2afd69097998?auto=format&fit=crop&w=1200&q=80">
   <meta name="theme-color" content="#0f172a">
   <script src="https://cdn.tailwindcss.com"></script>
   <script>
     tailwind.config = {
       theme: {
         extend: {
-          colors: { 
-            brand: { DEFAULT: '#0ea5e9', dark: '#0369a1' }, 
-            base: '#0f172a', 
-            accent: '#f59e0b' 
+          colors: {
+            brand: { DEFAULT: '#0ea5e9', dark: '#0369a1' },
+            base: '#0f172a',
+            accent: '#f59e0b'
           },
           scrollMargin: {
             consultation: '100px'
@@ -35,9 +40,18 @@
     }
   </script>
   <style>
-    * { box-sizing: border-box; margin: 0; padding: 0; }
-    html { -webkit-text-size-adjust: 100%; -webkit-font-smoothing: antialiased; }
-    body { 
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    html {
+      -webkit-text-size-adjust: 100%;
+      -webkit-font-smoothing: antialiased;
+    }
+
+    body {
       font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
       background: #0f172a;
       color: #f1f5f9;
@@ -45,7 +59,7 @@
 
     /* Enhanced Hero Section */
     .hero-section {
-      background: linear-gradient(135deg, rgba(15,23,42,0.95) 0%, rgba(30,41,59,0.95) 100%);
+      background: linear-gradient(135deg, rgba(15, 23, 42, 0.95) 0%, rgba(30, 41, 59, 0.95) 100%);
       position: relative;
       overflow: hidden;
       min-height: 85vh;
@@ -66,7 +80,7 @@
     .hero-overlay {
       position: absolute;
       inset: 0;
-      background: linear-gradient(135deg, rgba(14,165,233,0.08) 0%, rgba(16,185,129,0.08) 50%, rgba(139,92,246,0.08) 100%);
+      background: linear-gradient(135deg, rgba(14, 165, 233, 0.08) 0%, rgba(16, 185, 129, 0.08) 50%, rgba(139, 92, 246, 0.08) 100%);
       z-index: 1;
     }
 
@@ -77,8 +91,15 @@
     }
 
     @keyframes fadeInUp {
-      from { opacity: 0; transform: translateY(30px); }
-      to { opacity: 1; transform: translateY(0); }
+      from {
+        opacity: 0;
+        transform: translateY(30px);
+      }
+
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
     }
 
     /* Professional Button Styles */
@@ -100,31 +121,31 @@
     .btn-primary {
       background: linear-gradient(135deg, #0ea5e9 0%, #0284c7 100%);
       color: white;
-      box-shadow: 0 10px 25px rgba(14,165,233,0.3);
+      box-shadow: 0 10px 25px rgba(14, 165, 233, 0.3);
     }
 
     .btn-primary:hover {
       background: linear-gradient(135deg, #0284c7 0%, #0369a1 100%);
-      box-shadow: 0 15px 35px rgba(14,165,233,0.4);
+      box-shadow: 0 15px 35px rgba(14, 165, 233, 0.4);
       transform: translateY(-2px);
     }
 
     .btn-secondary {
       background: transparent;
       color: white;
-      border: 2px solid rgba(255,255,255,0.3);
+      border: 2px solid rgba(255, 255, 255, 0.3);
     }
 
     .btn-secondary:hover {
-      background: rgba(255,255,255,0.1);
-      border-color: rgba(255,255,255,0.5);
+      background: rgba(255, 255, 255, 0.1);
+      border-color: rgba(255, 255, 255, 0.5);
       transform: translateY(-2px);
     }
 
     /* Enhanced Service Cards */
     .service-card {
-      background: rgba(255,255,255,0.05);
-      border: 1px solid rgba(255,255,255,0.1);
+      background: rgba(255, 255, 255, 0.05);
+      border: 1px solid rgba(255, 255, 255, 0.1);
       border-radius: 1.25rem;
       padding: 2rem;
       transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
@@ -139,23 +160,23 @@
       content: '';
       position: absolute;
       inset: 0;
-      background: linear-gradient(135deg, rgba(14,165,233,0.1) 0%, rgba(16,185,129,0.1) 100%);
+      background: linear-gradient(135deg, rgba(14, 165, 233, 0.1) 0%, rgba(16, 185, 129, 0.1) 100%);
       opacity: 0;
       transition: opacity 0.3s ease;
     }
 
     .service-card:hover {
-      background: rgba(255,255,255,0.08);
-      border-color: rgba(14,165,233,0.3);
+      background: rgba(255, 255, 255, 0.08);
+      border-color: rgba(14, 165, 233, 0.3);
       transform: translateY(-8px);
-      box-shadow: 0 20px 40px rgba(0,0,0,0.3);
+      box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3);
     }
 
     .service-card:hover::before {
       opacity: 1;
     }
 
-    .service-card > * {
+    .service-card>* {
       position: relative;
       z-index: 1;
     }
@@ -188,7 +209,7 @@
       background: linear-gradient(135deg, #0ea5e9 0%, #0284c7 100%);
       color: white;
       border: none;
-      box-shadow: 0 8px 25px rgba(14,165,233,0.4);
+      box-shadow: 0 8px 25px rgba(14, 165, 233, 0.4);
       cursor: pointer;
       display: flex;
       align-items: center;
@@ -199,7 +220,7 @@
 
     .chatbot-toggle:hover {
       transform: scale(1.1);
-      box-shadow: 0 12px 35px rgba(14,165,233,0.5);
+      box-shadow: 0 12px 35px rgba(14, 165, 233, 0.5);
     }
 
     .chatbot-panel {
@@ -210,11 +231,11 @@
       max-width: calc(100vw - 3rem);
       height: 40rem;
       max-height: calc(100vh - 10rem);
-      background: rgba(15,23,42,0.98);
+      background: rgba(15, 23, 42, 0.98);
       backdrop-filter: blur(20px);
-      border: 1px solid rgba(255,255,255,0.15);
+      border: 1px solid rgba(255, 255, 255, 0.15);
       border-radius: 1.25rem;
-      box-shadow: 0 20px 50px rgba(0,0,0,0.6);
+      box-shadow: 0 20px 50px rgba(0, 0, 0, 0.6);
       display: flex;
       flex-direction: column;
       overflow: hidden;
@@ -230,8 +251,8 @@
 
     .chatbot-header {
       padding: 1.25rem;
-      background: linear-gradient(135deg, rgba(14,165,233,0.15) 0%, rgba(16,185,129,0.15) 100%);
-      border-bottom: 1px solid rgba(255,255,255,0.1);
+      background: linear-gradient(135deg, rgba(14, 165, 233, 0.15) 0%, rgba(16, 185, 129, 0.15) 100%);
+      border-bottom: 1px solid rgba(255, 255, 255, 0.1);
       display: flex;
       align-items: center;
       justify-content: space-between;
@@ -246,7 +267,7 @@
       flex-direction: column;
       gap: 0.75rem;
       scrollbar-width: thin;
-      scrollbar-color: rgba(255,255,255,0.2) transparent;
+      scrollbar-color: rgba(255, 255, 255, 0.2) transparent;
     }
 
     .chatbot-messages::-webkit-scrollbar {
@@ -254,7 +275,7 @@
     }
 
     .chatbot-messages::-webkit-scrollbar-thumb {
-      background: rgba(255,255,255,0.2);
+      background: rgba(255, 255, 255, 0.2);
       border-radius: 2px;
     }
 
@@ -268,20 +289,20 @@
     }
 
     .chat-message.bot {
-      background: rgba(14,165,233,0.15);
-      border: 1px solid rgba(14,165,233,0.3);
+      background: rgba(14, 165, 233, 0.15);
+      border: 1px solid rgba(14, 165, 233, 0.3);
       align-self: flex-start;
     }
 
     .chat-message.user {
-      background: rgba(255,255,255,0.1);
-      border: 1px solid rgba(255,255,255,0.2);
+      background: rgba(255, 255, 255, 0.1);
+      border: 1px solid rgba(255, 255, 255, 0.2);
       align-self: flex-end;
     }
 
     .chatbot-suggestions {
       padding: 1rem 1.25rem;
-      border-top: 1px solid rgba(255,255,255,0.1);
+      border-top: 1px solid rgba(255, 255, 255, 0.1);
       display: flex;
       flex-wrap: wrap;
       gap: 0.5rem;
@@ -290,8 +311,8 @@
 
     .suggestion-btn {
       padding: 0.5rem 1rem;
-      background: rgba(255,255,255,0.08);
-      border: 1px solid rgba(255,255,255,0.15);
+      background: rgba(255, 255, 255, 0.08);
+      border: 1px solid rgba(255, 255, 255, 0.15);
       border-radius: 999px;
       color: #cbd5e1;
       font-size: 0.85rem;
@@ -300,13 +321,13 @@
     }
 
     .suggestion-btn:hover {
-      background: rgba(255,255,255,0.15);
+      background: rgba(255, 255, 255, 0.15);
       color: white;
     }
 
     .chatbot-input-container {
       padding: 1rem 1.25rem;
-      border-top: 1px solid rgba(255,255,255,0.1);
+      border-top: 1px solid rgba(255, 255, 255, 0.1);
       display: flex;
       gap: 0.75rem;
       flex-shrink: 0;
@@ -315,8 +336,8 @@
     .chatbot-input {
       flex: 1;
       padding: 0.875rem 1rem;
-      background: rgba(255,255,255,0.08);
-      border: 1px solid rgba(255,255,255,0.15);
+      background: rgba(255, 255, 255, 0.08);
+      border: 1px solid rgba(255, 255, 255, 0.15);
       border-radius: 0.75rem;
       color: white;
       font-size: 0.925rem;
@@ -325,15 +346,15 @@
     .chatbot-input:focus {
       outline: none;
       border-color: #0ea5e9;
-      background: rgba(255,255,255,0.12);
+      background: rgba(255, 255, 255, 0.12);
     }
 
     /* Enhanced Input Styles */
     .form-input {
       width: 100%;
       padding: 0.875rem 1rem;
-      background: rgba(255,255,255,0.08);
-      border: 1px solid rgba(255,255,255,0.15);
+      background: rgba(255, 255, 255, 0.08);
+      border: 1px solid rgba(255, 255, 255, 0.15);
       border-radius: 0.75rem;
       color: white;
       font-size: 1rem;
@@ -343,8 +364,8 @@
     .form-input:focus {
       outline: none;
       border-color: #0ea5e9;
-      background: rgba(255,255,255,0.12);
-      box-shadow: 0 0 0 3px rgba(14,165,233,0.15);
+      background: rgba(255, 255, 255, 0.12);
+      box-shadow: 0 0 0 3px rgba(14, 165, 233, 0.15);
     }
 
     .form-input::placeholder {
@@ -385,16 +406,16 @@
 
     /* Card Styles */
     .card {
-      background: rgba(255,255,255,0.05);
-      border: 1px solid rgba(255,255,255,0.1);
+      background: rgba(255, 255, 255, 0.05);
+      border: 1px solid rgba(255, 255, 255, 0.1);
       border-radius: 1rem;
       padding: 1.5rem;
       transition: all 0.3s ease;
     }
 
     .card:hover {
-      background: rgba(255,255,255,0.08);
-      border-color: rgba(255,255,255,0.2);
+      background: rgba(255, 255, 255, 0.08);
+      border-color: rgba(255, 255, 255, 0.2);
     }
 
     /* Responsive Design */
@@ -406,7 +427,7 @@
       align-items: center;
       width: 2.5rem;
       height: 2.5rem;
-      background: rgba(255,255,255,0.1);
+      background: rgba(255, 255, 255, 0.1);
       border: none;
       border-radius: 0.5rem;
       padding: 0.5rem;
@@ -415,7 +436,7 @@
     }
 
     .mobile-menu-toggle:hover {
-      background: rgba(255,255,255,0.2);
+      background: rgba(255, 255, 255, 0.2);
     }
 
     .mobile-menu-toggle:active {
@@ -430,9 +451,9 @@
       width: 80%;
       max-width: 300px;
       height: 100vh;
-      background: rgba(15,23,42,0.98);
-      border-left: 1px solid rgba(255,255,255,0.1);
-      box-shadow: -5px 0 15px rgba(0,0,0,0.3);
+      background: rgba(15, 23, 42, 0.98);
+      border-left: 1px solid rgba(255, 255, 255, 0.1);
+      box-shadow: -5px 0 15px rgba(0, 0, 0, 0.3);
       transition: right 0.3s ease;
       z-index: 9999;
       overflow-y: auto;
@@ -449,7 +470,7 @@
       left: 0;
       width: 100%;
       height: 100vh;
-      background: rgba(0,0,0,0.5);
+      background: rgba(0, 0, 0, 0.5);
       z-index: 9998;
     }
 
@@ -494,16 +515,25 @@
         height: calc(100vh - 9rem);
       }
 
-      .chatbot-input-container { 
-        position: sticky; 
-        bottom: 0; 
-        align-items: center; 
+      .chatbot-input-container {
+        position: sticky;
+        bottom: 0;
+        align-items: center;
         gap: 0.375rem;
         padding: 0.75rem 0.75rem;
-        padding-bottom: calc(0.75rem + env(safe-area-inset-bottom)); 
+        padding-bottom: calc(0.75rem + env(safe-area-inset-bottom));
       }
-      .chatbot-input { padding: 0.625rem 0.75rem; }
-      .chatbot-input-container .btn { flex: 0 0 auto; padding: 0.5rem 0.875rem; font-size: 0.9rem; white-space: nowrap; }
+
+      .chatbot-input {
+        padding: 0.625rem 0.75rem;
+      }
+
+      .chatbot-input-container .btn {
+        flex: 0 0 auto;
+        padding: 0.5rem 0.875rem;
+        font-size: 0.9rem;
+        white-space: nowrap;
+      }
 
       .btn {
         padding: 0.75rem 1.25rem;
@@ -511,7 +541,7 @@
         white-space: nowrap;
       }
 
-      nav > div {
+      nav>div {
         padding: 0.875rem 1rem !important;
       }
 
@@ -543,7 +573,8 @@
         gap: 1.5rem !important;
       }
 
-      .service-card, .card {
+      .service-card,
+      .card {
         padding: 1.5rem !important;
       }
     }
@@ -562,9 +593,26 @@
         right: 0.25rem;
         bottom: calc(6.5rem + env(safe-area-inset-bottom));
       }
-      .chatbot-input-container { position: sticky; bottom: 0; align-items:center; gap:0.375rem; padding: 0.75rem 0.75rem; padding-bottom: calc(0.75rem + env(safe-area-inset-bottom)); }
-      .chatbot-input { padding: 0.625rem 0.75rem; }
-      .chatbot-input-container .btn { flex: 0 0 auto; padding: 0.5rem 0.875rem; font-size: 0.9rem; white-space: nowrap; }
+
+      .chatbot-input-container {
+        position: sticky;
+        bottom: 0;
+        align-items: center;
+        gap: 0.375rem;
+        padding: 0.75rem 0.75rem;
+        padding-bottom: calc(0.75rem + env(safe-area-inset-bottom));
+      }
+
+      .chatbot-input {
+        padding: 0.625rem 0.75rem;
+      }
+
+      .chatbot-input-container .btn {
+        flex: 0 0 auto;
+        padding: 0.5rem 0.875rem;
+        font-size: 0.9rem;
+        white-space: nowrap;
+      }
     }
 
     /* Header Styles */
@@ -573,8 +621,8 @@
       top: 0;
       z-index: 1000;
       backdrop-filter: blur(12px);
-      background: rgba(15,23,42,0.85);
-      border-bottom: 1px solid rgba(255,255,255,0.1);
+      background: rgba(15, 23, 42, 0.85);
+      border-bottom: 1px solid rgba(255, 255, 255, 0.1);
     }
 
     .logo {
@@ -588,10 +636,18 @@
     }
 
     /* Mobile toggle visibility */
-    .mobile-menu-toggle { display: none; }
+    .mobile-menu-toggle {
+      display: none;
+    }
+
     @media (max-width: 768px) {
-      .mobile-menu-toggle { display: flex !important; }
-      .desktop-nav { display: none; }
+      .mobile-menu-toggle {
+        display: flex !important;
+      }
+
+      .desktop-nav {
+        display: none;
+      }
     }
 
     /* Feature Icons */
@@ -601,7 +657,7 @@
       display: flex;
       align-items: center;
       justify-content: center;
-      background: rgba(14,165,233,0.15);
+      background: rgba(14, 165, 233, 0.15);
       border-radius: 1rem;
       font-size: 1.75rem;
       margin: 0 auto 1rem;
@@ -612,8 +668,8 @@
       display: inline-flex;
       align-items: center;
       gap: 0.5rem;
-      background: rgba(16,185,129,0.15);
-      border: 1px solid rgba(16,185,129,0.3);
+      background: rgba(16, 185, 129, 0.15);
+      border: 1px solid rgba(16, 185, 129, 0.3);
       border-radius: 999px;
       padding: 0.75rem 1.5rem;
       margin-bottom: 2rem;
@@ -628,15 +684,24 @@
     }
 
     @keyframes pulse {
-      0%, 100% { opacity: 1; transform: scale(1); }
-      50% { opacity: 0.5; transform: scale(1.2); }
+
+      0%,
+      100% {
+        opacity: 1;
+        transform: scale(1);
+      }
+
+      50% {
+        opacity: 0.5;
+        transform: scale(1.2);
+      }
     }
 
     /* Drawer Styles */
     .drawer-overlay {
       position: fixed;
       inset: 0;
-      background: rgba(0,0,0,0.5);
+      background: rgba(0, 0, 0, 0.5);
       backdrop-filter: blur(4px);
       z-index: 9998;
       display: flex;
@@ -650,8 +715,8 @@
     }
 
     .drawer-content {
-      background: rgba(15,23,42,0.98);
-      border: 1px solid rgba(255,255,255,0.15);
+      background: rgba(15, 23, 42, 0.98);
+      border: 1px solid rgba(255, 255, 255, 0.15);
       border-radius: 1.5rem;
       padding: 2rem;
       max-width: 32rem;
@@ -660,137 +725,239 @@
       overflow-y: auto;
     }
   </style>
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "GeneralContractor",
+    "name": "Auxonium Group",
+    "image": "https://auxonium.com/logo.png",
+    "url": "https://auxonium.com",
+    "telephone": "+971563536545",
+    "address": {
+      "@type": "PostalAddress",
+      "addressCountry": "AE",
+      "addressRegion": "Dubai"
+    },
+    "priceRange": "$$",
+    "openingHoursSpecification": {
+      "@type": "OpeningHoursSpecification",
+      "dayOfWeek": [
+        "Monday",
+        "Tuesday",
+        "Wednesday",
+        "Thursday",
+        "Friday",
+        "Saturday"
+      ],
+      "opens": "08:00",
+      "closes": "18:00"
+    },
+    "sameAs": [
+      "https://www.facebook.com/auxonium",
+      "https://www.linkedin.com/company/auxonium"
+    ]
+  }
+  </script>
 </head>
+
 <body>
 
-    <nav class="header">
-    <div style="max-width: 1400px; margin: 0 auto; display: flex; justify-content: space-between; align-items: center; padding: 1rem 1.5rem;">
-        <!-- Logo/Brand -->
-        <a href="index.html" style="color: white; text-decoration: none; font-weight: 700; display: flex; align-items: center; flex-shrink: 0;">
-            <div class="logo"></div>
-            <span class="ml-3 text-xl font-bold text-white">Auxonium Group</span>
-        </a>
+  <nav class="header">
+    <div
+      style="max-width: 1400px; margin: 0 auto; display: flex; justify-content: space-between; align-items: center; padding: 1rem 1.5rem;">
+      <!-- Logo/Brand -->
+      <a href="index.html"
+        style="color: white; text-decoration: none; font-weight: 700; display: flex; align-items: center; flex-shrink: 0;">
+        <div class="logo"></div>
+        <span class="ml-3 text-xl font-bold text-white">Auxonium Group</span>
+      </a>
 
-        <!-- Desktop Navigation -->
-        <ul class="desktop-nav" style="list-style: none; display: flex; gap: 0.5rem; margin: 0; padding: 0; align-items: center;">
-            <li><a href="index.html" style="color: white; text-decoration: none; font-weight: 500; transition: all 0.2s; padding: 0.5rem 1rem; border-radius: 0.375rem; font-size: 0.9375rem; white-space: nowrap;" onmouseover="this.style.backgroundColor='rgba(255,255,255,0.15)';" onmouseout="this.style.backgroundColor='transparent';">Home</a></li>
+      <!-- Desktop Navigation -->
+      <ul class="desktop-nav"
+        style="list-style: none; display: flex; gap: 0.5rem; margin: 0; padding: 0; align-items: center;">
+        <li><a href="index.html"
+            style="color: white; text-decoration: none; font-weight: 500; transition: all 0.2s; padding: 0.5rem 1rem; border-radius: 0.375rem; font-size: 0.9375rem; white-space: nowrap;"
+            onmouseover="this.style.backgroundColor='rgba(255,255,255,0.15)';"
+            onmouseout="this.style.backgroundColor='transparent';">Home</a></li>
 
-            <!-- Services Dropdown -->
-            <li style="position: relative;">
-                <a href="#services" style="color: white; text-decoration: none; font-weight: 500; transition: all 0.2s; padding: 0.5rem 1rem; border-radius: 0.375rem; font-size: 0.9375rem; display: flex; align-items: center; gap: 0.25rem; white-space: nowrap;" onmouseover="this.style.backgroundColor='rgba(255,255,255,0.15)'; this.nextElementSibling.style.display='block';" onmouseout="this.style.backgroundColor='transparent';">
-                    Services <span style="font-size: 0.75rem;">▼</span>
-                </a>
-                <div style="display: none; position: absolute; top: 100%; left: 0; background: white; box-shadow: 0 4px 20px rgba(0,0,0,0.15); border-radius: 0.5rem; margin-top: 0.5rem; min-width: 220px; overflow: hidden; z-index: 1001;" onmouseover="this.style.display='block';" onmouseout="this.style.display='none';">
-                    <a href="it-services.html" style="display: block; padding: 0.875rem 1.25rem; color: #003366; text-decoration: none; transition: all 0.2s; border-bottom: 1px solid #f0f0f0;" onmouseover="this.style.backgroundColor='#f8f9fa'; this.style.paddingLeft='1.5rem';" onmouseout="this.style.backgroundColor='white'; this.style.paddingLeft='1.25rem';">
-                        <strong style="font-size: 0.9375rem;">💻 IT Services</strong><br>
-                        <small style="color: #666; font-size: 0.8125rem;">Infrastructure & Cloud</small>
-                    </a>
-                    <a href="ac-services.html" style="display: block; padding: 0.875rem 1.25rem; color: #003366; text-decoration: none; transition: all 0.2s; border-bottom: 1px solid #f0f0f0;" onmouseover="this.style.backgroundColor='#f8f9fa'; this.style.paddingLeft='1.5rem';" onmouseout="this.style.backgroundColor='white'; this.style.paddingLeft='1.25rem';">
-                        <strong style="font-size: 0.9375rem;">❄️ AC Services</strong><br>
-                        <small style="color: #666; font-size: 0.8125rem;">Installation & Maintenance</small>
-                    </a>
-                    <a href="electrical-services.html" style="display: block; padding: 0.875rem 1.25rem; color: #003366; text-decoration: none; transition: all 0.2s;" onmouseover="this.style.backgroundColor='#f8f9fa'; this.style.paddingLeft='1.5rem';" onmouseout="this.style.backgroundColor='white'; this.style.paddingLeft='1.25rem';">
-                        <strong style="font-size: 0.9375rem;">⚡ Electrical Services</strong><br>
-                        <small style="color: #666; font-size: 0.8125rem;">Wiring & Lighting</small>
-                    </a>
-                    <a href="fitout-services.html" style="display: block; padding: 0.875rem 1.25rem; color: #003366; text-decoration: none; transition: all 0.2s;" onmouseover="this.style.backgroundColor='#f8f9fa'; this.style.paddingLeft='1.5rem';" onmouseout="this.style.backgroundColor='white'; this.style.paddingLeft='1.25rem';">
-                        <strong style="font-size: 0.9375rem;">🧱 Fitout Services</strong><br>
-                        <small style="color: #666; font-size: 0.8125rem;">Interior, Gypsum, Glass & Partitions</small>
-                    </a>
-                </div>
-            </li>
-
-            <li><a href="#about" style="color: white; text-decoration: none; font-weight: 500; transition: all 0.2s; padding: 0.5rem 1rem; border-radius: 0.375rem; font-size: 0.9375rem; white-space: nowrap;" onmouseover="this.style.backgroundColor='rgba(255,255,255,0.15)';" onmouseout="this.style.backgroundColor='transparent';">About</a></li>
-            <li><a href="#pricing" style="color: white; text-decoration: none; font-weight: 500; transition: all 0.2s; padding: 0.5rem 1rem; border-radius: 0.375rem; font-size: 0.9375rem; white-space: nowrap;" onmouseover="this.style.backgroundColor='rgba(255,255,255,0.15)';" onmouseout="this.style.backgroundColor='transparent';">Pricing</a></li>
-            <li><a href="#consultation" style="color: white; text-decoration: none; font-weight: 500; transition: all 0.2s; padding: 0.5rem 1rem; border-radius: 0.375rem; font-size: 0.9375rem; white-space: nowrap;" onmouseover="this.style.backgroundColor='rgba(255,255,255,0.15)';" onmouseout="this.style.backgroundColor='transparent';">Contact</a></li>
-        </ul>
-
-        <!-- CTA Buttons -->
-        <div class="desktop-nav" style="display: flex; gap: 0.75rem; align-items: center; flex-shrink: 0;">
-            <a href="https://api.whatsapp.com/send?phone=971563536545" target="_blank" rel="noopener" style="background: linear-gradient(135deg, #0ea5e9, #06b6d4); color: white; padding: 0.625rem 1.25rem; border-radius: 0.5rem; text-decoration: none; font-weight: 600; display: flex; align-items: center; gap: 0.5rem; transition: all 0.2s; box-shadow: 0 2px 8px rgba(14, 165, 233, 0.3); font-size: 0.875rem; white-space: nowrap;" onmouseover="this.style.background='linear-gradient(135deg, #0284c7, #0891b2)'; this.style.transform='translateY(-1px)'; this.style.boxShadow='0 4px 12px rgba(14, 165, 233, 0.4)';" onmouseout="this.style.background='linear-gradient(135deg, #0ea5e9, #06b6d4)'; this.style.transform='translateY(0)'; this.style.boxShadow='0 2px 8px rgba(14, 165, 233, 0.3)';">
-                <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
-                  <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893A11.821 11.821 0 0020.885 3.488"/>
-                </svg>
-                <span>WhatsApp</span>
+        <!-- Services Dropdown -->
+        <li style="position: relative;">
+          <a href="#services"
+            style="color: white; text-decoration: none; font-weight: 500; transition: all 0.2s; padding: 0.5rem 1rem; border-radius: 0.375rem; font-size: 0.9375rem; display: flex; align-items: center; gap: 0.25rem; white-space: nowrap;"
+            onmouseover="this.style.backgroundColor='rgba(255,255,255,0.15)'; this.nextElementSibling.style.display='block';"
+            onmouseout="this.style.backgroundColor='transparent';">
+            Services <span style="font-size: 0.75rem;">▼</span>
+          </a>
+          <div
+            style="display: none; position: absolute; top: 100%; left: 0; background: white; box-shadow: 0 4px 20px rgba(0,0,0,0.15); border-radius: 0.5rem; margin-top: 0.5rem; min-width: 220px; overflow: hidden; z-index: 1001;"
+            onmouseover="this.style.display='block';" onmouseout="this.style.display='none';">
+            <a href="it-services.html"
+              style="display: block; padding: 0.875rem 1.25rem; color: #003366; text-decoration: none; transition: all 0.2s; border-bottom: 1px solid #f0f0f0;"
+              onmouseover="this.style.backgroundColor='#f8f9fa'; this.style.paddingLeft='1.5rem';"
+              onmouseout="this.style.backgroundColor='white'; this.style.paddingLeft='1.25rem';">
+              <strong style="font-size: 0.9375rem;">💻 IT Services</strong><br>
+              <small style="color: #666; font-size: 0.8125rem;">Infrastructure & Cloud</small>
             </a>
-            <button onclick="openDrawer()" style="background: linear-gradient(135deg, #10b981, #059669); color: white; padding: 0.625rem 1.5rem; border: none; border-radius: 0.5rem; font-weight: 600; cursor: pointer; transition: all 0.2s; box-shadow: 0 2px 8px rgba(16, 185, 129, 0.3); font-size: 0.875rem; white-space: nowrap;" onmouseover="this.style.background='linear-gradient(135deg, #059669, #047857)'; this.style.transform='translateY(-1px)'; this.style.boxShadow='0 4px 12px rgba(16, 185, 129, 0.4)';" onmouseout="this.style.background='linear-gradient(135deg, #10b981, #059669)'; this.style.transform='translateY(0)'; this.style.boxShadow='0 2px 8px rgba(16, 185, 129, 0.3)';">
-                📧 Get Quote
-            </button>
-        </div>
+            <a href="ac-services.html"
+              style="display: block; padding: 0.875rem 1.25rem; color: #003366; text-decoration: none; transition: all 0.2s; border-bottom: 1px solid #f0f0f0;"
+              onmouseover="this.style.backgroundColor='#f8f9fa'; this.style.paddingLeft='1.5rem';"
+              onmouseout="this.style.backgroundColor='white'; this.style.paddingLeft='1.25rem';">
+              <strong style="font-size: 0.9375rem;">❄️ AC Services</strong><br>
+              <small style="color: #666; font-size: 0.8125rem;">Installation & Maintenance</small>
+            </a>
+            <a href="electrical-services.html"
+              style="display: block; padding: 0.875rem 1.25rem; color: #003366; text-decoration: none; transition: all 0.2s;"
+              onmouseover="this.style.backgroundColor='#f8f9fa'; this.style.paddingLeft='1.5rem';"
+              onmouseout="this.style.backgroundColor='white'; this.style.paddingLeft='1.25rem';">
+              <strong style="font-size: 0.9375rem;">⚡ Electrical Services</strong><br>
+              <small style="color: #666; font-size: 0.8125rem;">Wiring & Lighting</small>
+            </a>
+            <a href="fitout-services.html"
+              style="display: block; padding: 0.875rem 1.25rem; color: #003366; text-decoration: none; transition: all 0.2s;"
+              onmouseover="this.style.backgroundColor='#f8f9fa'; this.style.paddingLeft='1.5rem';"
+              onmouseout="this.style.backgroundColor='white'; this.style.paddingLeft='1.25rem';">
+              <strong style="font-size: 0.9375rem;">🧱 Fitout Services</strong><br>
+              <small style="color: #666; font-size: 0.8125rem;">Interior, Gypsum, Glass & Partitions</small>
+            </a>
+          </div>
+        </li>
 
-        <!-- Mobile Menu Toggle -->
-        <button class="mobile-menu-toggle" onclick="toggleMobileMenu()" aria-label="Menu" style="flex-direction:column; justify-content:center; align-items:center; width:42px; height:42px; border-radius:999px; background: rgba(255,255,255,0.15); border:1px solid rgba(255,255,255,0.2);">
-            <span style="display:block; width: 20px; height: 2px; background: white; margin: 2px 0; transition: 0.3s;"></span>
-            <span style="display:block; width: 20px; height: 2px; background: white; margin: 2px 0; transition: 0.3s;"></span>
-            <span style="display:block; width: 20px; height: 2px; background: white; margin: 2px 0; transition: 0.3s;"></span>
+        <li><a href="#about"
+            style="color: white; text-decoration: none; font-weight: 500; transition: all 0.2s; padding: 0.5rem 1rem; border-radius: 0.375rem; font-size: 0.9375rem; white-space: nowrap;"
+            onmouseover="this.style.backgroundColor='rgba(255,255,255,0.15)';"
+            onmouseout="this.style.backgroundColor='transparent';">About</a></li>
+        <li><a href="#pricing"
+            style="color: white; text-decoration: none; font-weight: 500; transition: all 0.2s; padding: 0.5rem 1rem; border-radius: 0.375rem; font-size: 0.9375rem; white-space: nowrap;"
+            onmouseover="this.style.backgroundColor='rgba(255,255,255,0.15)';"
+            onmouseout="this.style.backgroundColor='transparent';">Pricing</a></li>
+        <li><a href="#consultation"
+            style="color: white; text-decoration: none; font-weight: 500; transition: all 0.2s; padding: 0.5rem 1rem; border-radius: 0.375rem; font-size: 0.9375rem; white-space: nowrap;"
+            onmouseover="this.style.backgroundColor='rgba(255,255,255,0.15)';"
+            onmouseout="this.style.backgroundColor='transparent';">Contact</a></li>
+      </ul>
+
+      <!-- CTA Buttons -->
+      <div class="desktop-nav" style="display: flex; gap: 0.75rem; align-items: center; flex-shrink: 0;">
+        <a href="https://api.whatsapp.com/send?phone=971563536545" target="_blank" rel="noopener"
+          style="background: linear-gradient(135deg, #0ea5e9, #06b6d4); color: white; padding: 0.625rem 1.25rem; border-radius: 0.5rem; text-decoration: none; font-weight: 600; display: flex; align-items: center; gap: 0.5rem; transition: all 0.2s; box-shadow: 0 2px 8px rgba(14, 165, 233, 0.3); font-size: 0.875rem; white-space: nowrap;"
+          onmouseover="this.style.background='linear-gradient(135deg, #0284c7, #0891b2)'; this.style.transform='translateY(-1px)'; this.style.boxShadow='0 4px 12px rgba(14, 165, 233, 0.4)';"
+          onmouseout="this.style.background='linear-gradient(135deg, #0ea5e9, #06b6d4)'; this.style.transform='translateY(0)'; this.style.boxShadow='0 2px 8px rgba(14, 165, 233, 0.3)';">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+            <path
+              d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893A11.821 11.821 0 0020.885 3.488" />
+          </svg>
+          <span>WhatsApp</span>
+        </a>
+        <button onclick="openDrawer()"
+          style="background: linear-gradient(135deg, #10b981, #059669); color: white; padding: 0.625rem 1.5rem; border: none; border-radius: 0.5rem; font-weight: 600; cursor: pointer; transition: all 0.2s; box-shadow: 0 2px 8px rgba(16, 185, 129, 0.3); font-size: 0.875rem; white-space: nowrap;"
+          onmouseover="this.style.background='linear-gradient(135deg, #059669, #047857)'; this.style.transform='translateY(-1px)'; this.style.boxShadow='0 4px 12px rgba(16, 185, 129, 0.4)';"
+          onmouseout="this.style.background='linear-gradient(135deg, #10b981, #059669)'; this.style.transform='translateY(0)'; this.style.boxShadow='0 2px 8px rgba(16, 185, 129, 0.3)';">
+          📧 Get Quote
         </button>
+      </div>
+
+      <!-- Mobile Menu Toggle -->
+      <button class="mobile-menu-toggle" onclick="toggleMobileMenu()" aria-label="Menu"
+        style="flex-direction:column; justify-content:center; align-items:center; width:42px; height:42px; border-radius:999px; background: rgba(255,255,255,0.15); border:1px solid rgba(255,255,255,0.2);">
+        <span
+          style="display:block; width: 20px; height: 2px; background: white; margin: 2px 0; transition: 0.3s;"></span>
+        <span
+          style="display:block; width: 20px; height: 2px; background: white; margin: 2px 0; transition: 0.3s;"></span>
+        <span
+          style="display:block; width: 20px; height: 2px; background: white; margin: 2px 0; transition: 0.3s;"></span>
+      </button>
     </div>
-</nav>
+  </nav>
 
-<!-- Mobile Menu Overlay -->
-<div class="mobile-overlay" id="mobileOverlay" onclick="toggleMobileMenu()"></div>
+  <!-- Mobile Menu Overlay -->
+  <div class="mobile-overlay" id="mobileOverlay" onclick="toggleMobileMenu()"></div>
 
-<!-- Mobile Menu -->
-<div class="mobile-menu" id="mobileMenu">
-    <div style="padding: 20px; border-bottom: 1px solid rgba(255,255,255,0.1); display: flex; justify-content: space-between; align-items: center;">
-        <div style="display:flex; flex-direction:column; gap:4px;">
-            <span style="display:block; width: 24px; height: 2px; background: white;"></span>
-            <span style="display:block; width: 24px; height: 2px; background: white;"></span>
-            <span style="display:block; width: 24px; height: 2px; background: white;"></span>
-        </div>
-        <button onclick="toggleMobileMenu()" style="background: none; border: none; color: white; font-size: 24px; cursor: pointer;">✕</button>
+  <!-- Mobile Menu -->
+  <div class="mobile-menu" id="mobileMenu">
+    <div
+      style="padding: 20px; border-bottom: 1px solid rgba(255,255,255,0.1); display: flex; justify-content: space-between; align-items: center;">
+      <div style="display:flex; flex-direction:column; gap:4px;">
+        <span style="display:block; width: 24px; height: 2px; background: white;"></span>
+        <span style="display:block; width: 24px; height: 2px; background: white;"></span>
+        <span style="display:block; width: 24px; height: 2px; background: white;"></span>
+      </div>
+      <button onclick="toggleMobileMenu()"
+        style="background: none; border: none; color: white; font-size: 24px; cursor: pointer;">✕</button>
     </div>
     <ul style="list-style: none; padding: 0; margin: 0;">
-        <li><a href="index.html" style="display: block; padding: 16px 20px; color: white; text-decoration: none; border-bottom: 1px solid rgba(255,255,255,0.1);" onclick="toggleMobileMenu()">🏠 Home</a></li>
-        <li><a href="it-services.html" style="display: block; padding: 16px 20px; color: white; text-decoration: none; border-bottom: 1px solid rgba(255,255,255,0.1);" onclick="toggleMobileMenu()">💻 IT Services</a></li>
-        <li><a href="ac-services.html" style="display: block; padding: 16px 20px; color: white; text-decoration: none; border-bottom: 1px solid rgba(255,255,255,0.1);" onclick="toggleMobileMenu()">❄️ AC Services</a></li>
-        <li><a href="electrical-services.html" style="display: block; padding: 16px 20px; color: white; text-decoration: none; border-bottom: 1px solid rgba(255,255,255,0.1);" onclick="toggleMobileMenu()">⚡ Electrical Services</a></li>
-        <li><a href="fitout-services.html" style="display: block; padding: 16px 20px; color: white; text-decoration: none; border-bottom: 1px solid rgba(255,255,255,0.1);" onclick="toggleMobileMenu()">🧱 Fitout Services</a></li>
-        <li><a href="#about" style="display: block; padding: 16px 20px; color: white; text-decoration: none; border-bottom: 1px solid rgba(255,255,255,0.1);" onclick="toggleMobileMenu()">ℹ️ About</a></li>
-        <li><a href="#pricing" style="display: block; padding: 16px 20px; color: white; text-decoration: none; border-bottom: 1px solid rgba(255,255,255,0.1);" onclick="toggleMobileMenu()">💰 Pricing</a></li>
-        <li><a href="#consultation" style="display: block; padding: 16px 20px; color: white; text-decoration: none; border-bottom: 1px solid rgba(255,255,255,0.1);" onclick="toggleMobileMenu()">📞 Contact</a></li>
-        <li style="padding: 20px;">
-            <a href="https://api.whatsapp.com/send?phone=971563536545" target="_blank" rel="noopener" style="display: block; background: linear-gradient(135deg, #0ea5e9, #06b6d4); color: white; padding: 12px; border-radius: 8px; text-align: center; text-decoration: none; font-weight: 600; margin-bottom: 10px;">
-              <span style="display:inline-flex; align-items:center; gap:8px; justify-content:center;">
-                <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true" style="vertical-align:middle;">
-                  <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893A11.821 11.821 0 0020.885 3.488"/>
-                </svg>
-                <span>WhatsApp</span>
-              </span>
-            </a>
-            <button onclick="openDrawer(); toggleMobileMenu();" style="width: 100%; background: linear-gradient(135deg, #10b981, #059669); color: white; padding: 12px; border: none; border-radius: 8px; font-weight: 600; cursor: pointer;">📧 Get Quote</button>
-        </li>
+      <li><a href="index.html"
+          style="display: block; padding: 16px 20px; color: white; text-decoration: none; border-bottom: 1px solid rgba(255,255,255,0.1);"
+          onclick="toggleMobileMenu()">🏠 Home</a></li>
+      <li><a href="it-services.html"
+          style="display: block; padding: 16px 20px; color: white; text-decoration: none; border-bottom: 1px solid rgba(255,255,255,0.1);"
+          onclick="toggleMobileMenu()">💻 IT Services</a></li>
+      <li><a href="ac-services.html"
+          style="display: block; padding: 16px 20px; color: white; text-decoration: none; border-bottom: 1px solid rgba(255,255,255,0.1);"
+          onclick="toggleMobileMenu()">❄️ AC Services</a></li>
+      <li><a href="electrical-services.html"
+          style="display: block; padding: 16px 20px; color: white; text-decoration: none; border-bottom: 1px solid rgba(255,255,255,0.1);"
+          onclick="toggleMobileMenu()">⚡ Electrical Services</a></li>
+      <li><a href="fitout-services.html"
+          style="display: block; padding: 16px 20px; color: white; text-decoration: none; border-bottom: 1px solid rgba(255,255,255,0.1);"
+          onclick="toggleMobileMenu()">🧱 Fitout Services</a></li>
+      <li><a href="#about"
+          style="display: block; padding: 16px 20px; color: white; text-decoration: none; border-bottom: 1px solid rgba(255,255,255,0.1);"
+          onclick="toggleMobileMenu()">ℹ️ About</a></li>
+      <li><a href="#pricing"
+          style="display: block; padding: 16px 20px; color: white; text-decoration: none; border-bottom: 1px solid rgba(255,255,255,0.1);"
+          onclick="toggleMobileMenu()">💰 Pricing</a></li>
+      <li><a href="#consultation"
+          style="display: block; padding: 16px 20px; color: white; text-decoration: none; border-bottom: 1px solid rgba(255,255,255,0.1);"
+          onclick="toggleMobileMenu()">📞 Contact</a></li>
+      <li style="padding: 20px;">
+        <a href="https://api.whatsapp.com/send?phone=971563536545" target="_blank" rel="noopener"
+          style="display: block; background: linear-gradient(135deg, #0ea5e9, #06b6d4); color: white; padding: 12px; border-radius: 8px; text-align: center; text-decoration: none; font-weight: 600; margin-bottom: 10px;">
+          <span style="display:inline-flex; align-items:center; gap:8px; justify-content:center;">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"
+              style="vertical-align:middle;">
+              <path
+                d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893A11.821 11.821 0 0020.885 3.488" />
+            </svg>
+            <span>WhatsApp</span>
+          </span>
+        </a>
+        <button onclick="openDrawer(); toggleMobileMenu();"
+          style="width: 100%; background: linear-gradient(135deg, #10b981, #059669); color: white; padding: 12px; border: none; border-radius: 8px; font-weight: 600; cursor: pointer;">📧
+          Get Quote</button>
+      </li>
     </ul>
-</div>
+  </div>
 
 
 
 
-  
+
 
   <!-- Hero Section -->
   <section class="hero-section">
     <div class="hero-bg"></div>
     <div class="hero-overlay"></div>
     <div class="hero-content max-w-7xl mx-auto px-4 py-20 text-center">
-      
-      
+
+
       <h1 class="text-5xl md:text-6xl lg:text-7xl font-extrabold mb-6 leading-tight">
         <span class="block text-white">General Contracting Services</span>
         <span class="block bg-gradient-to-r from-brand to-emerald-400 bg-clip-text text-transparent">
           IT, Electrical, AC Mechanics & Fitouts
         </span>
       </h1>
-      
+
       <p class="text-xl text-slate-300 max-w-3xl mx-auto mb-10 leading-relaxed">
-        From office infrastructure and cloud migration to AC mechanics, electrical works and fitouts. 
-        <span class="text-emerald-300 font-semibold">End-to-end delivery with rapid on-site support across all Emirates.</span>
+        From office infrastructure and cloud migration to AC mechanics, electrical works and fitouts.
+        <span class="text-emerald-300 font-semibold">End-to-end delivery with rapid on-site support across all
+          Emirates.</span>
       </p>
-      
+
       <div class="flex flex-col sm:flex-row gap-4 justify-center items-center">
         <a href="https://api.whatsapp.com/send?phone=971563536545" class="btn btn-primary text-lg">
           <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor">
-            <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893A11.821 11.821 0 0020.885 3.488"/>
+            <path
+              d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893A11.821 11.821 0 0020.885 3.488" />
           </svg>
           Get in Touch
         </a>
@@ -798,9 +965,11 @@
           🔍 Explore Services
         </a>
       </div>
-      
+
       <div class="mt-12 text-slate-400 text-sm">
-        Trusted by SMEs, startups, and enterprises across <span class="text-emerald-300 font-semibold">Abu Dhabi</span>, <span class="text-emerald-300 font-semibold">Dubai</span>, and <span class="text-emerald-300 font-semibold">all Emirates</span>
+        Trusted by SMEs, startups, and enterprises across <span class="text-emerald-300 font-semibold">Abu Dhabi</span>,
+        <span class="text-emerald-300 font-semibold">Dubai</span>, and <span class="text-emerald-300 font-semibold">all
+          Emirates</span>
       </div>
     </div>
   </section>
@@ -810,13 +979,15 @@
     <div class="max-w-7xl mx-auto px-4">
       <h2 class="section-title">About Auxonium General Contracting LLC - S.P.C</h2>
       <p class="section-subtitle">
-        Auxonium General Contracting LLC - S.P.C (Auxonium Group) delivers reliable, cost-effective solutions tailored to your business needs
+        Auxonium General Contracting LLC - S.P.C (Auxonium Group) delivers reliable, cost-effective solutions tailored
+        to your business needs
       </p>
-      
+
       <div class="grid md:grid-cols-2 gap-12 items-center">
         <div>
           <p class="text-lg text-slate-300 leading-relaxed mb-6">
-            Whether you need a full office setup, secure infrastructure, or facility services, our engineers and technicians deliver end-to-end solutions with rapid on-site support across all Emirates.
+            Whether you need a full office setup, secure infrastructure, or facility services, our engineers and
+            technicians deliver end-to-end solutions with rapid on-site support across all Emirates.
           </p>
           <div class="grid grid-cols-2 gap-4">
             <div class="card text-center">
@@ -830,7 +1001,9 @@
           </div>
         </div>
         <div class="relative">
-          <img src="https://images.unsplash.com/photo-1521791136064-7986c2920216?auto=format&fit=crop&w=1200&q=80" alt="Professional Team Collaboration" class="w-full h-80 object-cover rounded-2xl shadow-2xl" loading="lazy" decoding="async">
+          <img src="https://images.unsplash.com/photo-1521791136064-7986c2920216?auto=format&fit=crop&w=1200&q=80"
+            alt="Professional Team Collaboration" class="w-full h-80 object-cover rounded-2xl shadow-2xl" loading="lazy"
+            decoding="async">
           <div class="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent rounded-2xl"></div>
           <div class="absolute bottom-6 left-6 text-white">
             <div class="font-bold text-xl mb-1">Professional Team</div>
@@ -848,11 +1021,12 @@
       <p class="section-subtitle">
         Comprehensive solutions for your business infrastructure needs
       </p>
-      
+
       <div class="grid md:grid-cols-3 gap-8">
         <!-- IT Solutions -->
         <div class="service-card">
-          <img src="https://images.unsplash.com/photo-1531482615713-2afd69097998?auto=format&fit=crop&w=1200&q=80" alt="IT Solutions - Modern Office Technology" class="service-image" loading="lazy" decoding="async">
+          <img src="https://images.unsplash.com/photo-1531482615713-2afd69097998?auto=format&fit=crop&w=1200&q=80"
+            alt="IT Solutions - Modern Office Technology" class="service-image" loading="lazy" decoding="async">
           <h3 class="text-2xl font-bold mb-4">IT Solutions</h3>
           <ul class="space-y-2 mb-6 flex-grow">
             <li class="flex items-start gap-2 text-slate-300">
@@ -881,7 +1055,9 @@
 
         <!-- AC Mechanics -->
         <div class="service-card">
-          <img src="https://ringoacservices.com/wp-content/uploads/2022/11/Professional-AC-Repair-Service-by-Expert-Technicians-1.jpg" alt="AC Mechanics - Professional HVAC Technician" class="service-image" loading="lazy" decoding="async">
+          <img
+            src="https://ringoacservices.com/wp-content/uploads/2022/11/Professional-AC-Repair-Service-by-Expert-Technicians-1.jpg"
+            alt="AC Mechanics - Professional HVAC Technician" class="service-image" loading="lazy" decoding="async">
           <h3 class="text-2xl font-bold mb-4">AC Mechanics</h3>
           <ul class="space-y-2 mb-6 flex-grow">
             <li class="flex items-start gap-2 text-slate-300">
@@ -905,7 +1081,9 @@
         </div>
         <!-- Electrical Services -->
         <div class="service-card">
-          <img src="https://images.unsplash.com/photo-1621905251918-48416bd8575a?auto=format&fit=crop&w=1200&q=80" alt="Electrical Services - Professional Electrician at Work" class="service-image" loading="lazy" decoding="async">
+          <img src="https://images.unsplash.com/photo-1621905251918-48416bd8575a?auto=format&fit=crop&w=1200&q=80"
+            alt="Electrical Services - Professional Electrician at Work" class="service-image" loading="lazy"
+            decoding="async">
           <h3 class="text-2xl font-bold mb-4">Electrical Services</h3>
           <ul class="space-y-2 mb-6 flex-grow">
             <li class="flex items-start gap-2 text-slate-300">
@@ -933,7 +1111,8 @@
         </div>
         <!-- Fitout Services -->
         <div class="service-card">
-          <img src="https://images.unsplash.com/photo-1524758631624-e2822e304c36?auto=format&fit=crop&w=1200&q=80" alt="Fitout Services - Interior and Partitions" class="service-image" loading="lazy" decoding="async">
+          <img src="https://images.unsplash.com/photo-1524758631624-e2822e304c36?auto=format&fit=crop&w=1200&q=80"
+            alt="Fitout Services - Interior and Partitions" class="service-image" loading="lazy" decoding="async">
           <h3 class="text-2xl font-bold mb-4">Fitout Services</h3>
           <ul class="space-y-2 mb-6 flex-grow">
             <li class="flex items-start gap-2 text-slate-300">
@@ -971,7 +1150,7 @@
       <p class="section-subtitle">
         Professional service backed by expertise and reliability
       </p>
-      
+
       <div class="grid md:grid-cols-3 gap-8">
         <div class="card text-center">
           <div class="feature-icon">🔧</div>
@@ -1000,16 +1179,22 @@
       <p class="section-subtitle">Trusted by businesses and residents across all Emirates</p>
 
       <div class="grid md:grid-cols-3 gap-6">
-        <div style="background: rgba(255,255,255,0.03); border: 1px solid rgba(255,255,255,0.1); border-radius: 1rem; padding: 2rem; position: relative;">
-          <div style="position: absolute; top: 1rem; left: 1.5rem; font-size: 3rem; color: rgba(14,165,233,0.2); font-family: Georgia, serif; line-height: 1;">"</div>
+        <div
+          style="background: rgba(255,255,255,0.03); border: 1px solid rgba(255,255,255,0.1); border-radius: 1rem; padding: 2rem; position: relative;">
+          <div
+            style="position: absolute; top: 1rem; left: 1.5rem; font-size: 3rem; color: rgba(14,165,233,0.2); font-family: Georgia, serif; line-height: 1;">
+            "</div>
           <div class="mb-4">
             <div class="flex items-center gap-1 mb-3">
               <span style="color: #fbbf24;">⭐⭐⭐⭐⭐</span>
             </div>
-            <p class="text-slate-300 mb-4" style="margin-top: 2rem;">Quick response for our office network emergency. The team arrived within 2 hours and fixed our connectivity issues. Highly professional and knowledgeable IT engineers.</p>
+            <p class="text-slate-300 mb-4" style="margin-top: 2rem;">Quick response for our office network emergency.
+              The team arrived within 2 hours and fixed our connectivity issues. Highly professional and knowledgeable
+              IT engineers.</p>
           </div>
           <div class="flex items-center gap-3">
-            <div style="width: 3rem; height: 3rem; background: linear-gradient(135deg, #0ea5e9, #10b981); border-radius: 50%; display: flex; align-items: center; justify-content: center; font-weight: 700; font-size: 1.125rem;">
+            <div
+              style="width: 3rem; height: 3rem; background: linear-gradient(135deg, #0ea5e9, #10b981); border-radius: 50%; display: flex; align-items: center; justify-content: center; font-weight: 700; font-size: 1.125rem;">
               MH
             </div>
             <div>
@@ -1019,16 +1204,22 @@
           </div>
         </div>
 
-        <div style="background: rgba(255,255,255,0.03); border: 1px solid rgba(255,255,255,0.1); border-radius: 1rem; padding: 2rem; position: relative;">
-          <div style="position: absolute; top: 1rem; left: 1.5rem; font-size: 3rem; color: rgba(14,165,233,0.2); font-family: Georgia, serif; line-height: 1;">"</div>
+        <div
+          style="background: rgba(255,255,255,0.03); border: 1px solid rgba(255,255,255,0.1); border-radius: 1rem; padding: 2rem; position: relative;">
+          <div
+            style="position: absolute; top: 1rem; left: 1.5rem; font-size: 3rem; color: rgba(14,165,233,0.2); font-family: Georgia, serif; line-height: 1;">
+            "</div>
           <div class="mb-4">
             <div class="flex items-center gap-1 mb-3">
               <span style="color: #fbbf24;">⭐⭐⭐⭐⭐</span>
             </div>
-            <p class="text-slate-300 mb-4" style="margin-top: 2rem;">Our villa AC stopped working during peak summer. Emergency service team came same day and replaced the compressor. Excellent work quality and fair pricing.</p>
+            <p class="text-slate-300 mb-4" style="margin-top: 2rem;">Our villa AC stopped working during peak summer.
+              Emergency service team came same day and replaced the compressor. Excellent work quality and fair pricing.
+            </p>
           </div>
           <div class="flex items-center gap-3">
-            <div style="width: 3rem; height: 3rem; background: linear-gradient(135deg, #0ea5e9, #10b981); border-radius: 50%; display: flex; align-items: center; justify-content: center; font-weight: 700; font-size: 1.125rem;">
+            <div
+              style="width: 3rem; height: 3rem; background: linear-gradient(135deg, #0ea5e9, #10b981); border-radius: 50%; display: flex; align-items: center; justify-content: center; font-weight: 700; font-size: 1.125rem;">
               SA
             </div>
             <div>
@@ -1038,16 +1229,21 @@
           </div>
         </div>
 
-        <div style="background: rgba(255,255,255,0.03); border: 1px solid rgba(255,255,255,0.1); border-radius: 1rem; padding: 2rem; position: relative;">
-          <div style="position: absolute; top: 1rem; left: 1.5rem; font-size: 3rem; color: rgba(14,165,233,0.2); font-family: Georgia, serif; line-height: 1;">"</div>
+        <div
+          style="background: rgba(255,255,255,0.03); border: 1px solid rgba(255,255,255,0.1); border-radius: 1rem; padding: 2rem; position: relative;">
+          <div
+            style="position: absolute; top: 1rem; left: 1.5rem; font-size: 3rem; color: rgba(14,165,233,0.2); font-family: Georgia, serif; line-height: 1;">
+            "</div>
           <div class="mb-4">
             <div class="flex items-center gap-1 mb-3">
               <span style="color: #fbbf24;">⭐⭐⭐⭐⭐</span>
             </div>
-            <p class="text-slate-300 mb-4" style="margin-top: 2rem;">Complete electrical rewiring for our warehouse done professionally. Safety certification provided and all work documented properly. Great team!</p>
+            <p class="text-slate-300 mb-4" style="margin-top: 2rem;">Complete electrical rewiring for our warehouse done
+              professionally. Safety certification provided and all work documented properly. Great team!</p>
           </div>
           <div class="flex items-center gap-3">
-            <div style="width: 3rem; height: 3rem; background: linear-gradient(135deg, #0ea5e9, #10b981); border-radius: 50%; display: flex; align-items: center; justify-content: center; font-weight: 700; font-size: 1.125rem;">
+            <div
+              style="width: 3rem; height: 3rem; background: linear-gradient(135deg, #0ea5e9, #10b981); border-radius: 50%; display: flex; align-items: center; justify-content: center; font-weight: 700; font-size: 1.125rem;">
               RK
             </div>
             <div>
@@ -1068,45 +1264,58 @@
       <p class="section-subtitle">Successfully delivered across UAE</p>
 
       <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
-        <div style="background: rgba(255,255,255,0.04); border: 1px solid rgba(255,255,255,0.1); border-radius: 1rem; padding: 2rem;">
+        <div
+          style="background: rgba(255,255,255,0.04); border: 1px solid rgba(255,255,255,0.1); border-radius: 1rem; padding: 2rem;">
           <div style="font-size: 2.5rem; margin-bottom: 1rem;">🏢</div>
           <h3 style="font-size: 1.125rem; font-weight: 700; margin-bottom: 0.5rem;">Office IT Setup</h3>
-          <p style="color: #94a3b8; font-size: 0.875rem; margin-bottom: 1rem;">Complete network infrastructure with 50+ workstations, servers, and CCTV</p>
-          <div style="display: inline-block; padding: 0.5rem 1rem; background: rgba(14,165,233,0.2); color: #0ea5e9; border-radius: 0.5rem; font-size: 0.875rem;">
+          <p style="color: #94a3b8; font-size: 0.875rem; margin-bottom: 1rem;">Complete network infrastructure with 50+
+            workstations, servers, and CCTV</p>
+          <div
+            style="display: inline-block; padding: 0.5rem 1rem; background: rgba(14,165,233,0.2); color: #0ea5e9; border-radius: 0.5rem; font-size: 0.875rem;">
             📍 Business Bay, Dubai
           </div>
         </div>
 
-        <div style="background: rgba(255,255,255,0.04); border: 1px solid rgba(255,255,255,0.1); border-radius: 1rem; padding: 2rem;">
+        <div
+          style="background: rgba(255,255,255,0.04); border: 1px solid rgba(255,255,255,0.1); border-radius: 1rem; padding: 2rem;">
           <div style="font-size: 2.5rem; margin-bottom: 1rem;">❄️</div>
           <h3 style="font-size: 1.125rem; font-weight: 700; margin-bottom: 0.5rem;">Central AC Installation</h3>
-          <p style="color: #94a3b8; font-size: 0.875rem; margin-bottom: 1rem;">120 TR VRF system for commercial building with 8 floors</p>
-          <div style="display: inline-block; padding: 0.5rem 1rem; background: rgba(14,165,233,0.2); color: #0ea5e9; border-radius: 0.5rem; font-size: 0.875rem;">
+          <p style="color: #94a3b8; font-size: 0.875rem; margin-bottom: 1rem;">120 TR VRF system for commercial building
+            with 8 floors</p>
+          <div
+            style="display: inline-block; padding: 0.5rem 1rem; background: rgba(14,165,233,0.2); color: #0ea5e9; border-radius: 0.5rem; font-size: 0.875rem;">
             📍 Al Ain
           </div>
         </div>
 
-        <div style="background: rgba(255,255,255,0.04); border: 1px solid rgba(255,255,255,0.1); border-radius: 1rem; padding: 2rem;">
+        <div
+          style="background: rgba(255,255,255,0.04); border: 1px solid rgba(255,255,255,0.1); border-radius: 1rem; padding: 2rem;">
           <div style="font-size: 2.5rem; margin-bottom: 1rem;">⚡</div>
           <h3 style="font-size: 1.125rem; font-weight: 700; margin-bottom: 0.5rem;">Industrial Electrical</h3>
-          <p style="color: #94a3b8; font-size: 0.875rem; margin-bottom: 1rem;">3-phase power distribution for manufacturing facility</p>
-          <div style="display: inline-block; padding: 0.5rem 1rem; background: rgba(14,165,233,0.2); color: #0ea5e9; border-radius: 0.5rem; font-size: 0.875rem;">
+          <p style="color: #94a3b8; font-size: 0.875rem; margin-bottom: 1rem;">3-phase power distribution for
+            manufacturing facility</p>
+          <div
+            style="display: inline-block; padding: 0.5rem 1rem; background: rgba(14,165,233,0.2); color: #0ea5e9; border-radius: 0.5rem; font-size: 0.875rem;">
             📍 Ras Al Khaimah
           </div>
         </div>
 
-        <div style="background: rgba(255,255,255,0.04); border: 1px solid rgba(255,255,255,0.1); border-radius: 1rem; padding: 2rem;">
+        <div
+          style="background: rgba(255,255,255,0.04); border: 1px solid rgba(255,255,255,0.1); border-radius: 1rem; padding: 2rem;">
           <div style="font-size: 2.5rem; margin-bottom: 1rem;">☁️</div>
           <h3 style="font-size: 1.125rem; font-weight: 700; margin-bottom: 0.5rem;">Cloud Migration</h3>
-          <p style="color: #94a3b8; font-size: 0.875rem; margin-bottom: 1rem;">AWS infrastructure with hybrid connectivity and backup</p>
-          <div style="display: inline-block; padding: 0.5rem 1rem; background: rgba(14,165,233,0.2); color: #0ea5e9; border-radius: 0.5rem; font-size: 0.875rem;">
+          <p style="color: #94a3b8; font-size: 0.875rem; margin-bottom: 1rem;">AWS infrastructure with hybrid
+            connectivity and backup</p>
+          <div
+            style="display: inline-block; padding: 0.5rem 1rem; background: rgba(14,165,233,0.2); color: #0ea5e9; border-radius: 0.5rem; font-size: 0.875rem;">
             📍 Dubai
           </div>
         </div>
       </div>
 
       <div class="text-center" style="margin-top: 2rem;">
-        <p style="color: #94a3b8;">Serving clients in Dubai, Abu Dhabi, Sharjah, Ajman, Fujairah, Ras Al Khaimah, and Umm Al Quwain</p>
+        <p style="color: #94a3b8;">Serving clients in Dubai, Abu Dhabi, Sharjah, Ajman, Fujairah, Ras Al Khaimah, and
+          Umm Al Quwain</p>
       </div>
     </div>
   </section>
@@ -1118,7 +1327,7 @@
       <p class="section-subtitle">
         Starting points for your project - we customize based on your needs
       </p>
-      
+
       <div class="grid md:grid-cols-3 gap-8">
         <div class="card">
           <h3 class="text-2xl font-bold mb-2">Starter</h3>
@@ -1168,7 +1377,7 @@
           </ul>
           <button onclick="openDrawer()" class="btn btn-primary w-full">Get Started</button>
         </div>
-  
+
         <div class="card">
           <h3 class="text-2xl font-bold mb-2">Enterprise</h3>
           <div class="text-4xl font-bold text-brand mb-6">Custom</div>
@@ -1194,7 +1403,7 @@
         </div>
       </div>
 
-      
+
     </div>
   </section>
 
@@ -1256,7 +1465,8 @@
               <input type="hidden" name="_template" value="table">
               <input type="hidden" name="_captcha" value="false">
               <input type="hidden" name="_next" value="https://auxonium.com/thank-you.html">
-              <input type="hidden" name="_autoresponse" value="Thank you for contacting Auxonium Group. We have received your request and will get back to you shortly.">
+              <input type="hidden" name="_autoresponse"
+                value="Thank you for contacting Auxonium Group. We have received your request and will get back to you shortly.">
               <input type="hidden" name="_replyto" value="">
               <input type="text" name="_honey" style="display:none">
               <div class="grid grid-cols-1 gap-4">
@@ -1277,10 +1487,12 @@
                   <option value="">Select specific service</option>
                 </select>
               </div>
-              <textarea name="message" placeholder="Tell us about your requirements..." rows="4" class="form-input" required></textarea>
+              <textarea name="message" placeholder="Tell us about your requirements..." rows="4" class="form-input"
+                required></textarea>
               <button type="submit" class="btn btn-primary w-full">
                 <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
-                  <path d="M2 5c0-1.1.9-2 2-2h16a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V5zm2 0l8 5 8-5H4zm16 2.3l-8 5-8-5V19h16V7.3z"/>
+                  <path
+                    d="M2 5c0-1.1.9-2 2-2h16a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V5zm2 0l8 5 8-5H4zm16 2.3l-8 5-8-5V19h16V7.3z" />
                 </svg>
                 Send Request
               </button>
@@ -1302,8 +1514,12 @@
           </div>
           <p class="text-slate-400 mb-4 text-center"> IT Solutions • AC Mechanics • Electrical Works • Fitouts </p>
           <div class="flex gap-3 justify-center">
-            <div class="w-10 h-10 bg-white/10 rounded-lg flex items-center justify-center hover:bg-white/20 cursor-pointer transition-colors">📱</div>
-            <div class="w-10 h-10 bg-white/10 rounded-lg flex items-center justify-center hover:bg-white/20 cursor-pointer transition-colors">✉️</div>
+            <div
+              class="w-10 h-10 bg-white/10 rounded-lg flex items-center justify-center hover:bg-white/20 cursor-pointer transition-colors">
+              📱</div>
+            <div
+              class="w-10 h-10 bg-white/10 rounded-lg flex items-center justify-center hover:bg-white/20 cursor-pointer transition-colors">
+              ✉️</div>
           </div>
         </div>
         <div class="text-center">
@@ -1312,7 +1528,8 @@
             <a href="index.html#services" class="block text-slate-400 hover:text-brand transition-colors">Services</a>
             <a href="index.html#about" class="block text-slate-400 hover:text-brand transition-colors">About Us</a>
             <a href="#consultation" class="block text-slate-400 hover:text-brand transition-colors">Get a Quote</a>
-            <a href="assets-credits.txt" download class="block text-slate-400 hover:text-brand transition-colors">Assets & Credits</a>
+            <a href="assets-credits.txt" download class="block text-slate-400 hover:text-brand transition-colors">Assets
+              & Credits</a>
           </div>
         </div>
         <div class="text-center">
@@ -1331,20 +1548,22 @@
       </div>
     </div>
   </footer>
-  
+
   <!-- Quote Request Drawer -->
   <div id="quoteDrawer" class="drawer-overlay hidden">
     <div class="drawer-content">
       <div class="flex items-center justify-between mb-6">
         <h3 class="text-2xl font-bold">Request a Quote</h3>
-        <button onclick="closeDrawer()" class="w-10 h-10 flex items-center justify-center bg-white/10 rounded-lg hover:bg-white/20 transition-colors">✕</button>
+        <button onclick="closeDrawer()"
+          class="w-10 h-10 flex items-center justify-center bg-white/10 rounded-lg hover:bg-white/20 transition-colors">✕</button>
       </div>
       <form id="drawerForm" class="space-y-4" action="https://formsubmit.co/info@auxonium.com" method="POST">
         <input type="hidden" name="_subject" value="Website Enquiry - Request a Quote">
         <input type="hidden" name="_template" value="table">
         <input type="hidden" name="_captcha" value="false">
         <input type="hidden" name="_next" value="https://auxonium.com/thank-you.html">
-        <input type="hidden" name="_autoresponse" value="Thank you for contacting Auxonium Group. We have received your request and will get back to you shortly.">
+        <input type="hidden" name="_autoresponse"
+          value="Thank you for contacting Auxonium Group. We have received your request and will get back to you shortly.">
         <input type="hidden" name="_replyto" value="">
         <input type="text" name="_honey" style="display:none">
         <div class="grid grid-cols-1 gap-4">
@@ -1367,8 +1586,10 @@
         </div>
         <textarea name="message" placeholder="Tell us what you need..." rows="4" class="form-input" required></textarea>
         <button type="submit" class="btn btn-primary w-full">
-          <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true" style="margin-right:6px;">
-            <path d="M2 5c0-1.1.9-2 2-2h16a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V5zm2 0l8 5 8-5H4zm16 2.3l-8 5-8-5V19h16V7.3z"/>
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"
+            style="margin-right:6px;">
+            <path
+              d="M2 5c0-1.1.9-2 2-2h16a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V5zm2 0l8 5 8-5H4zm16 2.3l-8 5-8-5V19h16V7.3z" />
           </svg>
           Send Request
         </button>
@@ -1381,31 +1602,32 @@
     <button id="chatToggle" class="chatbot-toggle" onclick="toggleChat()">
       💬
     </button>
-    
+
     <div id="chatPanel" class="chatbot-panel hidden">
       <div class="chatbot-header">
         <div class="flex items-center gap-3">
           <div class="logo"></div>
           <span class="font-semibold">Auxonium Group Assistant</span>
         </div>
-        <button onclick="toggleChat()" class="w-8 h-8 flex items-center justify-center bg-white/10 rounded-lg hover:bg-white/20 transition-colors">
+        <button onclick="toggleChat()"
+          class="w-8 h-8 flex items-center justify-center bg-white/10 rounded-lg hover:bg-white/20 transition-colors">
           ✕
         </button>
       </div>
-      
+
       <div id="chatMessages" class="chatbot-messages">
         <div class="chat-message bot">
           Hi! 👋 How can I help you today? Ask me about our IT solutions, AC services, or Electrical works.
         </div>
       </div>
-      
+
       <div class="chatbot-suggestions">
         <button class="suggestion-btn" onclick="sendSuggestion('Office setup')">Office setup</button>
         <button class="suggestion-btn" onclick="sendSuggestion('CCTV installation')">CCTV installation</button>
         <button class="suggestion-btn" onclick="sendSuggestion('AC service')">AC service</button>
         <button class="suggestion-btn" onclick="sendSuggestion('Electrical repair')">Electrical repair</button>
       </div>
-      
+
       <form id="chatForm" class="chatbot-input-container" onsubmit="sendMessage(event)">
         <input id="chatInput" type="text" placeholder="Type your message..." class="chatbot-input" autocomplete="off">
         <button type="submit" class="btn btn-primary">Send</button>
@@ -1450,7 +1672,7 @@
     function populateSubServices(serviceSelect, subServiceSelect) {
       const service = serviceSelect.value;
       subServiceSelect.innerHTML = '<option value="">Select specific service</option>';
-      
+
       if (service && subServices[service]) {
         subServices[service].forEach(sub => {
           const option = document.createElement('option');
@@ -1489,7 +1711,7 @@
     }
 
     // Close drawer on outside click
-    document.getElementById('quoteDrawer')?.addEventListener('click', function(e) {
+    document.getElementById('quoteDrawer')?.addEventListener('click', function (e) {
       if (e.target === this) {
         closeDrawer();
       }
@@ -1499,7 +1721,7 @@
     function toggleChat() {
       const panel = document.getElementById('chatPanel');
       const toggle = document.getElementById('chatToggle');
-      
+
       if (panel.classList.contains('hidden')) {
         panel.classList.remove('hidden');
         toggle.style.display = 'none';
@@ -1559,9 +1781,9 @@
       e.preventDefault();
       const input = document.getElementById('chatInput');
       const message = input.value.trim();
-      
+
       if (!message) return;
-      
+
       addMessage(message, 'user');
       input.value = '';
 
@@ -1573,23 +1795,23 @@
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify(payload)
       })
-      .then(r => r.json())
-      .then(data => {
-        hideTyping();
-        const reply = data && data.reply ? data.reply : 'Sorry, I could not process that right now.';
-        addMessage(reply, 'bot');
-      })
-      .catch(() => {
-        hideTyping();
-        addMessage('Temporary issue reaching the assistant. Please try again or message us on WhatsApp at +971563536545.', 'bot');
-      });
+        .then(r => r.json())
+        .then(data => {
+          hideTyping();
+          const reply = data && data.reply ? data.reply : 'Sorry, I could not process that right now.';
+          addMessage(reply, 'bot');
+        })
+        .catch(() => {
+          hideTyping();
+          addMessage('Temporary issue reaching the assistant. Please try again or message us on WhatsApp at +971563536545.', 'bot');
+        });
     }
 
     // Form validation before submission
     function validateForm(form) {
       const email = form.querySelector('input[name="email"]').value;
       const phone = form.querySelector('input[name="phone"]').value;
-      
+
       if (!/^\S+@\S+\.\S+$/.test(email)) {
         alert('Please enter a valid email address.');
         return false;
@@ -1602,44 +1824,44 @@
     }
 
     // Add form validation on submit
-    document.addEventListener('DOMContentLoaded', function() {
+    document.addEventListener('DOMContentLoaded', function () {
       const contactForm = document.getElementById('contactForm');
       const drawerForm = document.getElementById('drawerForm');
-      
+
       if (contactForm) {
-        contactForm.addEventListener('submit', function(e) {
+        contactForm.addEventListener('submit', function (e) {
           console.log('Contact form submitting...');
           if (!validateForm(this)) {
             e.preventDefault();
             return false;
           }
-          
+
           // Set reply-to field to user's email
           const emailField = this.querySelector('input[name="email"]');
           const replyToField = this.querySelector('input[name="_replyto"]');
           if (emailField && replyToField) {
             replyToField.value = emailField.value;
           }
-          
+
           console.log('Contact form validation passed, submitting to FormSubmit');
         });
       }
-      
+
       if (drawerForm) {
-        drawerForm.addEventListener('submit', function(e) {
+        drawerForm.addEventListener('submit', function (e) {
           console.log('Drawer form submitting...');
           if (!validateForm(this)) {
             e.preventDefault();
             return false;
           }
-          
+
           // Set reply-to field to user's email
           const emailField = this.querySelector('input[name="email"]');
           const replyToField = this.querySelector('input[name="_replyto"]');
           if (emailField && replyToField) {
             replyToField.value = emailField.value;
           }
-          
+
           console.log('Drawer form validation passed, submitting to FormSubmit');
         });
       }
@@ -1657,11 +1879,11 @@
     });
 
     // Close chat when clicking outside
-    document.addEventListener('click', function(e) {
+    document.addEventListener('click', function (e) {
       const chatPanel = document.getElementById('chatPanel');
       const chatToggle = document.getElementById('chatToggle');
       const chatContainer = document.querySelector('.chatbot-container');
-      
+
       if (chatPanel && !chatPanel.classList.contains('hidden')) {
         if (!chatContainer.contains(e.target)) {
           toggleChat();
@@ -1696,11 +1918,11 @@
       if (h === '#consultation' || h === '#contact') {
         const target = document.getElementById('consultation');
         if (target) {
-          setTimeout(function() {
+          setTimeout(function () {
             target.scrollIntoView({ behavior: 'smooth', block: 'start' });
           }, 100);
           // Fallback after content settles
-          setTimeout(function() {
+          setTimeout(function () {
             target.scrollIntoView({ behavior: 'smooth', block: 'start' });
           }, 400);
         }
@@ -1710,7 +1932,7 @@
     window.addEventListener('hashchange', scrollToConsultation);
 
     // Intercept in-page #contact clicks to scroll to #consultation
-    document.addEventListener('click', function(e) {
+    document.addEventListener('click', function (e) {
       const a = e.target.closest('a[href="#contact"]');
       if (a) {
         e.preventDefault();

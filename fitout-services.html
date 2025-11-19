@@ -1,18 +1,20 @@
 <!doctype html>
 <html lang="en">
+
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=5, user-scalable=yes">
   <title>Fitout Services | Auxonium Group - UAE</title>
-  <meta name="description" content="Turnkey interior fitout: interior design, gypsum works, glass and partition systems, ceilings, flooring, joinery, painting and MEP coordination across UAE.">
+  <meta name="description"
+    content="Turnkey interior fitout: interior design, gypsum works, glass and partition systems, ceilings, flooring, joinery, painting and MEP coordination across UAE.">
   <meta name="theme-color" content="#0f172a">
   <script src="https://cdn.tailwindcss.com"></script>
   <script>
     tailwind.config = {
       theme: {
         extend: {
-          colors: { 
-            brand: { DEFAULT: '#0ea5e9', dark: '#0369a1' }, 
+          colors: {
+            brand: { DEFAULT: '#0ea5e9', dark: '#0369a1' },
             base: '#0f172a'
           }
         }
@@ -20,97 +22,384 @@
     }
   </script>
   <style>
-    * { box-sizing: border-box; margin: 0; padding: 0; }
-    html { -webkit-text-size-adjust: 100%; -webkit-font-smoothing: antialiased; }
-    body { 
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    html {
+      -webkit-text-size-adjust: 100%;
+      -webkit-font-smoothing: antialiased;
+    }
+
+    body {
       font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
       background: #0f172a;
       color: #f1f5f9;
     }
-    .header { position: sticky; top: 0; z-index: 1000; backdrop-filter: blur(12px); background: rgba(15,23,42,0.85); border-bottom: 1px solid rgba(255,255,255,0.1); }
-    .logo { width: 2.5rem; height: 2.5rem; background-image: url('logo.png'); background-repeat: no-repeat; background-position: center; background-size: contain; border-radius: 0.5rem; }
-    .mobile-menu-toggle { display: none; }
-    @media (max-width: 768px) {
-      .mobile-menu-toggle { display: flex !important; }
-      .desktop-nav { display: none; }
+
+    .header {
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+      backdrop-filter: blur(12px);
+      background: rgba(15, 23, 42, 0.85);
+      border-bottom: 1px solid rgba(255, 255, 255, 0.1);
     }
-    .btn { display: inline-flex; align-items: center; justify-content: center; gap: 0.5rem; padding: 0.875rem 1.75rem; border-radius: 0.75rem; font-weight: 600; transition: all 0.3s ease; cursor: pointer; text-decoration: none; }
-    .btn-primary { background: linear-gradient(135deg, #0ea5e9 0%, #0284c7 100%); color: white; box-shadow: 0 10px 25px rgba(14,165,233,0.3); }
-    .btn-primary:hover { background: linear-gradient(135deg, #0284c7 0%, #0369a1 100%); transform: translateY(-2px); }
-    .btn-secondary { background: transparent; color: white; border: 2px solid rgba(255,255,255,0.3); }
-    .btn-secondary:hover { background: rgba(255,255,255,0.1); border-color: rgba(255,255,255,0.5); }
-    .hero-section { background: linear-gradient(135deg, rgba(15,23,42,0.95) 0%, rgba(30,41,59,0.95) 100%); position: relative; padding: 7.5rem 0 6rem; }
-    .hero-bg { position: absolute; inset: 0; background-image: url('https://images.unsplash.com/photo-1501045661006-fcebe0257c3f?auto=format&fit=crop&w=1740&q=80'); background-size: cover; background-position: center; opacity: 0.12; z-index: 0; }
-    .section { padding: 4rem 0; }
-    .section-title { font-size: 2.5rem; font-weight: 800; margin-bottom: 1rem; background: linear-gradient(135deg, #ffffff 0%, #e2e8f0 100%); background-clip: text; -webkit-background-clip: text; -webkit-text-fill-color: transparent; }
-    .card { background: rgba(255,255,255,0.05); border: 1px solid rgba(255,255,255,0.1); border-radius: 1rem; padding: 2rem; transition: all 0.3s ease; }
-    .card:hover { background: rgba(255,255,255,0.08); border-color: rgba(14,165,233,0.3); transform: translateY(-4px); }
-    .service-image { width: 100%; height: 10rem; object-fit: cover; border-radius: 0.75rem; margin-bottom: 1rem; }
-    details { background: rgba(255,255,255,0.03); border: 1px solid rgba(255,255,255,0.08); border-radius: 0.5rem; padding: 0.75rem; margin-top: 1rem; }
-    summary { cursor: pointer; color: #0ea5e9; font-weight: 600; padding: 0.5rem; }
-    summary:hover { color: #38bdf8; }
-    details[open] summary { margin-bottom: 0.75rem; border-bottom: 1px solid rgba(255,255,255,0.1); }
+
+    .logo {
+      width: 2.5rem;
+      height: 2.5rem;
+      background-image: url('logo.png');
+      background-repeat: no-repeat;
+      background-position: center;
+      background-size: contain;
+      border-radius: 0.5rem;
+    }
+
+    .mobile-menu-toggle {
+      display: none;
+    }
+
+    @media (max-width: 768px) {
+      .mobile-menu-toggle {
+        display: flex !important;
+      }
+
+      .desktop-nav {
+        display: none;
+      }
+    }
+
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 0.5rem;
+      padding: 0.875rem 1.75rem;
+      border-radius: 0.75rem;
+      font-weight: 600;
+      transition: all 0.3s ease;
+      cursor: pointer;
+      text-decoration: none;
+    }
+
+    .btn-primary {
+      background: linear-gradient(135deg, #0ea5e9 0%, #0284c7 100%);
+      color: white;
+      box-shadow: 0 10px 25px rgba(14, 165, 233, 0.3);
+    }
+
+    .btn-primary:hover {
+      background: linear-gradient(135deg, #0284c7 0%, #0369a1 100%);
+      transform: translateY(-2px);
+    }
+
+    .btn-secondary {
+      background: transparent;
+      color: white;
+      border: 2px solid rgba(255, 255, 255, 0.3);
+    }
+
+    .btn-secondary:hover {
+      background: rgba(255, 255, 255, 0.1);
+      border-color: rgba(255, 255, 255, 0.5);
+    }
+
+    .hero-section {
+      background: linear-gradient(135deg, rgba(15, 23, 42, 0.95) 0%, rgba(30, 41, 59, 0.95) 100%);
+      position: relative;
+      padding: 7.5rem 0 6rem;
+    }
+
+    .hero-bg {
+      position: absolute;
+      inset: 0;
+      background-image: url('https://images.unsplash.com/photo-1501045661006-fcebe0257c3f?auto=format&fit=crop&w=1740&q=80');
+      background-size: cover;
+      background-position: center;
+      opacity: 0.12;
+      z-index: 0;
+    }
+
+    .section {
+      padding: 4rem 0;
+    }
+
+    .section-title {
+      font-size: 2.5rem;
+      font-weight: 800;
+      margin-bottom: 1rem;
+      background: linear-gradient(135deg, #ffffff 0%, #e2e8f0 100%);
+      background-clip: text;
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+
+    .card {
+      background: rgba(255, 255, 255, 0.05);
+      border: 1px solid rgba(255, 255, 255, 0.1);
+      border-radius: 1rem;
+      padding: 2rem;
+      transition: all 0.3s ease;
+    }
+
+    .card:hover {
+      background: rgba(255, 255, 255, 0.08);
+      border-color: rgba(14, 165, 233, 0.3);
+      transform: translateY(-4px);
+    }
+
+    .service-image {
+      width: 100%;
+      height: 10rem;
+      object-fit: cover;
+      border-radius: 0.75rem;
+      margin-bottom: 1rem;
+    }
+
+    details {
+      background: rgba(255, 255, 255, 0.03);
+      border: 1px solid rgba(255, 255, 255, 0.08);
+      border-radius: 0.5rem;
+      padding: 0.75rem;
+      margin-top: 1rem;
+    }
+
+    summary {
+      cursor: pointer;
+      color: #0ea5e9;
+      font-weight: 600;
+      padding: 0.5rem;
+    }
+
+    summary:hover {
+      color: #38bdf8;
+    }
+
+    details[open] summary {
+      margin-bottom: 0.75rem;
+      border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+    }
 
     /* Mobile Navigation */
-    .mobile-menu-toggle { display: none; flex-direction: column; justify-content: center; align-items: center; width: 2.5rem; height: 2.5rem; background: rgba(255,255,255,0.1); border: none; border-radius: 0.5rem; padding: 0.5rem; cursor: pointer; transition: all 0.2s ease; }
-    .mobile-menu-toggle:hover { background: rgba(255,255,255,0.2); }
-    .mobile-menu-toggle:active { transform: scale(0.95); }
-    .mobile-menu { display: none; position: fixed; top: 0; right: -100%; width: 80%; max-width: 300px; height: 100vh; background: rgba(15,23,42,0.98); border-left: 1px solid rgba(255,255,255,0.1); box-shadow: -5px 0 15px rgba(0,0,0,0.3); transition: right 0.3s ease; z-index: 9999; overflow-y: auto; }
-    .mobile-menu.active { right: 0; }
-    .mobile-overlay { display: none; position: fixed; top: 0; left: 0; width: 100%; height: 100vh; background: rgba(0,0,0,0.5); z-index: 9998; }
-    .mobile-overlay.active { display: block; }
+    .mobile-menu-toggle {
+      display: none;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      width: 2.5rem;
+      height: 2.5rem;
+      background: rgba(255, 255, 255, 0.1);
+      border: none;
+      border-radius: 0.5rem;
+      padding: 0.5rem;
+      cursor: pointer;
+      transition: all 0.2s ease;
+    }
+
+    .mobile-menu-toggle:hover {
+      background: rgba(255, 255, 255, 0.2);
+    }
+
+    .mobile-menu-toggle:active {
+      transform: scale(0.95);
+    }
+
+    .mobile-menu {
+      display: none;
+      position: fixed;
+      top: 0;
+      right: -100%;
+      width: 80%;
+      max-width: 300px;
+      height: 100vh;
+      background: rgba(15, 23, 42, 0.98);
+      border-left: 1px solid rgba(255, 255, 255, 0.1);
+      box-shadow: -5px 0 15px rgba(0, 0, 0, 0.3);
+      transition: right 0.3s ease;
+      z-index: 9999;
+      overflow-y: auto;
+    }
+
+    .mobile-menu.active {
+      right: 0;
+    }
+
+    .mobile-overlay {
+      display: none;
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100vh;
+      background: rgba(0, 0, 0, 0.5);
+      z-index: 9998;
+    }
+
+    .mobile-overlay.active {
+      display: block;
+    }
 
     @media (max-width: 768px) {
-      .hero-section { min-height: auto; padding: 3rem 0 2rem; }
-      .section { padding: 3rem 0; }
-      .section-title { font-size: 1.75rem; line-height: 1.3; }
-      .mobile-menu-toggle { display: flex; }
-      .btn { padding: 0.75rem 1.25rem; font-size: 0.875rem; white-space: nowrap; }
-      nav > div { padding: 0.875rem 1rem !important; }
-      .desktop-nav { display: none !important; }
-      .logo-text { font-size: 1.125rem; }
-      .mobile-menu { display: block; }
-      .grid { gap: 1.5rem !important; }
-      .card { padding: 1.5rem !important; }
+      .hero-section {
+        min-height: auto;
+        padding: 3rem 0 2rem;
+      }
+
+      .section {
+        padding: 3rem 0;
+      }
+
+      .section-title {
+        font-size: 1.75rem;
+        line-height: 1.3;
+      }
+
+      .mobile-menu-toggle {
+        display: flex;
+      }
+
+      .btn {
+        padding: 0.75rem 1.25rem;
+        font-size: 0.875rem;
+        white-space: nowrap;
+      }
+
+      nav>div {
+        padding: 0.875rem 1rem !important;
+      }
+
+      .desktop-nav {
+        display: none !important;
+      }
+
+      .logo-text {
+        font-size: 1.125rem;
+      }
+
+      .mobile-menu {
+        display: block;
+      }
+
+      .grid {
+        gap: 1.5rem !important;
+      }
+
+      .card {
+        padding: 1.5rem !important;
+      }
     }
   </style>
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Service",
+    "serviceType": "Fitout Services",
+    "provider": {
+      "@type": "GeneralContractor",
+      "name": "Auxonium Group"
+    },
+    "areaServed": {
+      "@type": "Country",
+      "name": "United Arab Emirates"
+    }
+  }
+  </script>
 </head>
+
 <body>
   <!-- Header -->
   <nav class="header">
-    <div style="max-width: 1400px; margin: 0 auto; display: flex; justify-content: space-between; align-items: center; padding: 1rem 1.5rem;">
-      <a href="index.html" style="color: white; text-decoration: none; font-weight: 700; display: flex; align-items: center; flex-shrink: 0;">
+    <div
+      style="max-width: 1400px; margin: 0 auto; display: flex; justify-content: space-between; align-items: center; padding: 1rem 1.5rem;">
+      <a href="index.html"
+        style="color: white; text-decoration: none; font-weight: 700; display: flex; align-items: center; flex-shrink: 0;">
         <div class="logo"></div>
         <span class="ml-3 text-xl font-bold text-white">Auxonium Group</span>
       </a>
-      <ul class="desktop-nav" style="list-style: none; display: flex; gap: 0.5rem; margin: 0; padding: 0; align-items: center;">
-        <li><a href="index.html" style="color: white; text-decoration: none; font-weight: 500; transition: all 0.2s; padding: 0.5rem 1rem; border-radius: 0.375rem; font-size: 0.9375rem; white-space: nowrap;" onmouseover="this.style.backgroundColor='rgba(255,255,255,0.15)';" onmouseout="this.style.backgroundColor='transparent';">Home</a></li>
+      <ul class="desktop-nav"
+        style="list-style: none; display: flex; gap: 0.5rem; margin: 0; padding: 0; align-items: center;">
+        <li><a href="index.html"
+            style="color: white; text-decoration: none; font-weight: 500; transition: all 0.2s; padding: 0.5rem 1rem; border-radius: 0.375rem; font-size: 0.9375rem; white-space: nowrap;"
+            onmouseover="this.style.backgroundColor='rgba(255,255,255,0.15)';"
+            onmouseout="this.style.backgroundColor='transparent';">Home</a></li>
         <li style="position: relative;">
-          <a href="index.html#services" style="color: white; text-decoration: none; font-weight: 500; transition: all 0.2s; padding: 0.5rem 1rem; border-radius: 0.375rem; font-size: 0.9375rem; display: flex; align-items: center; gap: 0.25rem; white-space: nowrap;" onmouseover="this.style.backgroundColor='rgba(255,255,255,0.15)'; this.nextElementSibling.style.display='block';" onmouseout="this.style.backgroundColor='transparent';">Services <span style="font-size: 0.75rem;">▼</span></a>
-          <div style="display: none; position: absolute; top: 100%; left: 0; background: white; box-shadow: 0 4px 20px rgba(0,0,0,0.15); border-radius: 0.5rem; margin-top: 0.5rem; min-width: 220px; overflow: hidden; z-index: 1001;" onmouseover="this.style.display='block';" onmouseout="this.style.display='none';">
-            <a href="it-services.html" style="display: block; padding: 0.875rem 1.25rem; color: #003366; text-decoration: none; transition: all 0.2s; border-bottom: 1px solid #f0f0f0;" onmouseover="this.style.backgroundColor='#f8f9fa'; this.style.paddingLeft='1.5rem';" onmouseout="this.style.backgroundColor='white'; this.style.paddingLeft='1.25rem';"><strong style="font-size: 0.9375rem;">💻 IT Services</strong><br><small style="color: #666; font-size: 0.8125rem;">Infrastructure & Cloud</small></a>
-            <a href="ac-services.html" style="display: block; padding: 0.875rem 1.25rem; color: #003366; text-decoration: none; transition: all 0.2s; border-bottom: 1px solid #f0f0f0;" onmouseover="this.style.backgroundColor='#f8f9fa'; this.style.paddingLeft='1.5rem';" onmouseout="this.style.backgroundColor='white'; this.style.paddingLeft='1.25rem';"><strong style="font-size: 0.9375rem;">❄️ AC Services</strong><br><small style="color: #666; font-size: 0.8125rem;">Installation & Maintenance</small></a>
-            <a href="electrical-services.html" style="display: block; padding: 0.875rem 1.25rem; color: #003366; text-decoration: none; transition: all 0.2s;" onmouseover="this.style.backgroundColor='#f8f9fa'; this.style.paddingLeft='1.5rem';" onmouseout="this.style.backgroundColor='white'; this.style.paddingLeft='1.25rem';"><strong style="font-size: 0.9375rem;">⚡ Electrical Services</strong><br><small style="color: #666; font-size: 0.8125rem;">Wiring & Lighting</small></a>
-            <a href="fitout-services.html" style="display: block; padding: 0.875rem 1.25rem; color: #003366; text-decoration: none; transition: all 0.2s;" onmouseover="this.style.backgroundColor='#f8f9fa'; this.style.paddingLeft='1.5rem';" onmouseout="this.style.backgroundColor='white'; this.style.paddingLeft='1.25rem';"><strong style="font-size: 0.9375rem;">🧱 Fitout Services</strong><br><small style="color: #666; font-size: 0.8125rem;">Interior, Gypsum, Glass & Partitions</small></a>
+          <a href="index.html#services"
+            style="color: white; text-decoration: none; font-weight: 500; transition: all 0.2s; padding: 0.5rem 1rem; border-radius: 0.375rem; font-size: 0.9375rem; display: flex; align-items: center; gap: 0.25rem; white-space: nowrap;"
+            onmouseover="this.style.backgroundColor='rgba(255,255,255,0.15)'; this.nextElementSibling.style.display='block';"
+            onmouseout="this.style.backgroundColor='transparent';">Services <span
+              style="font-size: 0.75rem;">▼</span></a>
+          <div
+            style="display: none; position: absolute; top: 100%; left: 0; background: white; box-shadow: 0 4px 20px rgba(0,0,0,0.15); border-radius: 0.5rem; margin-top: 0.5rem; min-width: 220px; overflow: hidden; z-index: 1001;"
+            onmouseover="this.style.display='block';" onmouseout="this.style.display='none';">
+            <a href="it-services.html"
+              style="display: block; padding: 0.875rem 1.25rem; color: #003366; text-decoration: none; transition: all 0.2s; border-bottom: 1px solid #f0f0f0;"
+              onmouseover="this.style.backgroundColor='#f8f9fa'; this.style.paddingLeft='1.5rem';"
+              onmouseout="this.style.backgroundColor='white'; this.style.paddingLeft='1.25rem';"><strong
+                style="font-size: 0.9375rem;">💻 IT Services</strong><br><small
+                style="color: #666; font-size: 0.8125rem;">Infrastructure & Cloud</small></a>
+            <a href="ac-services.html"
+              style="display: block; padding: 0.875rem 1.25rem; color: #003366; text-decoration: none; transition: all 0.2s; border-bottom: 1px solid #f0f0f0;"
+              onmouseover="this.style.backgroundColor='#f8f9fa'; this.style.paddingLeft='1.5rem';"
+              onmouseout="this.style.backgroundColor='white'; this.style.paddingLeft='1.25rem';"><strong
+                style="font-size: 0.9375rem;">❄️ AC Services</strong><br><small
+                style="color: #666; font-size: 0.8125rem;">Installation & Maintenance</small></a>
+            <a href="electrical-services.html"
+              style="display: block; padding: 0.875rem 1.25rem; color: #003366; text-decoration: none; transition: all 0.2s;"
+              onmouseover="this.style.backgroundColor='#f8f9fa'; this.style.paddingLeft='1.5rem';"
+              onmouseout="this.style.backgroundColor='white'; this.style.paddingLeft='1.25rem';"><strong
+                style="font-size: 0.9375rem;">⚡ Electrical Services</strong><br><small
+                style="color: #666; font-size: 0.8125rem;">Wiring & Lighting</small></a>
+            <a href="fitout-services.html"
+              style="display: block; padding: 0.875rem 1.25rem; color: #003366; text-decoration: none; transition: all 0.2s;"
+              onmouseover="this.style.backgroundColor='#f8f9fa'; this.style.paddingLeft='1.5rem';"
+              onmouseout="this.style.backgroundColor='white'; this.style.paddingLeft='1.25rem';"><strong
+                style="font-size: 0.9375rem;">🧱 Fitout Services</strong><br><small
+                style="color: #666; font-size: 0.8125rem;">Interior, Gypsum, Glass & Partitions</small></a>
           </div>
         </li>
-        <li><a href="index.html#about" style="color: white; text-decoration: none; font-weight: 500; transition: all 0.2s; padding: 0.5rem 1rem; border-radius: 0.375rem; font-size: 0.9375rem; white-space: nowrap;" onmouseover="this.style.backgroundColor='rgba(255,255,255,0.15)';" onmouseout="this.style.backgroundColor='transparent';">About</a></li>
-        <li><a href="index.html#pricing" style="color: white; text-decoration: none; font-weight: 500; transition: all 0.2s; padding: 0.5rem 1rem; border-radius: 0.375rem; font-size: 0.9375rem; white-space: nowrap;" onmouseover="this.style.backgroundColor='rgba(255,255,255,0.15)';" onmouseout="this.style.backgroundColor='transparent';">Pricing</a></li>
-        <li><a href="index.html#contact" style="color: white; text-decoration: none; font-weight: 500; transition: all 0.2s; padding: 0.5rem 1rem; border-radius: 0.375rem; font-size: 0.9375rem; white-space: nowrap;" onmouseover="this.style.backgroundColor='rgba(255,255,255,0.15)';" onmouseout="this.style.backgroundColor='transparent';">Contact</a></li>
+        <li><a href="index.html#about"
+            style="color: white; text-decoration: none; font-weight: 500; transition: all 0.2s; padding: 0.5rem 1rem; border-radius: 0.375rem; font-size: 0.9375rem; white-space: nowrap;"
+            onmouseover="this.style.backgroundColor='rgba(255,255,255,0.15)';"
+            onmouseout="this.style.backgroundColor='transparent';">About</a></li>
+        <li><a href="index.html#pricing"
+            style="color: white; text-decoration: none; font-weight: 500; transition: all 0.2s; padding: 0.5rem 1rem; border-radius: 0.375rem; font-size: 0.9375rem; white-space: nowrap;"
+            onmouseover="this.style.backgroundColor='rgba(255,255,255,0.15)';"
+            onmouseout="this.style.backgroundColor='transparent';">Pricing</a></li>
+        <li><a href="index.html#contact"
+            style="color: white; text-decoration: none; font-weight: 500; transition: all 0.2s; padding: 0.5rem 1rem; border-radius: 0.375rem; font-size: 0.9375rem; white-space: nowrap;"
+            onmouseover="this.style.backgroundColor='rgba(255,255,255,0.15)';"
+            onmouseout="this.style.backgroundColor='transparent';">Contact</a></li>
       </ul>
 
       <div class="desktop-nav" style="display: flex; gap: 0.75rem; align-items: center; flex-shrink: 0;">
-        <a href="https://api.whatsapp.com/send?phone=971563536545" target="_blank" rel="noopener" style="background: linear-gradient(135deg, #0ea5e9, #06b6d4); color: white; padding: 0.625rem 1.25rem; border-radius: 0.5rem; text-decoration: none; font-weight: 600; display: flex; align-items: center; gap: 0.5rem; transition: all 0.2s; box-shadow: 0 2px 8px rgba(14, 165, 233, 0.3); font-size: 0.875rem; white-space: nowrap;" onmouseover="this.style.background='linear-gradient(135deg, #0284c7, #0891b2)'; this.style.transform='translateY(-1px)'; this.style.boxShadow='0 4px 12px rgba(14, 165, 233, 0.4)';" onmouseout="this.style.background='linear-gradient(135deg, #0ea5e9, #06b6d4)'; this.style.transform='translateY(0)'; this.style.boxShadow='0 2px 8px rgba(14, 165, 233, 0.3)';">
-          <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893A11.821 11.821 0 0020.885 3.488"/></svg>
+        <a href="https://api.whatsapp.com/send?phone=971563536545" target="_blank" rel="noopener"
+          style="background: linear-gradient(135deg, #0ea5e9, #06b6d4); color: white; padding: 0.625rem 1.25rem; border-radius: 0.5rem; text-decoration: none; font-weight: 600; display: flex; align-items: center; gap: 0.5rem; transition: all 0.2s; box-shadow: 0 2px 8px rgba(14, 165, 233, 0.3); font-size: 0.875rem; white-space: nowrap;"
+          onmouseover="this.style.background='linear-gradient(135deg, #0284c7, #0891b2)'; this.style.transform='translateY(-1px)'; this.style.boxShadow='0 4px 12px rgba(14, 165, 233, 0.4)';"
+          onmouseout="this.style.background='linear-gradient(135deg, #0ea5e9, #06b6d4)'; this.style.transform='translateY(0)'; this.style.boxShadow='0 2px 8px rgba(14, 165, 233, 0.3)';">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+            <path
+              d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893A11.821 11.821 0 0020.885 3.488" />
+          </svg>
           <span>WhatsApp</span>
         </a>
-        <a href="index.html#consultation" style="background: linear-gradient(135deg, #10b981, #059669); color: white; padding: 0.625rem 1.5rem; border-radius: 0.5rem; text-decoration: none; font-weight: 600; transition: all 0.2s; box-shadow: 0 2px 8px rgba(16, 185, 129, 0.3); font-size: 0.875rem; white-space: nowrap; display: inline-block;" onmouseover="this.style.background='linear-gradient(135deg, #059669, #047857)'; this.style.transform='translateY(-1px)'; this.style.boxShadow='0 4px 12px rgba(16, 185, 129, 0.4)';" onmouseout="this.style.background='linear-gradient(135deg, #10b981, #059669)'; this.style.transform='translateY(0)'; this.style.boxShadow='0 2px 8px rgba(16, 185, 129, 0.3)';">🎯 Get Quote</a>
+        <a href="index.html#consultation"
+          style="background: linear-gradient(135deg, #10b981, #059669); color: white; padding: 0.625rem 1.5rem; border-radius: 0.5rem; text-decoration: none; font-weight: 600; transition: all 0.2s; box-shadow: 0 2px 8px rgba(16, 185, 129, 0.3); font-size: 0.875rem; white-space: nowrap; display: inline-block;"
+          onmouseover="this.style.background='linear-gradient(135deg, #059669, #047857)'; this.style.transform='translateY(-1px)'; this.style.boxShadow='0 4px 12px rgba(16, 185, 129, 0.4)';"
+          onmouseout="this.style.background='linear-gradient(135deg, #10b981, #059669)'; this.style.transform='translateY(0)'; this.style.boxShadow='0 2px 8px rgba(16, 185, 129, 0.3)';">🎯
+          Get Quote</a>
       </div>
 
-      <button class="mobile-menu-toggle" onclick="toggleMobileMenu()" aria-label="Menu" style="flex-direction:column; justify-content:center; align-items:center; width:42px; height:42px; border-radius:999px; background: rgba(255,255,255,0.15); border:1px solid rgba(255,255,255,0.2);">
-        <span style="display:block; width: 20px; height: 2px; background: white; margin: 2px 0; transition: 0.3s;"></span>
-        <span style="display:block; width: 20px; height: 2px; background: white; margin: 2px 0; transition: 0.3s;"></span>
-        <span style="display:block; width: 20px; height: 2px; background: white; margin: 2px 0; transition: 0.3s;"></span>
+      <button class="mobile-menu-toggle" onclick="toggleMobileMenu()" aria-label="Menu"
+        style="flex-direction:column; justify-content:center; align-items:center; width:42px; height:42px; border-radius:999px; background: rgba(255,255,255,0.15); border:1px solid rgba(255,255,255,0.2);">
+        <span
+          style="display:block; width: 20px; height: 2px; background: white; margin: 2px 0; transition: 0.3s;"></span>
+        <span
+          style="display:block; width: 20px; height: 2px; background: white; margin: 2px 0; transition: 0.3s;"></span>
+        <span
+          style="display:block; width: 20px; height: 2px; background: white; margin: 2px 0; transition: 0.3s;"></span>
       </button>
     </div>
   </nav>
@@ -119,31 +408,56 @@
   <div class="mobile-overlay" id="mobileOverlay" onclick="toggleMobileMenu()"></div>
   <!-- Mobile Menu -->
   <div class="mobile-menu" id="mobileMenu">
-    <div style="padding: 20px; border-bottom: 1px solid rgba(255,255,255,0.1); display: flex; justify-content: space-between; align-items: center;">
+    <div
+      style="padding: 20px; border-bottom: 1px solid rgba(255,255,255,0.1); display: flex; justify-content: space-between; align-items: center;">
       <div style="display:flex; flex-direction:column; gap:4px;">
         <span style="display:block; width: 24px; height: 2px; background: white;"></span>
         <span style="display:block; width: 24px; height: 2px; background: white;"></span>
         <span style="display:block; width: 24px; height: 2px; background: white;"></span>
       </div>
-      <button onclick="toggleMobileMenu()" style="background: none; border: none; color: white; font-size: 24px; cursor: pointer;">✕</button>
+      <button onclick="toggleMobileMenu()"
+        style="background: none; border: none; color: white; font-size: 24px; cursor: pointer;">✕</button>
     </div>
     <ul style="list-style: none; padding: 0; margin: 0;">
-      <li><a href="index.html" style="display: block; padding: 16px 20px; color: white; text-decoration: none; border-bottom: 1px solid rgba(255,255,255,0.1);" onclick="toggleMobileMenu()">🏠 Home</a></li>
-      <li><a href="it-services.html" style="display: block; padding: 16px 20px; color: white; text-decoration: none; border-bottom: 1px solid rgba(255,255,255,0.1);" onclick="toggleMobileMenu()">💻 IT Services</a></li>
-      <li><a href="ac-services.html" style="display: block; padding: 16px 20px; color: white; text-decoration: none; border-bottom: 1px solid rgba(255,255,255,0.1);" onclick="toggleMobileMenu()">❄️ AC Services</a></li>
-      <li><a href="electrical-services.html" style="display: block; padding: 16px 20px; color: white; text-decoration: none; border-bottom: 1px solid rgba(255,255,255,0.1);" onclick="toggleMobileMenu()">⚡ Electrical Services</a></li>
-      <li><a href="fitout-services.html" style="display: block; padding: 16px 20px; color: white; text-decoration: none; border-bottom: 1px solid rgba(255,255,255,0.1);" onclick="toggleMobileMenu()">🧱 Fitout Services</a></li>
-      <li><a href="index.html#about" style="display: block; padding: 16px 20px; color: white; text-decoration: none; border-bottom: 1px solid rgba(255,255,255,0.1);" onclick="toggleMobileMenu()">ℹ️ About</a></li>
-      <li><a href="index.html#pricing" style="display: block; padding: 16px 20px; color: white; text-decoration: none; border-bottom: 1px solid rgba(255,255,255,0.1);" onclick="toggleMobileMenu()">💰 Pricing</a></li>
-      <li><a href="index.html#consultation" style="display: block; padding: 16px 20px; color: white; text-decoration: none; border-bottom: 1px solid rgba(255,255,255,0.1);" onclick="toggleMobileMenu()">📞 Contact</a></li>
+      <li><a href="index.html"
+          style="display: block; padding: 16px 20px; color: white; text-decoration: none; border-bottom: 1px solid rgba(255,255,255,0.1);"
+          onclick="toggleMobileMenu()">🏠 Home</a></li>
+      <li><a href="it-services.html"
+          style="display: block; padding: 16px 20px; color: white; text-decoration: none; border-bottom: 1px solid rgba(255,255,255,0.1);"
+          onclick="toggleMobileMenu()">💻 IT Services</a></li>
+      <li><a href="ac-services.html"
+          style="display: block; padding: 16px 20px; color: white; text-decoration: none; border-bottom: 1px solid rgba(255,255,255,0.1);"
+          onclick="toggleMobileMenu()">❄️ AC Services</a></li>
+      <li><a href="electrical-services.html"
+          style="display: block; padding: 16px 20px; color: white; text-decoration: none; border-bottom: 1px solid rgba(255,255,255,0.1);"
+          onclick="toggleMobileMenu()">⚡ Electrical Services</a></li>
+      <li><a href="fitout-services.html"
+          style="display: block; padding: 16px 20px; color: white; text-decoration: none; border-bottom: 1px solid rgba(255,255,255,0.1);"
+          onclick="toggleMobileMenu()">🧱 Fitout Services</a></li>
+      <li><a href="index.html#about"
+          style="display: block; padding: 16px 20px; color: white; text-decoration: none; border-bottom: 1px solid rgba(255,255,255,0.1);"
+          onclick="toggleMobileMenu()">ℹ️ About</a></li>
+      <li><a href="index.html#pricing"
+          style="display: block; padding: 16px 20px; color: white; text-decoration: none; border-bottom: 1px solid rgba(255,255,255,0.1);"
+          onclick="toggleMobileMenu()">💰 Pricing</a></li>
+      <li><a href="index.html#consultation"
+          style="display: block; padding: 16px 20px; color: white; text-decoration: none; border-bottom: 1px solid rgba(255,255,255,0.1);"
+          onclick="toggleMobileMenu()">📞 Contact</a></li>
       <li style="padding: 20px;">
-        <a href="https://api.whatsapp.com/send?phone=971563536545" target="_blank" rel="noopener" style="display: block; background: linear-gradient(135deg, #0ea5e9, #06b6d4); color: white; padding: 12px; border-radius: 8px; text-align: center; text-decoration: none; font-weight: 600; margin-bottom: 10px;">
+        <a href="https://api.whatsapp.com/send?phone=971563536545" target="_blank" rel="noopener"
+          style="display: block; background: linear-gradient(135deg, #0ea5e9, #06b6d4); color: white; padding: 12px; border-radius: 8px; text-align: center; text-decoration: none; font-weight: 600; margin-bottom: 10px;">
           <span style="display:inline-flex; align-items:center; gap:8px; justify-content:center;">
-            <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true" style="vertical-align:middle;"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347M12.051 21.785h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893A11.821 11.821 0 0020.885 3.488"/></svg>
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"
+              style="vertical-align:middle;">
+              <path
+                d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347M12.051 21.785h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893A11.821 11.821 0 0020.885 3.488" />
+            </svg>
             <span>WhatsApp</span>
           </span>
         </a>
-        <a href="index.html#consultation" style="display: block; width: 100%; background: linear-gradient(135deg, #10b981, #059669); color: white; padding: 12px; border-radius: 8px; text-align: center; text-decoration: none; font-weight: 600;">🎯 Get Quote</a>
+        <a href="index.html#consultation"
+          style="display: block; width: 100%; background: linear-gradient(135deg, #10b981, #059669); color: white; padding: 12px; border-radius: 8px; text-align: center; text-decoration: none; font-weight: 600;">🎯
+          Get Quote</a>
       </li>
     </ul>
   </div>
@@ -154,9 +468,12 @@
     <div class="max-w-7xl mx-auto px-4 relative z-10 hero-inner">
       <div class="grid md:grid-cols-2 gap-8 items-center">
         <div>
-          <h1 class="text-4xl md:text-5xl font-extrabold mb-4 text-white" style="background: linear-gradient(135deg, #ffffff 0%, #e2e8f0 100%); -webkit-background-clip: text; background-clip: text; -webkit-text-fill-color: transparent;">Fitout Services</h1>
+          <h1 class="text-4xl md:text-5xl font-extrabold mb-4 text-white"
+            style="background: linear-gradient(135deg, #ffffff 0%, #e2e8f0 100%); -webkit-background-clip: text; background-clip: text; -webkit-text-fill-color: transparent;">
+            Fitout Services</h1>
           <p class="text-xl text-slate-300 mb-6 leading-relaxed">
-            Turnkey interior fitout solutions for offices, retail, hospitality and residential spaces. We deliver design, build and handover with quality, speed and compliance.
+            Turnkey interior fitout solutions for offices, retail, hospitality and residential spaces. We deliver
+            design, build and handover with quality, speed and compliance.
           </p>
           <div class="flex gap-4">
             <a href="https://api.whatsapp.com/send?phone=971563536545" class="btn btn-primary">Chat on WhatsApp</a>
@@ -164,7 +481,9 @@
           </div>
         </div>
         <div class="relative">
-          <img src="https://images.unsplash.com/photo-1524758631624-e2822e304c36?auto=format&fit=crop&w=1600&q=80" alt="Modern interior fitout" class="w-full h-80 object-cover rounded-2xl shadow-2xl" loading="lazy" decoding="async">
+          <img src="https://images.unsplash.com/photo-1524758631624-e2822e304c36?auto=format&fit=crop&w=1600&q=80"
+            alt="Modern interior fitout" class="w-full h-80 object-cover rounded-2xl shadow-2xl" loading="lazy"
+            decoding="async">
           <div class="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent rounded-2xl"></div>
           <div class="absolute bottom-6 left-6 text-white">
             <div class="font-bold text-xl">Design • Build • Handover</div>
@@ -181,10 +500,14 @@
       <h2 class="section-title text-center mb-12">Comprehensive Fitout Solutions</h2>
       <div class="grid md:grid-cols-2 gap-8">
         <div class="card">
-          <img src="https://www.daftardecor.com/_next/image?url=https%3A%2F%2Fcargaison-brands.stream.prepr.io%2Fw_3000%2F2prjoev7q5r0-modern-interior-open-office-workspace-3d-rendering.jpg&w=1080&q=75" alt="Interior Design" class="service-image" loading="lazy" decoding="async">
+          <img
+            src="https://www.daftardecor.com/_next/image?url=https%3A%2F%2Fcargaison-brands.stream.prepr.io%2Fw_3000%2F2prjoev7q5r0-modern-interior-open-office-workspace-3d-rendering.jpg&w=1080&q=75"
+            alt="Interior Design" class="service-image" loading="lazy" decoding="async">
           <h3 class="text-2xl font-bold mb-3">Interior Design</h3>
-          <p class="text-slate-300 mb-4">Concept to detailed design with mood boards, 3D renders and material selections aligned to your brand and budget.</p>
-          <details><summary>Scope includes</summary>
+          <p class="text-slate-300 mb-4">Concept to detailed design with mood boards, 3D renders and material selections
+            aligned to your brand and budget.</p>
+          <details>
+            <summary>Scope includes</summary>
             <ul class="mt-3 space-y-2 text-slate-300">
               <li>✓ Space planning and layouts</li>
               <li>✓ 3D visualization and renders</li>
@@ -195,10 +518,14 @@
           </details>
         </div>
         <div class="card">
-          <img src="https://www.magictooltech.com/wp-content/uploads/2024/02/front-view-man-working-wearing-protection-gear-2048x1365.webp" alt="Gypsum Works" class="service-image" loading="lazy" decoding="async">
+          <img
+            src="https://www.magictooltech.com/wp-content/uploads/2024/02/front-view-man-working-wearing-protection-gear-2048x1365.webp"
+            alt="Gypsum Works" class="service-image" loading="lazy" decoding="async">
           <h3 class="text-2xl font-bold mb-3">Gypsum Works</h3>
-          <p class="text-slate-300 mb-4">False ceilings, bulkheads, feature walls and acoustics executed with precision and clean finishing.</p>
-          <details><summary>Deliverables</summary>
+          <p class="text-slate-300 mb-4">False ceilings, bulkheads, feature walls and acoustics executed with precision
+            and clean finishing.</p>
+          <details>
+            <summary>Deliverables</summary>
             <ul class="mt-3 space-y-2 text-slate-300">
               <li>✓ False ceilings and bulkheads</li>
               <li>✓ Cove lighting integrations</li>
@@ -209,10 +536,14 @@
           </details>
         </div>
         <div class="card">
-          <img src="https://special-lite.com/wp-content/uploads/2024/09/special-lite-dual-glazed-litespace-office-corner-sq-scaled.webp" alt="Glass & Partitions" class="service-image" loading="lazy" decoding="async">
+          <img
+            src="https://special-lite.com/wp-content/uploads/2024/09/special-lite-dual-glazed-litespace-office-corner-sq-scaled.webp"
+            alt="Glass & Partitions" class="service-image" loading="lazy" decoding="async">
           <h3 class="text-2xl font-bold mb-3">Glass & Partition Systems</h3>
-          <p class="text-slate-300 mb-4">Frameless glass, aluminum partitions and demountable systems for modern, flexible spaces.</p>
-          <details><summary>Options</summary>
+          <p class="text-slate-300 mb-4">Frameless glass, aluminum partitions and demountable systems for modern,
+            flexible spaces.</p>
+          <details>
+            <summary>Options</summary>
             <ul class="mt-3 space-y-2 text-slate-300">
               <li>✓ Frameless and framed glass</li>
               <li>✓ Acoustic and fire-rated partitions</li>
@@ -223,10 +554,13 @@
           </details>
         </div>
         <div class="card">
-          <img src="https://handymanpretoria.co.za/wp-content/uploads/2025/07/Flooring-Installation-Prices-768x439.jpeg" alt="Flooring & Joinery" class="service-image" loading="lazy" decoding="async">
+          <img src="https://handymanpretoria.co.za/wp-content/uploads/2025/07/Flooring-Installation-Prices-768x439.jpeg"
+            alt="Flooring & Joinery" class="service-image" loading="lazy" decoding="async">
           <h3 class="text-2xl font-bold mb-3">Flooring & Joinery</h3>
-          <p class="text-slate-300 mb-4">Vinyl, carpet, tiles and custom joinery including counters, cabinets and feature elements.</p>
-          <details><summary>Materials</summary>
+          <p class="text-slate-300 mb-4">Vinyl, carpet, tiles and custom joinery including counters, cabinets and
+            feature elements.</p>
+          <details>
+            <summary>Materials</summary>
             <ul class="mt-3 space-y-2 text-slate-300">
               <li>✓ Luxury vinyl, carpet tiles, porcelain</li>
               <li>✓ Skirtings and transitions</li>
@@ -237,10 +571,13 @@
           </details>
         </div>
         <div class="card">
-          <img src="https://cdn.2painter.com/uploads/2024/03/move-in-move-out-painting-services-2-1024x767.jpg" alt="Painting & Handover" class="service-image" loading="lazy" decoding="async">
+          <img src="https://cdn.2painter.com/uploads/2024/03/move-in-move-out-painting-services-2-1024x767.jpg"
+            alt="Painting & Handover" class="service-image" loading="lazy" decoding="async">
           <h3 class="text-2xl font-bold mb-3">Painting & Handover</h3>
-          <p class="text-slate-300 mb-4">Premium painting systems, snag rectification and thorough handover with documentation and warranties.</p>
-          <details><summary>Quality assurance</summary>
+          <p class="text-slate-300 mb-4">Premium painting systems, snag rectification and thorough handover with
+            documentation and warranties.</p>
+          <details>
+            <summary>Quality assurance</summary>
             <ul class="mt-3 space-y-2 text-slate-300">
               <li>✓ Surface prep and priming</li>
               <li>✓ Low-VOC and durable paints</li>
@@ -251,10 +588,13 @@
           </details>
         </div>
         <div class="card">
-          <img src="https://images.unsplash.com/photo-1520607162513-77705c0f0d4a?auto=format&fit=crop&w=1200&q=85" alt="MEP Coordination" class="service-image" loading="lazy" decoding="async">
+          <img src="https://images.unsplash.com/photo-1520607162513-77705c0f0d4a?auto=format&fit=crop&w=1200&q=85"
+            alt="MEP Coordination" class="service-image" loading="lazy" decoding="async">
           <h3 class="text-2xl font-bold mb-3">MEP Coordination</h3>
-          <p class="text-slate-300 mb-4">Seamless integration of mechanical, electrical and plumbing with coordinated layouts and clash-free installation.</p>
-          <details><summary>Coordination scope</summary>
+          <p class="text-slate-300 mb-4">Seamless integration of mechanical, electrical and plumbing with coordinated
+            layouts and clash-free installation.</p>
+          <details>
+            <summary>Coordination scope</summary>
             <ul class="mt-3 space-y-2 text-slate-300">
               <li>✓ Coordinated MEP shop drawings</li>
               <li>✓ HVAC diffuser and lighting alignment</li>
@@ -276,7 +616,8 @@
         <div class="card text-center">
           <div class="text-4xl mb-3">🧭</div>
           <h3 class="text-xl font-bold mb-3">Design to Handover</h3>
-          <p class="text-slate-300">Single partner accountable for design, approvals, build, quality checks and handover.</p>
+          <p class="text-slate-300">Single partner accountable for design, approvals, build, quality checks and
+            handover.</p>
         </div>
         <div class="card text-center">
           <div class="text-4xl mb-3">🛡️</div>
@@ -286,7 +627,8 @@
         <div class="card text-center">
           <div class="text-4xl mb-3">⏱️</div>
           <h3 class="text-xl font-bold mb-3">On-Time Delivery</h3>
-          <p class="text-slate-300">Realistic schedules and transparent progress tracking to meet your opening dates.</p>
+          <p class="text-slate-300">Realistic schedules and transparent progress tracking to meet your opening dates.
+          </p>
         </div>
       </div>
     </div>
@@ -296,9 +638,11 @@
   <section class="section">
     <div class="max-w-4xl mx-auto px-4 text-center">
       <h2 class="text-3xl font-bold mb-4">Planning a Fitout?</h2>
-      <p class="text-xl text-slate-300 mb-8">Get a free consultation and estimate for your workspace or home interior.</p>
+      <p class="text-xl text-slate-300 mb-8">Get a free consultation and estimate for your workspace or home interior.
+      </p>
       <div class="flex flex-col sm:flex-row gap-4 justify-center">
-        <a href="https://api.whatsapp.com/send?phone=971563536545" class="btn btn-primary text-lg">💬 Chat on WhatsApp</a>
+        <a href="https://api.whatsapp.com/send?phone=971563536545" class="btn btn-primary text-lg">💬 Chat on
+          WhatsApp</a>
         <a href="index.html#consultation" class="btn btn-secondary text-lg">📝 Request Quote</a>
       </div>
     </div>
@@ -320,8 +664,10 @@
           <div class="space-y-2">
             <a href="index.html#services" class="block text-slate-400 hover:text-brand transition-colors">Services</a>
             <a href="index.html#about" class="block text-slate-400 hover:text-brand transition-colors">About Us</a>
-            <a href="index.html#consultation" class="block text-slate-400 hover:text-brand transition-colors">Get a Quote</a>
-            <a href="assets-credits.txt" download class="block text-slate-400 hover:text-brand transition-colors">Assets & Credits</a>
+            <a href="index.html#consultation" class="block text-slate-400 hover:text-brand transition-colors">Get a
+              Quote</a>
+            <a href="assets-credits.txt" download class="block text-slate-400 hover:text-brand transition-colors">Assets
+              & Credits</a>
           </div>
         </div>
         <div class="text-center">
@@ -335,7 +681,8 @@
           </div>
         </div>
       </div>
-      <div class="text-slate-500 text-sm text-center" id="year"> 2023 Auxonium General Contracting LLC - S.P.C. All rights reserved.</div>
+      <div class="text-slate-500 text-sm text-center" id="year"> 2023 Auxonium General Contracting LLC - S.P.C. All
+        rights reserved.</div>
     </div>
   </footer>
 
@@ -345,29 +692,186 @@
 
   <!-- Chatbot Styles -->
   <style>
-    .chatbot-container { position: fixed; bottom: 1.5rem; right: 1.5rem; z-index: 9999; }
-    .chatbot-toggle { width: 4rem; height: 4rem; border-radius: 50%; background: linear-gradient(135deg, #0ea5e9 0%, #0284c7 100%); color: white; border: none; box-shadow: 0 8px 25px rgba(14,165,233,0.4); cursor: pointer; display: flex; align-items: center; justify-content: center; font-size: 1.75rem; transition: all 0.3s ease; }
-    .chatbot-toggle:hover { transform: scale(1.1); box-shadow: 0 12px 35px rgba(14,165,233,0.5); }
-    .chatbot-panel { position: fixed; bottom: 6.5rem; right: 1.5rem; width: 26rem; max-width: calc(100vw - 3rem); height: 40rem; max-height: calc(100vh - 10rem); background: rgba(15,23,42,0.98); backdrop-filter: blur(20px); border: 1px solid rgba(255,255,255,0.15); border-radius: 1.25rem; box-shadow: 0 20px 50px rgba(0,0,0,0.6); display: flex; flex-direction: column; overflow: hidden; transition: all 0.3s ease; }
-    .chatbot-panel.hidden { opacity: 0; visibility: hidden; transform: translateY(20px); pointer-events: none; }
-    .chatbot-header { padding: 1.25rem; background: linear-gradient(135deg, rgba(14,165,233,0.15) 0%, rgba(16,185,129,0.15) 100%); border-bottom: 1px solid rgba(255,255,255,0.1); display: flex; align-items: center; justify-content: space-between; flex-shrink: 0; }
-    .chatbot-messages { flex: 1; overflow-y: auto; padding: 1.25rem; display: flex; flex-direction: column; gap: 0.75rem; }
-    .chat-message { padding: 0.875rem 1.125rem; border-radius: 1rem; max-width: 85%; word-wrap: break-word; font-size: 0.925rem; line-height: 1.5; }
-    .chat-message.bot { background: rgba(14,165,233,0.15); border: 1px solid rgba(14,165,233,0.3); align-self: flex-start; }
-    .chat-message.user { background: rgba(255,255,255,0.1); border: 1px solid rgba(255,255,255,0.2); align-self: flex-end; }
-    .chatbot-input-container { padding: 1rem 1.25rem; border-top: 1px solid rgba(255,255,255,0.1); display: flex; gap: 0.75rem; }
-    .chatbot-input { flex: 1; padding: 0.875rem 1rem; background: rgba(255,255,255,0.08); border: 1px solid rgba(255,255,255,0.15); border-radius: 0.75rem; color: white; font-size: 0.925rem; }
-    .chatbot-input:focus { outline: none; border-color: #0ea5e9; background: rgba(255,255,255,0.12); }
-    .chatbot-suggestions { padding: 1rem 1.25rem; border-top: 1px solid rgba(255,255,255,0.1); display: flex; flex-wrap: wrap; gap: 0.5rem; flex-shrink: 0; }
-    .suggestion-btn { padding: 0.5rem 1rem; background: rgba(255,255,255,0.08); border: 1px solid rgba(255,255,255,0.15); border-radius: 999px; color: #cbd5e1; font-size: 0.85rem; cursor: pointer; transition: all 0.2s ease; }
-    .suggestion-btn:hover { background: rgba(255,255,255,0.15); color: white; }
+    .chatbot-container {
+      position: fixed;
+      bottom: 1.5rem;
+      right: 1.5rem;
+      z-index: 9999;
+    }
+
+    .chatbot-toggle {
+      width: 4rem;
+      height: 4rem;
+      border-radius: 50%;
+      background: linear-gradient(135deg, #0ea5e9 0%, #0284c7 100%);
+      color: white;
+      border: none;
+      box-shadow: 0 8px 25px rgba(14, 165, 233, 0.4);
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 1.75rem;
+      transition: all 0.3s ease;
+    }
+
+    .chatbot-toggle:hover {
+      transform: scale(1.1);
+      box-shadow: 0 12px 35px rgba(14, 165, 233, 0.5);
+    }
+
+    .chatbot-panel {
+      position: fixed;
+      bottom: 6.5rem;
+      right: 1.5rem;
+      width: 26rem;
+      max-width: calc(100vw - 3rem);
+      height: 40rem;
+      max-height: calc(100vh - 10rem);
+      background: rgba(15, 23, 42, 0.98);
+      backdrop-filter: blur(20px);
+      border: 1px solid rgba(255, 255, 255, 0.15);
+      border-radius: 1.25rem;
+      box-shadow: 0 20px 50px rgba(0, 0, 0, 0.6);
+      display: flex;
+      flex-direction: column;
+      overflow: hidden;
+      transition: all 0.3s ease;
+    }
+
+    .chatbot-panel.hidden {
+      opacity: 0;
+      visibility: hidden;
+      transform: translateY(20px);
+      pointer-events: none;
+    }
+
+    .chatbot-header {
+      padding: 1.25rem;
+      background: linear-gradient(135deg, rgba(14, 165, 233, 0.15) 0%, rgba(16, 185, 129, 0.15) 100%);
+      border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      flex-shrink: 0;
+    }
+
+    .chatbot-messages {
+      flex: 1;
+      overflow-y: auto;
+      padding: 1.25rem;
+      display: flex;
+      flex-direction: column;
+      gap: 0.75rem;
+    }
+
+    .chat-message {
+      padding: 0.875rem 1.125rem;
+      border-radius: 1rem;
+      max-width: 85%;
+      word-wrap: break-word;
+      font-size: 0.925rem;
+      line-height: 1.5;
+    }
+
+    .chat-message.bot {
+      background: rgba(14, 165, 233, 0.15);
+      border: 1px solid rgba(14, 165, 233, 0.3);
+      align-self: flex-start;
+    }
+
+    .chat-message.user {
+      background: rgba(255, 255, 255, 0.1);
+      border: 1px solid rgba(255, 255, 255, 0.2);
+      align-self: flex-end;
+    }
+
+    .chatbot-input-container {
+      padding: 1rem 1.25rem;
+      border-top: 1px solid rgba(255, 255, 255, 0.1);
+      display: flex;
+      gap: 0.75rem;
+    }
+
+    .chatbot-input {
+      flex: 1;
+      padding: 0.875rem 1rem;
+      background: rgba(255, 255, 255, 0.08);
+      border: 1px solid rgba(255, 255, 255, 0.15);
+      border-radius: 0.75rem;
+      color: white;
+      font-size: 0.925rem;
+    }
+
+    .chatbot-input:focus {
+      outline: none;
+      border-color: #0ea5e9;
+      background: rgba(255, 255, 255, 0.12);
+    }
+
+    .chatbot-suggestions {
+      padding: 1rem 1.25rem;
+      border-top: 1px solid rgba(255, 255, 255, 0.1);
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.5rem;
+      flex-shrink: 0;
+    }
+
+    .suggestion-btn {
+      padding: 0.5rem 1rem;
+      background: rgba(255, 255, 255, 0.08);
+      border: 1px solid rgba(255, 255, 255, 0.15);
+      border-radius: 999px;
+      color: #cbd5e1;
+      font-size: 0.85rem;
+      cursor: pointer;
+      transition: all 0.2s ease;
+    }
+
+    .suggestion-btn:hover {
+      background: rgba(255, 255, 255, 0.15);
+      color: white;
+    }
+
     @media (max-width: 768px) {
-      .chatbot-container{ bottom:1rem; right:1rem; }
-      .chatbot-toggle{ width:3.5rem; height:3.5rem; font-size:1.5rem; }
-      .chatbot-panel{ width:calc(100vw - 2rem); right:0.25rem; bottom:calc(7.5rem + env(safe-area-inset-bottom)); height:calc(100vh - 8rem); }
-      .chatbot-input-container{ position: sticky; bottom: 0; align-items: center; gap: 0.375rem; padding: 0.75rem 0.75rem; padding-bottom: calc(0.75rem + env(safe-area-inset-bottom)); }
-      .chatbot-input { padding: 0.625rem 0.75rem; }
-      .chatbot-input-container .btn { flex: 0 0 auto; padding: 0.5rem 0.875rem; font-size: 0.9rem; white-space: nowrap; }
+      .chatbot-container {
+        bottom: 1rem;
+        right: 1rem;
+      }
+
+      .chatbot-toggle {
+        width: 3.5rem;
+        height: 3.5rem;
+        font-size: 1.5rem;
+      }
+
+      .chatbot-panel {
+        width: calc(100vw - 2rem);
+        right: 0.25rem;
+        bottom: calc(7.5rem + env(safe-area-inset-bottom));
+        height: calc(100vh - 8rem);
+      }
+
+      .chatbot-input-container {
+        position: sticky;
+        bottom: 0;
+        align-items: center;
+        gap: 0.375rem;
+        padding: 0.75rem 0.75rem;
+        padding-bottom: calc(0.75rem + env(safe-area-inset-bottom));
+      }
+
+      .chatbot-input {
+        padding: 0.625rem 0.75rem;
+      }
+
+      .chatbot-input-container .btn {
+        flex: 0 0 auto;
+        padding: 0.5rem 0.875rem;
+        font-size: 0.9rem;
+        white-space: nowrap;
+      }
     }
   </style>
 
@@ -376,14 +880,20 @@
     <button id="chatToggle" class="chatbot-toggle" onclick="toggleChat()">💬</button>
     <div id="chatPanel" class="chatbot-panel hidden">
       <div class="chatbot-header">
-        <div class="flex items-center gap-3"><div class="logo"></div><span class="font-semibold">Auxonium Group Assistant</span></div>
-        <button onclick="toggleChat()" class="w-8 h-8 flex items-center justify-center bg-white/10 rounded-lg hover:bg-white/20 transition-colors">✕</button>
+        <div class="flex items-center gap-3">
+          <div class="logo"></div><span class="font-semibold">Auxonium Group Assistant</span>
+        </div>
+        <button onclick="toggleChat()"
+          class="w-8 h-8 flex items-center justify-center bg-white/10 rounded-lg hover:bg-white/20 transition-colors">✕</button>
       </div>
-      <div id="chatMessages" class="chatbot-messages"><div class="chat-message bot">Hi! 👋 How can I help you today? Ask me about our fitout services.</div></div>
+      <div id="chatMessages" class="chatbot-messages">
+        <div class="chat-message bot">Hi! 👋 How can I help you today? Ask me about our fitout services.</div>
+      </div>
       <div class="chatbot-suggestions">
         <button class="suggestion-btn" onclick="sendSuggestion('Interior design consultation')">Interior design</button>
         <button class="suggestion-btn" onclick="sendSuggestion('Gypsum ceiling / bulkhead')">Gypsum works</button>
-        <button class="suggestion-btn" onclick="sendSuggestion('Glass or partition requirement')">Glass & partitions</button>
+        <button class="suggestion-btn" onclick="sendSuggestion('Glass or partition requirement')">Glass &
+          partitions</button>
         <button class="suggestion-btn" onclick="sendSuggestion('Flooring or joinery')">Flooring & joinery</button>
         <button class="suggestion-btn" onclick="sendSuggestion('MEP coordination needed')">MEP coordination</button>
         <button class="suggestion-btn" onclick="sendSuggestion('Request a fitout quote')">Request quote</button>
@@ -414,21 +924,22 @@
     function sendMessage(e) {
       e.preventDefault();
       const input = document.getElementById('chatInput');
-      const message = input.value.trim(); if (!message) return; addMessage(message, 'user'); input.value='';
+      const message = input.value.trim(); if (!message) return; addMessage(message, 'user'); input.value = '';
       setTimeout(() => {
-        const lowerMsg = message.toLowerCase(); let response='';
-        if (lowerMsg.includes('design')||lowerMsg.includes('interior')) response='Interior Design: We provide concepts, mood boards, 3D renders, materials/finishes and authority guidance. Share your space size and style preference to begin.';
-        else if (lowerMsg.includes('gypsum')||lowerMsg.includes('ceiling')||lowerMsg.includes('bulkhead')) response='Gypsum Works: False ceilings, bulkheads, cove lighting, acoustic/fire-rated systems with paint-ready finishing. Send a ceiling sketch or photos for a quick estimate.';
-        else if (lowerMsg.includes('glass')||lowerMsg.includes('partition')) response='Glass & Partitions: Frameless/framed glass, aluminum or gypsum partitions with acoustic options. Tell us dimensions and door needs to recommend a system.';
-        else if (lowerMsg.includes('floor')||lowerMsg.includes('joinery')||lowerMsg.includes('carpet')||lowerMsg.includes('vinyl')||lowerMsg.includes('tile')) response='Flooring & Joinery: Vinyl, carpet tiles, porcelain + custom counters/cabinets. What area (m²) and material do you prefer? We can propose samples.';
-        else if (lowerMsg.includes('mep')||lowerMsg.includes('coordination')) response='MEP Coordination: Coordinated shop drawings, diffuser/lighting alignment, access planning and site coordination. Share your latest drawings to proceed.';
-        else if (lowerMsg.includes('quote')||lowerMsg.includes('estimate')||lowerMsg.includes('price')||lowerMsg.includes('cost')) response='Great! Please share your location, scope (design/gypsum/glass/flooring/joinery/MEP) and timeline, or click "Request Quote" above.';
-        else response='Thanks! Please describe your fitout requirement (design, gypsum, glass/partitions, flooring/joinery, or MEP) and location. We will guide you step-by-step.';
+        const lowerMsg = message.toLowerCase(); let response = '';
+        if (lowerMsg.includes('design') || lowerMsg.includes('interior')) response = 'Interior Design: We provide concepts, mood boards, 3D renders, materials/finishes and authority guidance. Share your space size and style preference to begin.';
+        else if (lowerMsg.includes('gypsum') || lowerMsg.includes('ceiling') || lowerMsg.includes('bulkhead')) response = 'Gypsum Works: False ceilings, bulkheads, cove lighting, acoustic/fire-rated systems with paint-ready finishing. Send a ceiling sketch or photos for a quick estimate.';
+        else if (lowerMsg.includes('glass') || lowerMsg.includes('partition')) response = 'Glass & Partitions: Frameless/framed glass, aluminum or gypsum partitions with acoustic options. Tell us dimensions and door needs to recommend a system.';
+        else if (lowerMsg.includes('floor') || lowerMsg.includes('joinery') || lowerMsg.includes('carpet') || lowerMsg.includes('vinyl') || lowerMsg.includes('tile')) response = 'Flooring & Joinery: Vinyl, carpet tiles, porcelain + custom counters/cabinets. What area (m²) and material do you prefer? We can propose samples.';
+        else if (lowerMsg.includes('mep') || lowerMsg.includes('coordination')) response = 'MEP Coordination: Coordinated shop drawings, diffuser/lighting alignment, access planning and site coordination. Share your latest drawings to proceed.';
+        else if (lowerMsg.includes('quote') || lowerMsg.includes('estimate') || lowerMsg.includes('price') || lowerMsg.includes('cost')) response = 'Great! Please share your location, scope (design/gypsum/glass/flooring/joinery/MEP) and timeline, or click "Request Quote" above.';
+        else response = 'Thanks! Please describe your fitout requirement (design, gypsum, glass/partitions, flooring/joinery, or MEP) and location. We will guide you step-by-step.';
         addMessage(response, 'bot');
       }, 500);
     }
     // Close chat when clicking outside
-    document.addEventListener('click', function(e){ const chatPanel=document.getElementById('chatPanel'); const container=document.querySelector('.chatbot-container'); if(chatPanel && !chatPanel.classList.contains('hidden')){ if(!container.contains(e.target)) toggleChat(); }});
+    document.addEventListener('click', function (e) { const chatPanel = document.getElementById('chatPanel'); const container = document.querySelector('.chatbot-container'); if (chatPanel && !chatPanel.classList.contains('hidden')) { if (!container.contains(e.target)) toggleChat(); } });
   </script>
 </body>
+
 </html>
