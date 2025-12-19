@@ -4,7 +4,7 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=5, user-scalable=yes">
-  <title>AC Mechanics | Auxonium Group - UAE</title>
+  <title>AC Mechanics | Auxonium - UAE</title>
   <meta name="description"
     content="Professional HVAC services: AC installation, maintenance, repair, ducting and air quality services across UAE.">
   <meta name="theme-color" content="#0f172a">
@@ -308,7 +308,7 @@
     "serviceType": "AC Services",
     "provider": {
       "@type": "GeneralContractor",
-      "name": "Auxonium Group"
+      "name": "Auxonium"
     },
     "areaServed": {
       "@type": "Country",
@@ -327,7 +327,7 @@
       <a href="index.html"
         style="color: white; text-decoration: none; font-weight: 700; display: flex; align-items: center; flex-shrink: 0;">
         <div class="logo"></div>
-        <span class="ml-3 text-xl font-bold text-white">Auxonium Group</span>
+        <span class="ml-3 text-xl font-bold text-white">Auxonium</span>
       </a>
 
       <!-- Desktop Navigation -->
@@ -653,7 +653,7 @@
   <!-- Why Choose Us -->
   <section class="section bg-white/5">
     <div class="max-w-7xl mx-auto px-4">
-      <h2 class="section-title text-center mb-12">Why Choose Auxonium Group for AC Services</h2>
+      <h2 class="section-title text-center mb-12">Why Choose Auxonium for AC Services</h2>
       <div class="grid md:grid-cols-3 gap-8">
         <div class="feature-box">
           <div class="text-4xl mb-3">🔧</div>
@@ -697,7 +697,7 @@
         <div>
           <div class="flex items-center justify-center gap-3 mb-2">
             <div class="logo"></div>
-            <span class="font-extrabold text-xl">Auxonium Group </span>
+            <span class="font-extrabold text-xl">Auxonium</span>
           </div>
           <p class="text-slate-400 mb-4 text-center"> IT Solutions • AC Mechanics • Electrical Works • Fitouts </p>
         </div>
@@ -724,7 +724,7 @@
         </div>
       </div>
       <div class="text-slate-500 text-sm text-center">
-        © <span id="year"></span> Auxonium General Contracting LLC - S.P.C. All rights reserved.
+        &copy; <span id="year"></span> Auxonium General Contracting LLC - S.P.C. All rights reserved.
       </div>
     </div>
   </footer>
@@ -755,7 +755,7 @@
       width: 4rem;
       height: 4rem;
       border-radius: 50%;
-      background: linear-gradient(135deg, #0ea5e9 0%, #0284c7 100%);
+      background: linear-gradient(135deg, #0ea5e9, #06b6d4);
       color: white;
       border: none;
       box-shadow: 0 8px 25px rgba(14, 165, 233, 0.4);
@@ -927,7 +927,7 @@
     <div id="chatPanel" class="chatbot-panel hidden">
       <div class="chatbot-header">
         <div class="flex items-center gap-3">
-          <div class="logo"></div><span class="font-semibold">Auxonium Group Assistant</span>
+          <div class="logo"></div><span class="font-semibold">Auxonium Assistant</span>
         </div>
         <button onclick="toggleChat()"
           class="w-8 h-8 flex items-center justify-center bg-white/10 rounded-lg hover:bg-white/20 transition-colors">✕</button>
@@ -975,20 +975,39 @@
       const message = input.value.trim(); if (!message) return; addMessage(message, 'user'); input.value = '';
       setTimeout(() => {
         const lowerMsg = message.toLowerCase(); let response = '';
-        if (lowerMsg.includes('install') || lowerMsg.includes('commission')) response = 'Installation & Commissioning: Split/ducted/cassette/VRF sizing, refrigerant charging, electrical/safety checks, testing & handover. Share unit type, tonnage and location.';
-        else if (lowerMsg.includes('mainten') || lowerMsg.includes('service')) response = 'Preventive Maintenance: Filters, coils, belts, electrical inspections and performance tests. How many units and preferred schedule?';
-        else if (lowerMsg.includes('emergency') || lowerMsg.includes('repair') || lowerMsg.includes('fault') || lowerMsg.includes('not cooling')) response = 'Emergency Repair: Same-day response across UAE. Please send your location and a callback number; we will dispatch a technician.';
-        else if (lowerMsg.includes('duct') || lowerMsg.includes('vent')) response = 'Ducting & Ventilation: Design, fabrication, installation and balancing. Share drawings or approximate lengths and sizes to estimate.';
-        else if (lowerMsg.includes('gas') || lowerMsg.includes('recharge') || lowerMsg.includes('refill')) response = 'Gas Refill: Leak check, proper refrigerant recharge and performance verification. What unit type/tonnage and current symptoms?';
-        else if (lowerMsg.includes('amc') || lowerMsg.includes('annual') || lowerMsg.includes('contract')) response = 'AMC: Annual maintenance contracts tailored to site and units. How many units and site location?';
-        else if (lowerMsg.includes('quote') || lowerMsg.includes('estimate') || lowerMsg.includes('price') || lowerMsg.includes('cost')) response = 'Great! Please share your location, unit types/count, and timeline—or click "Request Quote" above.';
-        else response = 'Thanks! Please describe your AC need (installation, maintenance, emergency, ducting, gas refill, or AMC) and your location.';
+        
+        // Enhanced AC-specific responses with accurate data
+        if (lowerMsg.includes('install') || lowerMsg.includes('commission')) {
+          response = '❄️ AC Installation & Commissioning:\n• Split/ducted/cassette/VRF sizing\n• Refrigerant charging & electrical checks\n• Safety inspections & system testing\n• Professional handover with documentation\n\n📍 Service Area: All UAE (Abu Dhabi 1-2hr, Dubai/Sharjah 2-3hr)\n📦 Projects Completed: 15+ in Dubai, 20+ in Abu Dhabi\n💰 Starting from: AED 400 base + AED 35/sqm\n✅ Warranty: 12 months on new installations\n\nShare unit type, tonnage and location for exact quote.';
+        }
+        else if (lowerMsg.includes('mainten') || lowerMsg.includes('service')) {
+          response = '🔧 Preventive AC Maintenance:\n• Filter cleaning/replacement\n• Coil cleaning & inspection\n• Belt tension & motor checks\n• Refrigerant level monitoring\n• Performance testing & optimization\n\n📋 Flexible Scheduling:\n• Monthly, quarterly, bi-annual plans\n• Customized for your building type\n\nProjects: 45+ across UAE\nOperator: Sayed (Response time: 2 min)\n📞 WhatsApp: +971563536545\n\nHow many units and preferred schedule?';
+        }
+        else if (lowerMsg.includes('emergency') || lowerMsg.includes('repair') || lowerMsg.includes('fault') || lowerMsg.includes('not cooling')) {
+          response = '🚨 Emergency AC Repair Service:\n⚡ FAST RESPONSE:\n• Abu Dhabi: 1-2 hours\n• Dubai/Sharjah: 2-3 hours\n• Other Emirates: 3-5 hours\n\n🛠️ Services Include:\n• Diagnostic & fault finding\n• Parts replacement\n• Refrigerant leak repair\n• Electrical fault correction\n• System restoration\n\n📞 24/7 Availability\n📱 Contact Sayed: +971563536545\n\nPlease share your location and callback number!';
+        }
+        else if (lowerMsg.includes('duct') || lowerMsg.includes('vent')) {
+          response = '💨 Ducting & Ventilation Systems:\n📋 Design & Engineering:\n• CAD drawings & load calculations\n• Material selection (GI, SS, FRP)\n• Insulation & noise control\n\n🔨 Installation Services:\n• Fabrication & fitting\n• Hangers & supports\n• Testing & commissioning\n\n📏 Projects: 1000+ meters installed\n💰 Pricing: Competitive rates across UAE\nNo location surcharges!\n\nShare drawings or dimensions for estimate.';
+        }
+        else if (lowerMsg.includes('gas') || lowerMsg.includes('recharge') || lowerMsg.includes('refill')) {
+          response = '⛽ AC Gas Refill Service:\n🔍 Complete Process:\n• Electronic leak detection\n• Pressure testing\n• Proper refrigerant recharge\n• Performance verification\n• Report with before/after readings\n\n📋 Service Includes:\n• R22, R410A, R32, R134a handling\n• Certified technicians\n• Environmentally responsible\n\n⏱️ Turnaround: Same-day completion\nProjects: 200+ refills completed\n\nWhat unit type/tonnage and symptoms?';
+        }
+        else if (lowerMsg.includes('amc') || lowerMsg.includes('annual') || lowerMsg.includes('contract')) {
+          response = '📋 Annual Maintenance Contracts (AMC):\n🔧 Comprehensive Coverage:\n• Quarterly preventive visits\n• Priority emergency response\n• Parts & labor included\n• Performance reporting\n• Energy optimization tips\n\n🏢 Tailored Plans:\n• Commercial buildings\n• Residential complexes\n• Industrial facilities\n\n📊 Our Portfolio:\n• 45+ projects across UAE\n• 20+ in Abu Dhabi (main base)\n• 15+ in Dubai\n• 10+ in Sharjah\n\nHow many units and site location?';
+        }
+        else if (lowerMsg.includes('quote') || lowerMsg.includes('estimate') || lowerMsg.includes('price') || lowerMsg.includes('cost')) {
+          response = '💰 Get Your AC Service Quote:\n\n⚡ Competitive UAE Pricing:\n• Installation: AED 400 base + AED 35/sqm\n• Maintenance: Packages from AED 200/month\n• Emergency: AED 150 call-out fee\n• Ducting: AED 180/meter installed\n• Gas Refill: AED 250-400 (depending on gas)\n\n✨ EQUAL PRICING:\nNo location surcharges across UAE!\n\n📝 Please share:\n1. Service type needed\n2. Project size/location\n3. Timeline requirements\n\nOr click "Request Quote" above for detailed proposal!';
+        }
+        else {
+          response = '❄️ Auxonium AC Specialists:\n\nWe provide comprehensive HVAC services:\n\n⚡ Installation & Commissioning\n🔧 Preventive Maintenance\n🚨 Emergency Repairs\n💨 Ducting Systems\n⛽ Gas Refill Services\n📋 Annual Contracts (AMC)\n\n📍 Coverage: All UAE Emirates\n📦 Projects: 45+ completed\n👷 Operator: Sayed (2-min response)\n\nWhat specific AC service do you need?';
+        }
         addMessage(response, 'bot');
       }, 500);
     }
     // Close chat when clicking outside
     document.addEventListener('click', function (e) { const chatPanel = document.getElementById('chatPanel'); const container = document.querySelector('.chatbot-container'); if (chatPanel && !chatPanel.classList.contains('hidden')) { if (!container.contains(e.target)) toggleChat(); } });
   </script>
+  
 </body>
 
 </html>

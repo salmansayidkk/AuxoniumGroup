@@ -4,10 +4,16 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=5, user-scalable=yes">
-  <title>Electrical Works | Auxonium Group - UAE</title>
+  <title>Electrical Works | Auxonium - UAE</title>
   <meta name="description"
     content="Professional electrical services: wiring, panel works, lighting, compliance testing and emergency call-outs across UAE.">
   <meta name="theme-color" content="#0f172a">
+  
+  <!-- NEW: Advanced CSS Features -->
+  <link rel="stylesheet" href="styles-improved.css">
+  <link rel="stylesheet" href="mobile-fixes.css">
+  <link rel="stylesheet" href="attractive-enhancements.css">
+  
   <script src="https://cdn.tailwindcss.com"></script>
   <script>
     tailwind.config = {
@@ -307,7 +313,7 @@
     "serviceType": "Electrical Services",
     "provider": {
       "@type": "GeneralContractor",
-      "name": "Auxonium Group"
+      "name": "Auxonium"
     },
     "areaServed": {
       "@type": "Country",
@@ -325,9 +331,10 @@
         <div class="flex items-center">
           <a href="index.html" class="flex-shrink-0 flex items-center">
             <div class="logo"></div>
-            <span class="ml-3 text-xl font-bold text-white">Auxonium Group</span>
+            <span class="ml-3 text-xl font-bold text-white">Auxonium</span>
           </a>
         </div>
+
         <!-- Desktop Navigation -->
         <ul class="desktop-nav"
           style="list-style: none; display: flex; gap: 0.5rem; margin: 0; padding: 0; align-items: center;">
@@ -407,54 +414,75 @@
         </div>
 
         <!-- Mobile Menu Toggle -->
-        <div class="-mr-2 flex md:hidden">
-          <button type="button"
-            class="inline-flex items-center justify-center p-2 rounded-md text-gray-400 hover:text-white hover:bg-gray-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-offset-gray-800 focus:ring-white"
-            aria-controls="mobile-menu" aria-expanded="false" onclick="toggleMobileMenu()">
-            <span class="sr-only">Open main menu</span>
-            <svg class="block h-6 w-6" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
-              stroke="currentColor" aria-hidden="true">
-              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
-            </svg>
-            <svg class="hidden h-6 w-6" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
-              stroke="currentColor" aria-hidden="true">
-              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" />
-            </svg>
-          </button>
-        </div>
+        <button class="mobile-menu-toggle" onclick="toggleMobileMenu()" aria-label="Menu"
+          style="flex-direction:column; justify-content:center; align-items:center; width:42px; height:42px; border-radius:999px; background: rgba(255,255,255,0.15); border:1px solid rgba(255,255,255,0.2);">
+          <span
+            style="display:block; width: 20px; height: 2px; background: white; margin: 2px 0; transition: 0.3s;"></span>
+          <span
+            style="display:block; width: 20px; height: 2px; background: white; margin: 2px 0; transition: 0.3s;"></span>
+          <span
+            style="display:block; width: 20px; height: 2px; background: white; margin: 2px 0; transition: 0.3s;"></span>
+        </button>
       </div>
     </div>
   </nav>
 
-  <!-- Mobile menu, show/hide based on menu state. -->
-  <div class="md:hidden hidden" id="mobileMenu">
-    <div class="px-2 pt-2 pb-3 space-y-1 sm:px-3">
-      <a href="index.html" class="block px-3 py-2 text-base font-medium text-white hover:bg-gray-700">🏠 Home</a>
-      <a href="it-services.html"
-        class="block px-3 py-2 text-base font-medium text-gray-300 hover:text-white hover:bg-gray-700">💻 IT
-        Services</a>
-      <a href="ac-services.html"
-        class="block px-3 py-2 text-base font-medium text-gray-300 hover:text-white hover:bg-gray-700">❄️ AC
-        Services</a>
-      <a href="electrical-services.html"
-        class="block px-3 py-2 text-base font-medium text-gray-300 hover:text-white hover:bg-gray-700">⚡ Electrical
-        Services</a>
-      <a href="fitout-services.html"
-        class="block px-3 py-2 text-base font-medium text-gray-300 hover:text-white hover:bg-gray-700">🧱 Fitout
-        Services</a>
-      <a href="index.html#about"
-        class="block px-3 py-2 text-base font-medium text-gray-300 hover:text-white hover:bg-gray-700">ℹ️ About Us</a>
-      <a href="index.html#pricing"
-        class="block px-3 py-2 text-base font-medium text-gray-300 hover:text-white hover:bg-gray-700">💰 Pricing</a>
-      <a href="index.html#consultation"
-        class="block px-3 py-2 text-base font-medium text-gray-300 hover:text-white hover:bg-gray-700">📞 Contact</a>
-      <div class="pt-4 pb-3 border-t border-gray-700">
-        <a href="https://wa.me/971563536545"
-          class="block w-full text-center px-4 py-2 text-base font-medium text-white bg-brand hover:bg-brand-dark rounded-md">
-          💬 WhatsApp Us
-        </a>
+  <!-- Mobile Menu Overlay -->
+  <div class="mobile-overlay" id="mobileOverlay" onclick="toggleMobileMenu()"></div>
+  <!-- Mobile Menu -->
+  <div class="mobile-menu" id="mobileMenu">
+    <div
+      style="padding: 20px; border-bottom: 1px solid rgba(255,255,255,0.1); display: flex; justify-content: space-between; align-items: center;">
+      <div style="display:flex; flex-direction:column; gap:4px;">
+        <span style="display:block; width: 24px; height: 2px; background: white;"></span>
+        <span style="display:block; width: 24px; height: 2px; background: white;"></span>
+        <span style="display:block; width: 24px; height: 2px; background: white;"></span>
       </div>
+      <button onclick="toggleMobileMenu()"
+        style="background: none; border: none; color: white; font-size: 24px; cursor: pointer;">✕</button>
     </div>
+    <ul style="list-style: none; padding: 0; margin: 0;">
+      <li><a href="index.html"
+          style="display: block; padding: 16px 20px; color: white; text-decoration: none; border-bottom: 1px solid rgba(255,255,255,0.1);"
+          onclick="toggleMobileMenu()">🏠 Home</a></li>
+      <li><a href="it-services.html"
+          style="display: block; padding: 16px 20px; color: white; text-decoration: none; border-bottom: 1px solid rgba(255,255,255,0.1);"
+          onclick="toggleMobileMenu()">💻 IT Services</a></li>
+      <li><a href="ac-services.html"
+          style="display: block; padding: 16px 20px; color: white; text-decoration: none; border-bottom: 1px solid rgba(255,255,255,0.1);"
+          onclick="toggleMobileMenu()">❄️ AC Services</a></li>
+      <li><a href="electrical-services.html"
+          style="display: block; padding: 16px 20px; color: white; text-decoration: none; border-bottom: 1px solid rgba(255,255,255,0.1);"
+          onclick="toggleMobileMenu()">⚡ Electrical Services</a></li>
+      <li><a href="fitout-services.html"
+          style="display: block; padding: 16px 20px; color: white; text-decoration: none; border-bottom: 1px solid rgba(255,255,255,0.1);"
+          onclick="toggleMobileMenu()">🧱 Fitout Services</a></li>
+      <li><a href="index.html#about"
+          style="display: block; padding: 16px 20px; color: white; text-decoration: none; border-bottom: 1px solid rgba(255,255,255,0.1);"
+          onclick="toggleMobileMenu()">ℹ️ About</a></li>
+      <li><a href="index.html#pricing"
+          style="display: block; padding: 16px 20px; color: white; text-decoration: none; border-bottom: 1px solid rgba(255,255,255,0.1);"
+          onclick="toggleMobileMenu()">💰 Pricing</a></li>
+      <li><a href="index.html#consultation"
+          style="display: block; padding: 16px 20px; color: white; text-decoration: none; border-bottom: 1px solid rgba(255,255,255,0.1);"
+          onclick="toggleMobileMenu()">📞 Contact</a></li>
+      <li style="padding: 20px;">
+        <a href="https://api.whatsapp.com/send?phone=971563536545" target="_blank" rel="noopener"
+          style="display: block; background: linear-gradient(135deg, #0ea5e9, #06b6d4); color: white; padding: 12px; border-radius: 8px; text-align: center; text-decoration: none; font-weight: 600; margin-bottom: 10px;">
+          <span style="display:inline-flex; align-items:center; gap:8px; justify-content:center;">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"
+              style="vertical-align:middle;">
+              <path
+                d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893A11.821 11.821 0 0020.885 3.488" />
+            </svg>
+            <span>WhatsApp</span>
+          </span>
+        </a>
+        <a href="index.html#consultation"
+          style="display: block; width: 100%; background: linear-gradient(135deg, #10b981, #059669); color: white; padding: 12px; border-radius: 8px; text-align: center; text-decoration: none; font-weight: 600;">🎯
+          Get Quote</a>
+      </li>
+    </ul>
   </div>
 
   <!-- Hero Section -->
@@ -632,7 +660,7 @@
   <!-- Why Choose Us -->
   <section class="section bg-white/5">
     <div class="max-w-7xl mx-auto px-4">
-      <h2 class="section-title text-center mb-12">Why Choose Auxonium Group for Electrical Services</h2>
+      <h2 class="section-title text-center mb-12">Why Choose Auxonium for Electrical Services</h2>
       <div class="grid md:grid-cols-3 gap-8">
         <div class="feature-box">
           <div class="text-4xl mb-3">⚡</div>
@@ -671,8 +699,6 @@
     </div>
   </section>
 
-
-
   <!-- Footer -->
   <footer class="py-12 border-t border-white/10">
     <div class="max-w-7xl mx-auto px-4">
@@ -680,7 +706,7 @@
         <div>
           <div class="flex items-center justify-center gap-3 mb-2">
             <div class="logo"></div>
-            <span class="font-extrabold text-xl">Auxonium Group</span>
+            <span class="font-extrabold text-xl">Auxonium</span>
           </div>
           <p class="text-slate-400 mb-4 text-center"> IT Solutions • AC Mechanics • Electrical Works • Fitouts </p>
         </div>
@@ -707,7 +733,7 @@
         </div>
       </div>
       <div class="text-slate-500 text-sm text-center">
-        © <span id="year"></span> Auxonium General Contracting LLC - S.P.C. All rights reserved.
+        &copy; <span id="year"></span> Auxonium General Contracting LLC - S.P.C. All rights reserved.
       </div>
     </div>
   </footer>
@@ -911,7 +937,7 @@
     <div id="chatPanel" class="chatbot-panel hidden">
       <div class="chatbot-header">
         <div class="flex items-center gap-3">
-          <div class="logo"></div><span class="font-semibold">Auxonium Group Assistant</span>
+          <div class="logo"></div><span class="font-semibold">Auxonium Assistant</span>
         </div>
         <button onclick="toggleChat()"
           class="w-8 h-8 flex items-center justify-center bg-white/10 rounded-lg hover:bg-white/20 transition-colors">✕</button>
@@ -958,20 +984,42 @@
       const message = input.value.trim(); if (!message) return; addMessage(message, 'user'); input.value = '';
       setTimeout(() => {
         const lowerMsg = message.toLowerCase(); let response = '';
-        if (lowerMsg.includes('wiring') || lowerMsg.includes('panel')) response = 'Wiring & Panel: New circuits, panelboards, grounding, load balancing and safety devices. Share your load or issue details and location.';
-        else if (lowerMsg.includes('light') || lowerMsg.includes('fixture') || lowerMsg.includes('led')) response = 'Lighting & Fixtures: Indoor/outdoor, LED upgrades, emergency lighting, smart controls. Tell us the area and type of lighting you need.';
-        else if (lowerMsg.includes('emergency') || lowerMsg.includes('fault') || lowerMsg.includes('outage')) response = 'Emergency Service: 24/7 call-out for outages and faults. Please share your location and a callback number for immediate dispatch.';
-        else if (lowerMsg.includes('commercial') || lowerMsg.includes('office') || lowerMsg.includes('warehouse')) response = 'Commercial Electrical: Power distribution, backup power, load management for offices/retail/warehouses. Describe your facility and scope.';
-        else if (lowerMsg.includes('residential') || lowerMsg.includes('home') || lowerMsg.includes('villa') || lowerMsg.includes('apartment')) response = 'Residential Electrical: Rewiring, kitchen/bath, ceiling fans, outdoor outlets. Which room/area and what issue or upgrade?';
-        else if (lowerMsg.includes('compliance') || lowerMsg.includes('safety') || lowerMsg.includes('certificate') || lowerMsg.includes('testing')) response = 'Compliance & Safety: Inspections, testing, certification, ground fault and IR testing. When can we schedule an inspection?';
-        else if (lowerMsg.includes('quote') || lowerMsg.includes('estimate') || lowerMsg.includes('price') || lowerMsg.includes('cost')) response = 'Great! Please share your location, scope (wiring/lighting/emergency/commercial/residential/compliance) and timeline, or click "Request Quote" above.';
-        else response = 'Thanks! Please describe your electrical requirement (wiring, lighting, emergency, commercial, residential, or compliance) and location.';
+        
+        // Enhanced Electrical-specific responses with accurate data
+        if (lowerMsg.includes('wiring') || lowerMsg.includes('panel')) {
+          response = '⚡ Electrical Wiring & Panels:\n📋 Services Include:\n• New circuit installations\n• Panelboard upgrades\n• Grounding systems\n• Load balancing\n• Safety device installation\n\n📍 Service Coverage:\n• Abu Dhabi: 1-2 hours (main base)\n• Dubai/Sharjah: 2-3 hours\n• Other Emirates: 3-5 hours\n\n📦 Projects: 20+ in Abu Dhabi\n💰 Starting: AED 300 base + AED 25/sqm\n✅ Warranty: 12 months parts & labor\n\nShare your load requirements or issue details and location for exact quote.';
+        }
+        else if (lowerMsg.includes('light') || lowerMsg.includes('fixture') || lowerMsg.includes('led')) {
+          response = '💡 LED Lighting Solutions:\n✨ Services Offered:\n• Indoor/outdoor lighting\n• LED retrofits & upgrades\n• Emergency lighting systems\n• Smart lighting controls\n• Decorative & architectural\n\n🏢 Applications:\n• Commercial offices\n• Retail spaces\n• Residential villas\n• Industrial facilities\n\n📊 Portfolio:\n• 100+ lighting projects\n• 20+ in Abu Dhabi (main base)\n• Equal pricing across UAE\n\nTell us the area and type of lighting needed!';
+        }
+        else if (lowerMsg.includes('emergency') || lowerMsg.includes('fault') || lowerMsg.includes('outage')) {
+          response = '🚨 24/7 Electrical Emergency Service:\n⚡ FAST RESPONSE TIMES:\n• Abu Dhabi: 1-2 hours\n• Dubai/Sharjah: 2-3 hours\n• Other Emirates: 3-5 hours\n\n🔌 Emergency Services:\n• Power outages\n• Short circuits\n• Exposed wiring\n• Tripped breakers\n• Electrical faults\n\n📞 Available 24/7\n📱 Contact Sayed: +971563536545\n\nPlease share your location and callback number for immediate dispatch!';
+        }
+        else if (lowerMsg.includes('commercial') || lowerMsg.includes('office') || lowerMsg.includes('warehouse')) {
+          response = '🏢 Commercial Electrical Solutions:\n📋 Comprehensive Services:\n• Power distribution systems\n• Backup power installations\n• Load management\n• Energy efficiency\n• Building automation\n\n🏭 Facility Types:\n• Office towers\n• Retail complexes\n• Warehouses\n• Industrial plants\n\n📊 Track Record:\n• 15+ commercial projects\n• 20+ in Abu Dhabi\n• 24/7 maintenance support\n\nDescribe your facility and electrical scope needed!';
+        }
+        else if (lowerMsg.includes('residential') || lowerMsg.includes('home') || lowerMsg.includes('villa') || lowerMsg.includes('apartment')) {
+          response = '🏠 Residential Electrical Services:\n🔧 Home Solutions:\n• Complete rewiring\n• Kitchen/bathroom upgrades\n• Ceiling fan installations\n• Outdoor outlets\n• EV charger setup\n\n🏡 Property Types:\n• Villas\n• Apartments\n• Townhouses\n• Renovations\n\n⏱️ Timeline: 2-5 days\n💰 Pricing: AED 300 base + AED 25/sqm\n📍 Service: All UAE (No location surcharges)\n\nWhich room/area and what upgrade or issue?';
+        }
+        else if (lowerMsg.includes('compliance') || lowerMsg.includes('safety') || lowerMsg.includes('certificate') || lowerMsg.includes('testing')) {
+          response = '✅ Electrical Compliance & Safety:\n📋 Certification Services:\n• Safety inspections\n• Testing & certification\n• Ground fault testing\n• Insulation resistance\n• Load analysis\n\n🏢 For:\n• Commercial buildings\n• Industrial facilities\n• Residential complexes\n\n📜 Standards:\n• DEWA compliance\n• International safety codes\n• Insurance requirements\n\nWhen can we schedule your inspection?';
+        }
+        else if (lowerMsg.includes('quote') || lowerMsg.includes('estimate') || lowerMsg.includes('price') || lowerMsg.includes('cost')) {
+          response = '💰 Electrical Service Pricing:\n\n⚡ Competitive UAE Rates:\n• Base Call-out: AED 300\n• Per Square Meter: AED 25\n• Emergency Fee: AED 150\n• LED Lighting: From AED 150/fixture\n• Panel Upgrades: From AED 500\n\n✨ EQUAL PRICING:\nNo location surcharges across UAE!\n\n📝 Please share:\n1. Service type needed\n2. Project size/location\n3. Timeline requirements\n\nOr click "Request Quote" above for detailed pricing!';
+        }
+        else {
+          response = '⚡ Auxonium Electrical Specialists:\n\nWe provide comprehensive electrical services:\n\n🔌 Wiring & Panel Upgrades\n💡 LED Lighting Solutions\n🚨 24/7 Emergency Service\n🏢 Commercial Electrical\n🏠 Residential Electrical\n✅ Compliance & Safety\n\n📍 Coverage: All UAE Emirates\n📦 Projects: 20+ in Abu Dhabi\n👷 Operator: Sayed (2-min response)\n\nWhat specific electrical service do you need?';
+        }
         addMessage(response, 'bot');
       }, 500);
     }
     // Close chat when clicking outside
     document.addEventListener('click', function (e) { const chatPanel = document.getElementById('chatPanel'); const container = document.querySelector('.chatbot-container'); if (chatPanel && !chatPanel.classList.contains('hidden')) { if (!container.contains(e.target)) toggleChat(); } });
   </script>
+  
+  <!-- NEW: Advanced Interactive Features -->
+  <script src="advanced-features.js"></script>
+  
 </body>
 
 </html>

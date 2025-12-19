@@ -1,0 +1,545 @@
+/* ===================================================================
+   MOBILE RESPONSIVE FIXES - CRITICAL IMPROVEMENTS
+   Specifically for Electrical & Fitout Service Pages
+   =================================================================== */
+
+/* === HEADER & NAVIGATION MOBILE FIX === */
+.header {
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  backdrop-filter: blur(12px);
+  background: rgba(15, 23, 42, 0.95); /* More solid on mobile */
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+  -webkit-backdrop-filter: blur(12px); /* Safari support */
+}
+
+.logo {
+  width: 2.5rem;
+  height: 2.5rem;
+  background-image: url('./logo.jpg');
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: contain;
+  border-radius: 0.5rem;
+  flex-shrink: 0;
+}
+
+/* === MOBILE MENU SYSTEM === */
+.mobile-menu-toggle {
+  display: none;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 2.75rem;
+  height: 2.75rem;
+  background: rgba(255, 255, 255, 0.1);
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  border-radius: 0.5rem;
+  padding: 0.5rem;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  flex-shrink: 0;
+}
+
+.mobile-menu-toggle:hover {
+  background: rgba(255, 255, 255, 0.2);
+}
+
+.mobile-menu-toggle:active {
+  transform: scale(0.95);
+}
+
+.mobile-menu {
+  display: none;
+  position: fixed;
+  top: 0;
+  right: -100%;
+  width: 85%;
+  max-width: 320px;
+  height: 100vh;
+  background: rgba(15, 23, 42, 0.98);
+  backdrop-filter: blur(20px);
+  border-left: 1px solid rgba(255, 255, 255, 0.1);
+  box-shadow: -5px 0 20px rgba(0, 0, 0, 0.5);
+  transition: right 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  z-index: 9999;
+  overflow-y: auto;
+  -webkit-overflow-scrolling: touch; /* Smooth scrolling on iOS */
+}
+
+.mobile-menu.active {
+  right: 0;
+}
+
+.mobile-overlay {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+  background: rgba(0, 0, 0, 0.6);
+  z-index: 9998;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.mobile-overlay.active {
+  display: block;
+  opacity: 1;
+}
+
+/* Mobile Menu Items - Touch Optimized */
+.mobile-menu ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.mobile-menu a {
+  display: block;
+  padding: 1rem 1.5rem;
+  color: white;
+  text-decoration: none;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+  transition: all 0.2s ease;
+  font-size: 0.9375rem;
+  min-height: 48px; /* Touch target size */
+  display: flex;
+  align-items: center;
+}
+
+.mobile-menu a:active {
+  background: rgba(14, 165, 233, 0.15);
+}
+
+/* === ELECTRICAL & FITOUT PAGE SPECIFIC FIXES === */
+
+/* Hero Grid - Mobile Stack */
+@media (max-width: 768px) {
+  .hero-section .grid {
+    grid-template-columns: 1fr !important;
+    gap: 1.5rem !important;
+  }
+
+  .hero-section .relative {
+    order: -1; /* Image first on mobile for better visual hierarchy */
+  }
+
+  .hero-section img {
+    height: 16rem !important; /* Reduced from 20rem */
+    width: 100%;
+    object-fit: cover;
+  }
+}
+
+/* Service Cards Grid - Electrical & Fitout Pages */
+@media (max-width: 768px) {
+  .service-card,
+  .card {
+    margin-bottom: 0;
+  }
+
+  /* Fix image overflow */
+  .service-image {
+    width: 100%;
+    height: 10rem;
+    object-fit: cover;
+    border-radius: 0.75rem;
+    margin-bottom: 1rem;
+  }
+
+  /* Details/Summary Expand Fix */
+  details {
+    margin-top: 1rem;
+    padding: 0.75rem;
+  }
+
+  summary {
+    font-size: 0.9375rem;
+    padding: 0.5rem;
+    cursor: pointer;
+    -webkit-tap-highlight-color: transparent;
+  }
+
+  details ul {
+    font-size: 0.875rem;
+    line-height: 1.6;
+  }
+}
+
+/* === GRID SYSTEM MOBILE FIXES === */
+@media (max-width: 768px) {
+  /* Force single column on mobile */
+  .grid.md\:grid-cols-2,
+  .grid.md\:grid-cols-3 {
+    grid-template-columns: 1fr !important;
+  }
+
+  /* Proper gap spacing */
+  .grid {
+    gap: 1.5rem !important;
+  }
+}
+
+/* === BUTTON GROUPS MOBILE === */
+@media (max-width: 768px) {
+  /* CTA Button Groups */
+  .flex.gap-4,
+  .flex.gap-3 {
+    flex-direction: column;
+    gap: 0.75rem !important;
+  }
+
+  .flex.gap-4 > .btn,
+  .flex.gap-3 > .btn {
+    width: 100%;
+  }
+
+  /* Navigation CTA Buttons */
+  nav .desktop-nav {
+    display: none !important;
+  }
+
+  .mobile-menu-toggle {
+    display: flex !important;
+  }
+}
+
+/* === TEXT OVERFLOW PREVENTION === */
+@media (max-width: 480px) {
+  /* Prevent text overflow */
+  h1, h2, h3, h4, h5, h6 {
+    word-wrap: break-word;
+    overflow-wrap: break-word;
+    hyphens: auto;
+  }
+
+  p, li {
+    word-wrap: break-word;
+    overflow-wrap: break-word;
+  }
+
+  /* Container padding adjustment */
+  .max-w-7xl {
+    padding-left: 1rem !important;
+    padding-right: 1rem !important;
+  }
+
+  /* Prevent horizontal scroll */
+  body {
+    overflow-x: hidden;
+  }
+
+  .hero-section,
+  .section {
+    overflow-x: hidden;
+  }
+}
+
+/* === ELECTRICAL PAGE SPECIFIC === */
+@media (max-width: 768px) {
+  /* Emergency Service Badge */
+  .feature-box {
+    padding: 1.25rem !important;
+    text-align: center;
+  }
+
+  .feature-box h3 {
+    font-size: 1.125rem;
+  }
+
+  /* Why Choose Section */
+  .grid.md\:grid-cols-3 .feature-box {
+    margin-bottom: 0;
+  }
+  
+  /* Electrical service details */
+  .service-image {
+    height: 10rem;
+  }
+  
+  details {
+    margin-top: 1rem;
+  }
+  
+  summary {
+    font-size: 1rem;
+    padding: 0.75rem;
+  }
+}
+
+/* === FITOUT PAGE SPECIFIC === */
+@media (max-width: 768px) {
+  /* Interior Design Images */
+  .service-image[alt*="Interior"],
+  .service-image[alt*="Gypsum"],
+  .service-image[alt*="Glass"] {
+    height: 11rem; /* Slightly taller for showcase */
+  }
+
+  /* MEP Coordination Cards */
+  .card h3 {
+    font-size: 1.25rem;
+    margin-bottom: 0.75rem;
+  }
+  
+  /* Fitout service details */
+  .service-image {
+    height: 11rem;
+  }
+  
+  details {
+    margin-top: 1rem;
+  }
+  
+  summary {
+    font-size: 1rem;
+    padding: 0.75rem;
+  }
+}
+
+/* === CHATBOT MOBILE OPTIMIZATION === */
+@media (max-width: 768px) {
+  .chatbot-container {
+    bottom: 1rem;
+    right: 1rem;
+  }
+
+  .chatbot-toggle {
+    width: 3.5rem;
+    height: 3.5rem;
+    font-size: 1.5rem;
+    box-shadow: 0 4px 12px rgba(14, 165, 233, 0.3);
+  }
+
+  .chatbot-panel {
+    width: calc(100vw - 2rem) !important;
+    right: 1rem !important;
+    left: 1rem !important;
+    bottom: 5.5rem !important;
+    height: calc(100vh - 8rem - env(safe-area-inset-bottom)) !important;
+    max-height: calc(100vh - 8rem - env(safe-area-inset-bottom)) !important;
+  }
+
+  .chatbot-input-container {
+    padding: 0.75rem;
+    padding-bottom: calc(0.75rem + env(safe-area-inset-bottom));
+    gap: 0.5rem;
+  }
+
+  .chatbot-input {
+    padding: 0.625rem 0.75rem;
+    font-size: 1rem; /* Prevent iOS zoom on focus */
+  }
+
+  .chatbot-input-container .btn {
+    padding: 0.625rem 1rem;
+    font-size: 0.875rem;
+  }
+
+  .chatbot-suggestions {
+    padding: 0.75rem;
+    gap: 0.5rem;
+  }
+
+  .suggestion-btn {
+    font-size: 0.8125rem;
+    padding: 0.5rem 0.875rem;
+  }
+}
+
+/* === FOOTER MOBILE === */
+@media (max-width: 768px) {
+  footer .grid {
+    grid-template-columns: 1fr !important;
+    gap: 2rem !important;
+    text-align: center;
+  }
+
+  footer .flex {
+    justify-content: center;
+  }
+}
+
+/* === LANDSCAPE MODE FIXES === */
+@media (max-width: 767px) and (max-height: 500px) and (orientation: landscape) {
+  .hero-section {
+    padding: 2rem 0 !important;
+    min-height: auto !important;
+  }
+
+  .chatbot-panel {
+    height: calc(100vh - 6rem) !important;
+  }
+
+  /* Compact mobile menu */
+  .mobile-menu a {
+    padding: 0.75rem 1.5rem;
+    font-size: 0.875rem;
+  }
+}
+
+/* === ADDITIONAL RESPONSIVE ENHANCEMENTS === */
+
+/* Ensure proper viewport handling */
+@viewport {
+  width: device-width;
+  zoom: 1.0;
+  min-zoom: 0.5;
+  max-zoom: 3.0;
+}
+
+/* Better text rendering on mobile */
+@media screen and (max-width: 768px) {
+  body {
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    text-rendering: optimizeLegibility;
+  }
+  
+  /* Improve readability on small screens */
+  p, li {
+    line-height: 1.6;
+  }
+  
+  /* Better touch targets */
+  a, button, .btn {
+    min-height: 44px;
+    min-width: 44px;
+  }
+  
+  /* Prevent horizontal scrolling */
+  .container, .max-w-7xl {
+    overflow-x: hidden;
+  }
+  
+  /* Adjust hero section for small screens */
+  .hero-section {
+    padding: 4rem 0 3rem !important;
+  }
+  
+  .hero-title {
+    font-size: 2rem !important;
+    line-height: 1.2;
+  }
+  
+  /* Better card spacing on mobile */
+  .card {
+    margin-bottom: 1.5rem;
+  }
+  
+  /* Improved form elements */
+  input, textarea, select {
+    font-size: 16px; /* Prevent iOS zoom */
+    padding: 0.75rem;
+  }
+  
+  /* Better image handling */
+  img {
+    max-width: 100%;
+    height: auto;
+  }
+}
+
+/* === SMALL PHONES (up to 480px) === */
+@media (max-width: 480px) {
+  .section-title {
+    font-size: 1.5rem !important;
+  }
+  
+  .hero-title {
+    font-size: 1.75rem !important;
+  }
+  
+  .btn {
+    padding: 0.625rem 1rem !important;
+    font-size: 0.875rem;
+  }
+  
+  .card {
+    padding: 1.25rem !important;
+  }
+  
+  .service-image {
+    height: 8rem !important;
+  }
+}
+
+/* === PHONES (481px - 767px) === */
+@media (min-width: 481px) and (max-width: 767px) {
+  .section-title {
+    font-size: 1.75rem;
+  }
+  
+  .hero-title {
+    font-size: 2rem;
+  }
+  
+  .service-image {
+    height: 9rem;
+  }
+}
+
+/* === TABLET SPECIFIC (768px-1024px) === */
+@media (min-width: 768px) and (max-width: 1024px) {
+  .service-card {
+    padding: 1.75rem !important;
+  }
+
+  .section-title {
+    font-size: 2rem;
+  }
+
+  .hero-title {
+    font-size: 2.5rem;
+  }
+}
+
+/* === TOUCH DEVICE OPTIMIZATIONS === */
+@media (hover: none) and (pointer: coarse) {
+  /* Remove hover effects on touch devices */
+  .btn:hover {
+    transform: none;
+  }
+
+  .service-card:hover {
+    transform: none;
+  }
+
+  .card:hover {
+    transform: none;
+  }
+
+  /* Add active states instead */
+  .btn:active {
+    transform: scale(0.98);
+  }
+
+  .service-card:active,
+  .card:active {
+    transform: scale(0.99);
+  }
+
+  /* Larger tap targets */
+  a, button {
+    min-height: 44px;
+    min-width: 44px;
+  }
+}
+
+/* === SAFE AREA SUPPORT (iPhone X+) === */
+@supports (padding: max(0px)) {
+  .chatbot-input-container {
+    padding-bottom: max(0.75rem, env(safe-area-inset-bottom));
+  }
+
+  .mobile-menu {
+    padding-bottom: env(safe-area-inset-bottom);
+  }
+
+  body {
+    padding-bottom: env(safe-area-inset-bottom);
+  }
+}

@@ -4,9 +4,9 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=5, user-scalable=yes">
-  <title>IT Services | Auxonium Group - UAE</title>
+  <title>IT Services | Auxonium - UAE</title>
   <meta name="description"
-    content="Comprehensive IT solutions: office setup, networking, CCTV, servers, cloud migration, backup, and cybersecurity across UAE.">
+    content="Comprehensive IT solutions: AWS, Azure, Microsoft 365, on-premises infrastructure, cybersecurity, SOC monitoring, CCTV, AMC support, and remote IT services across UAE.">
   <meta name="theme-color" content="#0f172a">
   <script src="https://cdn.tailwindcss.com"></script>
   <script>
@@ -247,6 +247,52 @@
       display: block;
     }
 
+    /* Service category buttons */
+    .category-btn {
+      transition: all 0.3s ease;
+    }
+
+    .category-btn:hover {
+      background: rgba(14, 165, 233, 0.2) !important;
+      border-color: rgba(14, 165, 233, 0.5) !important;
+      transform: translateY(-2px);
+    }
+
+    /* Section headers with accent */
+    .section-header {
+      position: relative;
+      padding-bottom: 1rem;
+      margin-bottom: 2rem;
+    }
+
+    .section-header::after {
+      content: '';
+      position: absolute;
+      bottom: 0;
+      left: 50%;
+      transform: translateX(-50%);
+      width: 60px;
+      height: 3px;
+      background: linear-gradient(90deg, #0ea5e9, #10b981);
+      border-radius: 2px;
+    }
+
+    /* Highlight cards */
+    .highlight-card {
+      position: relative;
+      overflow: hidden;
+    }
+
+    .highlight-card::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      height: 3px;
+      background: linear-gradient(90deg, #0ea5e9, #10b981);
+    }
+
     @media (max-width: 768px) {
       .hero-section {
         min-height: auto;
@@ -302,13 +348,50 @@
     "@context": "https://schema.org",
     "@type": "Service",
     "serviceType": "IT Services",
+    "name": "Comprehensive IT Solutions and Support Services",
+    "description": "IT infrastructure, cloud migration (AWS, Azure, Microsoft 365), cybersecurity, SOC monitoring, CCTV, and flexible support models (AMC and remote support) across UAE",
     "provider": {
       "@type": "GeneralContractor",
-      "name": "Auxonium Group"
+      "name": "Auxonium General Contracting LLC - S.P.C",
+      "url": "https://auxonium.com"
     },
     "areaServed": {
       "@type": "Country",
       "name": "United Arab Emirates"
+    },
+    "hasOfferCatalog": {
+      "@type": "OfferCatalog",
+      "name": "IT Services",
+      "itemListElement": [
+        {
+          "@type": "Offer",
+          "itemOffered": {
+            "@type": "Service",
+            "name": "Cloud Services - AWS, Azure, Microsoft 365"
+          }
+        },
+        {
+          "@type": "Offer",
+          "itemOffered": {
+            "@type": "Service",
+            "name": "Cybersecurity and SOC Services"
+          }
+        },
+        {
+          "@type": "Offer",
+          "itemOffered": {
+            "@type": "Service",
+            "name": "CCTV and Access Control"
+          }
+        },
+        {
+          "@type": "Offer",
+          "itemOffered": {
+            "@type": "Service",
+            "name": "Annual Maintenance Contract (AMC) and Remote Support"
+          }
+        }
+      ]
     }
   }
   </script>
@@ -323,7 +406,7 @@
       <a href="index.html"
         style="color: white; text-decoration: none; font-weight: 700; display: flex; align-items: center; flex-shrink: 0;">
         <div class="logo"></div>
-        <span class="ml-3 text-xl font-bold text-white">Auxonium Group</span>
+        <span class="ml-3 text-xl font-bold text-white">Auxonium</span>
       </a>
 
       <!-- Desktop Navigation -->
@@ -484,10 +567,9 @@
         <div>
           <h1 class="text-4xl md:text-5xl font-extrabold mb-4 text-white"
             style="background: linear-gradient(135deg, #ffffff 0%, #e2e8f0 100%); -webkit-background-clip: text; background-clip: text; -webkit-text-fill-color: transparent;">
-            IT Solutions</h1>
+            Complete IT Solutions & Support</h1>
           <p class="text-xl text-slate-300 mb-6 leading-relaxed">
-            From greenfield office setups to complex hybrid cloud and secure enterprise networks, our engineers deliver
-            end-to-end solutions with comprehensive documentation and support.
+            Comprehensive IT services from infrastructure setup to cloud migration (AWS, Azure, Microsoft 365), cybersecurity, SOC monitoring, CCTV, and flexible support models. We deliver end-to-end solutions with annual maintenance contracts (AMC) and cost-effective remote support across UAE.
           </p>
           <div class="flex gap-4">
             <a href="https://api.whatsapp.com/send?phone=971563536545" class="btn btn-primary">
@@ -515,9 +597,21 @@
   <!-- IT Details Section -->
   <section id="it-details" class="section">
     <div class="max-w-7xl mx-auto px-4">
-      <h2 class="section-title text-center mb-12">Comprehensive IT Services</h2>
+      <h2 class="section-title text-center mb-4">Comprehensive IT Services</h2>
+      <p class="text-center text-slate-400 text-lg mb-12 max-w-3xl mx-auto">End-to-end IT solutions from infrastructure setup to cloud migration, security, and managed support services across UAE.</p>
 
-      <div class="grid md:grid-cols-2 gap-8">
+      <!-- Service Categories Tabs -->
+      <div class="flex flex-wrap justify-center gap-3 mb-12">
+        <button onclick="scrollToSection('infrastructure')" class="category-btn px-4 py-2 bg-white/5 hover:bg-brand/20 border border-white/10 rounded-lg text-sm font-medium">🏢 Infrastructure</button>
+        <button onclick="scrollToSection('cloud')" class="category-btn px-4 py-2 bg-white/5 hover:bg-brand/20 border border-white/10 rounded-lg text-sm font-medium">☁️ Cloud Services</button>
+        <button onclick="scrollToSection('security')" class="category-btn px-4 py-2 bg-white/5 hover:bg-brand/20 border border-white/10 rounded-lg text-sm font-medium">🛡️ Security & SOC</button>
+        <button onclick="scrollToSection('support')" class="category-btn px-4 py-2 bg-white/5 hover:bg-brand/20 border border-white/10 rounded-lg text-sm font-medium">📞 Support Models</button>
+      </div>
+
+      <!-- Infrastructure Services -->
+      <div id="infrastructure" class="mb-16">
+        <h3 class="text-2xl font-bold mb-8 text-center" style="border-bottom: 2px solid rgba(14,165,233,0.3); padding-bottom: 1rem; display: inline-block;">Infrastructure & On-Premises</h3>
+        <div class="grid md:grid-cols-2 gap-8">
         <!-- Office Infrastructure -->
         <div class="card">
           <img src="https://images.unsplash.com/photo-1497366216548-37526070297c?auto=format&fit=crop&w=1740&q=80"
@@ -532,14 +626,21 @@
               <li>✓ LAN/WLAN design, Wi-Fi surveys, AP placement, segmentation</li>
               <li>✓ Workstation imaging, rollout, asset inventory and handover</li>
               <li>✓ UPS sizing, monitoring and alerting</li>
-              <li>✓ Documentation and training</li>
+              <li>✓ Server room design and setup</li>
+              <li>✓ Network security integration and firewall deployment</li>
+              <li>✓ IP address planning and subnet configuration</li>
+              <li>✓ Voice and video conferencing setup</li>
+              <li>✓ Print server and printer deployment</li>
+              <li>✓ IT asset management and tracking systems</li>
+              <li>✓ Comprehensive documentation and network diagrams</li>
+              <li>✓ Staff training and handover sessions</li>
             </ul>
           </details>
         </div>
 
         <!-- Networking -->
         <div class="card">
-          <img src="https://images.unsplash.com/photo-1560732488-6b0df240254a?auto=format&fit=crop&w=1200&q=80"
+          <img src="https://newtechcabling.com/wp-content/uploads/2025/01/Network-Cabling.jpg"
             alt="Network Cabling and Infrastructure" class="service-image" loading="lazy" decoding="async">
           <h3 class="text-2xl font-bold mb-3">Networking & Cabling</h3>
           <p class="text-slate-300 mb-4">Enterprise-grade network infrastructure with high availability, redundant
@@ -548,37 +649,26 @@
           <details>
             <summary>We handle</summary>
             <ul class="mt-3 space-y-2 text-slate-300">
-              <li>✓ LAN/WAN, VLANs, QoS, SD-WAN and VPN</li>
-              <li>✓ Firewalls, Routers, Switches, and other network devices</li>
+              <li>✓ LAN/WAN design and implementation</li>
+              <li>✓ VLANs, QoS, SD-WAN, and site-to-site VPN</li>
+              <li>✓ Firewalls, Routers, Switches, and wireless controllers</li>
+              <li>✓ Network security and access control policies</li>
               <li>✓ Redundancy, HA firewalls, failover and load balancing</li>
-              <li>✓ Network health checks, Documentation, Training</li>
-              <li>✓ Wireless surveys and optimization</li>
-            </ul>
-          </details>
-        </div>
-
-        <!-- CCTV & Biometrics -->
-        <div class="card">
-          <img src="https://images.unsplash.com/photo-1557597774-9d273605dfa9?auto=format&fit=crop&w=1200&q=80"
-            alt="CCTV Security Camera Installation" class="service-image" loading="lazy" decoding="async">
-          <h3 class="text-2xl font-bold mb-3">CCTV & Biometrics</h3>
-          <p class="text-slate-300 mb-4">Advanced surveillance and access control systems with crystal-clear IP cameras,
-            remote monitoring from anywhere, and biometric integration for enhanced security and attendance tracking.
-          </p>
-          <details>
-            <summary>Includes</summary>
-            <ul class="mt-3 space-y-2 text-slate-300">
-              <li>✓ IP CCTV design, remote viewing, secure storage and retention</li>
-              <li>✓ Biometric access control, attendance with HR integrations</li>
-              <li>✓ NVR setup, failover, motion alerts and compliance</li>
-              <li>✓ Privacy-aware signage and policies</li>
+              <li>✓ Wireless site surveys and heat mapping</li>
+              <li>✓ Wi-Fi optimization and coverage planning</li>
+              <li>✓ Network monitoring and management tools</li>
+              <li>✓ Bandwidth management and traffic shaping</li>
+              <li>✓ Network segmentation for security</li>
+              <li>✓ Network performance testing and optimization</li>
+              <li>✓ Comprehensive network documentation and diagrams</li>
+              <li>✓ Staff training on network operations</li>
             </ul>
           </details>
         </div>
 
         <!-- Servers & Virtualization -->
         <div class="card">
-          <img src="https://images.unsplash.com/photo-1544197150-b99a580bb7a8?auto=format&fit=crop&w=1200&q=80"
+          <img src="https://www.ionos.com/digitalguide/fileadmin/_processed_/4/4/csm_servervirtualisierung-t_7689d3772e.webp"
             alt="Server Rack Infrastructure" class="service-image" loading="lazy" decoding="async">
           <h3 class="text-2xl font-bold mb-3">Servers & Virtualization</h3>
           <p class="text-slate-300 mb-4">Powerful Windows and Linux server deployment with virtualization technologies
@@ -586,33 +676,21 @@
           <details>
             <summary>Deliverables</summary>
             <ul class="mt-3 space-y-2 text-slate-300">
-              <li>✓ Windows& Linux Server Deployment and Configuration</li>
-              <li>✓ Active Directory, GPO, DNS/DHCP, file/print services</li>
-              <li>✓ Hyper-V/VMware/Proxmox virtualization, clustering</li>
-              <li>✓ Web/app servers (NGINX/Apache), databases (MySQL/Postgres)</li>
-              <li>✓ Monitoring, performance tuning and documentation</li>
-            </ul>
-          </details>
-        </div>
-
-        <!-- Cloud Solutions -->
-        <div class="card">
-          <img
-            src="https://www.kellerschroeder.com/wp-content/uploads/2023/08/Cloud-Solutions-2-Evansville-Nashville.png"
-            alt="Cloud Computing Technology" class="service-image" loading="lazy" decoding="async">
-          <h3 class="text-2xl font-bold mb-3">Cloud Solutions (M365/Azure/AWS)</h3>
-          <p class="text-slate-300 mb-4">Seamless cloud migration to Microsoft 365, Azure, or AWS with hybrid
-            connectivity. Access your data anywhere, scale effortlessly, and reduce IT infrastructure costs by up to
-            40%.</p>
-          <details>
-            <summary>Capabilities</summary>
-            <ul class="mt-3 space-y-2 text-slate-300">
-              <li>✓ AWS and Azure Cloud services and Migrations</li>
-              <li>✓ DevOps and CI/CD pipelines Solutions</li>
-              <li>✓ Tenant setup, identity (Entra ID/Azure AD), MFA and SSO</li>
-              <li>✓ Migrations: email, files, apps; hybrid connectivity and VPN</li>
-              <li>✓ Backup & DR runbooks, cost optimization and scaling policies</li>
-              <li>✓ Compliance guardrails and baseline hardening</li>
+              <li>✓ Windows and Linux server deployment and configuration</li>
+              <li>✓ Active Directory design and implementation</li>
+              <li>✓ Group Policy Objects (GPO) and user management</li>
+              <li>✓ DNS, DHCP, and network services configuration</li>
+              <li>✓ File and print server setup</li>
+              <li>✓ Hyper-V, VMware, and Proxmox virtualization</li>
+              <li>✓ Server clustering and high availability (HA)</li>
+              <li>✓ Virtual machine management and optimization</li>
+              <li>✓ Web servers (NGINX, Apache, IIS)</li>
+              <li>✓ Database servers (MySQL, PostgreSQL, SQL Server)</li>
+              <li>✓ Application server deployment and configuration</li>
+              <li>✓ Server monitoring and alerting systems</li>
+              <li>✓ Performance tuning and capacity planning</li>
+              <li>✓ Server backup and recovery configuration</li>
+              <li>✓ Comprehensive server documentation and runbooks</li>
             </ul>
           </details>
         </div>
@@ -630,34 +708,25 @@
             <ul class="mt-3 space-y-2 text-slate-300">
               <li>✓ On-site and cloud backup solutions</li>
               <li>✓ Automated backup schedules with monitoring</li>
-              <li>✓ Disaster recovery planning and testing</li>
+              <li>✓ Multiple backup retention policies (daily, weekly, monthly)</li>
+              <li>✓ Database and application-specific backups</li>
+              <li>✓ Backup encryption and secure storage</li>
+              <li>✓ Disaster recovery planning and documentation</li>
+              <li>✓ DR site setup and replication</li>
+              <li>✓ Regular backup testing and validation</li>
               <li>✓ Rapid restore capabilities with RTO/RPO compliance</li>
-            </ul>
-          </details>
-        </div>
-
-        <!-- Cybersecurity -->
-        <div class="card">
-          <img src="https://securitybridge.com/wp-content/uploads/2022/11/Wordpress-Images-24-1.png"
-            alt="Cybersecurity Protection Shield" class="service-image" loading="lazy" decoding="async">
-          <h3 class="text-2xl font-bold mb-3">Cybersecurity</h3>
-          <p class="text-slate-300 mb-4">Multi-layered security approach with next-gen firewalls, endpoint protection,
-            vulnerability management, and security awareness training. Protect your business from cyber threats and
-            ensure compliance.</p>
-          <details>
-            <summary>Scope</summary>
-            <ul class="mt-3 space-y-2 text-slate-300">
-              <li>✓ Next-gen firewalls, IPS/IDS, web filtering, site-to-site VPN</li>
-              <li>✓ Endpoint protection/EDR, patching, vulnerability management</li>
-              <li>✓ Security assessments, hardening, IR playbooks and training</li>
-              <li>✓ Phishing simulations and awareness programs</li>
+              <li>✓ Bare-metal recovery options</li>
+              <li>✓ Cloud backup integration (AWS S3, Azure Blob)</li>
+              <li>✓ Backup reporting and alerting</li>
+              <li>✓ Quarterly DR drills and testing</li>
+              <li>✓ Disaster recovery runbooks and procedures</li>
             </ul>
           </details>
         </div>
 
         <!-- Hardware & OS -->
         <div class="card">
-          <img src="https://images.unsplash.com/photo-1591799264318-7e6ef8ddb7ea?auto=format&fit=crop&w=1200&q=80"
+          <img src="https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=1200&q=80"
             alt="Computer Hardware Installation" class="service-image" loading="lazy" decoding="async">
           <h3 class="text-2xl font-bold mb-3">Hardware & OS Installation</h3>
           <p class="text-slate-300 mb-4">Complete hardware procurement and deployment services with Windows/Linux OS
@@ -665,26 +734,334 @@
           <details>
             <summary>Services</summary>
             <ul class="mt-3 space-y-2 text-slate-300">
-              <li>✓ Hardware procurement and setup (PCs, laptops, printers)</li>
+              <li>✓ Hardware procurement and vendor management</li>
+              <li>✓ Desktop and laptop setup (PCs, Macs, workstations)</li>
+              <li>✓ Printer, scanner, and peripheral device installation</li>
               <li>✓ Windows and Linux OS installation and configuration</li>
-              <li>✓ Software deployment and licensing management</li>
-              <li>✓ Driver installation and system optimization</li>
+              <li>✓ Operating system upgrades and migrations</li>
+              <li>✓ Software deployment and package management</li>
+              <li>✓ Software licensing management and compliance</li>
+              <li>✓ Driver installation and hardware optimization</li>
+              <li>✓ System performance tuning and optimization</li>
+              <li>✓ Security hardening and patch management</li>
+              <li>✓ Disk encryption and data protection setup</li>
+              <li>✓ BIOS/UEFI configuration and security settings</li>
+              <li>✓ Asset tagging and inventory management</li>
+              <li>✓ Warranty registration and support setup</li>
+              <li>✓ User profile migration and data transfer</li>
+              <li>✓ Post-deployment testing and quality assurance</li>
             </ul>
           </details>
+        </div>
+        </div>
+      </div>
+
+      <!-- Cloud Services Section -->
+      <div id="cloud" class="mb-16 mt-16">
+        <h3 class="text-2xl font-bold mb-8 text-center" style="border-bottom: 2px solid rgba(14,165,233,0.3); padding-bottom: 1rem; display: inline-block;">Cloud Solutions & Migration</h3>
+        <p class="text-center text-slate-400 mb-8 max-w-2xl mx-auto">Comprehensive cloud services across AWS, Azure, and Microsoft 365. We help you migrate, optimize costs, and maintain secure cloud infrastructure.</p>
+        
+        <div class="grid md:grid-cols-3 gap-8 mb-8">
+          <!-- Microsoft 365 -->
+          <div class="card">
+            <img src="https://support.microsoft.com/images/en-us/a800a3f9-f73c-46b0-9b08-774017436549"
+              alt="Microsoft 365 Collaboration" class="service-image" loading="lazy" decoding="async">
+            <h3 class="text-2xl font-bold mb-3 mt-4">Microsoft 365</h3>
+            <p class="text-slate-300 mb-4">Complete Microsoft 365 tenant setup, migration, and optimization. Email, collaboration, security, and productivity all in one platform.</p>
+            <details>
+              <summary>Services</summary>
+              <ul class="mt-3 space-y-2 text-slate-300">
+                <li>✓ Tenant setup and domain configuration</li>
+                <li>✓ Email migration (Exchange, Gmail, IMAP)</li>
+                <li>✓ OneDrive and SharePoint setup</li>
+                <li>✓ Teams deployment and configuration</li>
+                <li>✓ Entra ID (Azure AD) and SSO setup</li>
+                <li>✓ MFA and conditional access policies</li>
+                <li>✓ Security & compliance configuration</li>
+                <li>✓ Intune device management</li>
+                <li>✓ User training and adoption programs</li>
+                <li>✓ Ongoing optimization and support</li>
+              </ul>
+            </details>
+          </div>
+
+          <!-- Azure Cloud -->
+          <div class="card">
+            <img src="https://www.influentialsoftware.com/wp-content/uploads/2024/01/cloud-storage-background-business-network-design.jpg"
+              alt="Azure Cloud Infrastructure" class="service-image" loading="lazy" decoding="async">
+            <h3 class="text-2xl font-bold mb-3 mt-4">Azure Cloud Services</h3>
+            <p class="text-slate-300 mb-4">Enterprise-grade Azure infrastructure, application hosting, and hybrid cloud solutions. Scale seamlessly with Microsoft Azure.</p>
+            <details>
+              <summary>Capabilities</summary>
+              <ul class="mt-3 space-y-2 text-slate-300">
+                <li>✓ Azure infrastructure design and deployment</li>
+                <li>✓ Virtual machines, app services, and containers</li>
+                <li>✓ Azure AD and identity management</li>
+                <li>✓ Storage solutions (Blob, Files, Disk)</li>
+                <li>✓ Azure SQL and database services</li>
+                <li>✓ Networking (VNet, VPN, ExpressRoute)</li>
+                <li>✓ Azure Backup and disaster recovery</li>
+                <li>✓ Cost optimization and monitoring</li>
+                <li>✓ DevOps pipelines (Azure DevOps)</li>
+                <li>✓ Security hardening and compliance</li>
+              </ul>
+            </details>
+          </div>
+
+          <!-- AWS Cloud -->
+          <div class="card">
+            <img src="https://cdn.hashnode.com/res/hashnode/image/upload/v1727447295516/2038bb2f-8450-49b3-8c1a-f6785a59f3d8.jpeg"
+              alt="AWS Cloud Infrastructure" class="service-image" loading="lazy" decoding="async">
+            <h3 class="text-2xl font-bold mb-3 mt-4">AWS Cloud Services</h3>
+            <p class="text-slate-300 mb-4">Scalable AWS infrastructure, migration services, and cloud-native solutions. Build, deploy, and manage on Amazon Web Services.</p>
+            <details>
+              <summary>Offerings</summary>
+              <ul class="mt-3 space-y-2 text-slate-300">
+                <li>✓ EC2, ECS, and Lambda serverless computing</li>
+                <li>✓ S3, EBS, and storage solutions</li>
+                <li>✓ RDS, DynamoDB, and database services</li>
+                <li>✓ VPC, CloudFront, and networking</li>
+                <li>✓ IAM and security configuration</li>
+                <li>✓ CloudWatch monitoring and logging</li>
+                <li>✓ Backup and disaster recovery (Backup, DR)</li>
+                <li>✓ Cost optimization and Reserved Instances</li>
+                <li>✓ DevOps and CI/CD (CodePipeline, CodeDeploy)</li>
+                <li>✓ Migration services (AWS Migration Hub)</li>
+              </ul>
+            </details>
+          </div>
+        </div>
+
+        <!-- Cloud Additional Services -->
+        <div class="grid md:grid-cols-2 gap-8">
+          <div class="card">
+            <img src="https://guptadeepak.com/content/images/size/w2000/2021/11/AdobeStock_265247767.jpeg"
+              alt="Hybrid Cloud Solutions" class="service-image mb-4" loading="lazy" decoding="async">
+            <h3 class="text-xl font-bold mb-3">🔀 Hybrid Cloud Solutions</h3>
+            <p class="text-slate-300 mb-3">Seamlessly connect on-premises infrastructure with cloud services for optimal flexibility and cost efficiency.</p>
+            <ul class="space-y-1 text-slate-300 text-sm">
+              <li>✓ VPN and ExpressRoute connectivity</li>
+              <li>✓ Hybrid identity (Azure AD Connect)</li>
+              <li>✓ Hybrid backup strategies</li>
+              <li>✓ Cross-cloud management</li>
+            </ul>
+          </div>
+
+          <div class="card">
+            <img src="https://www.turningcloud.com/blog/wp-content/uploads/2021/05/cloud-cost-optimization.jpeg"
+              alt="Cloud Cost Optimization" class="service-image mb-4" loading="lazy" decoding="async">
+            <h3 class="text-xl font-bold mb-3">💰 Cloud Cost Optimization</h3>
+            <p class="text-slate-300 mb-3">Reduce cloud spending by up to 40% through right-sizing, Reserved Instances, and intelligent resource management.</p>
+            <ul class="space-y-1 text-slate-300 text-sm">
+              <li>✓ Cost analysis and optimization audits</li>
+              <li>✓ Reserved Instance recommendations</li>
+              <li>✓ Auto-scaling and scheduling policies</li>
+              <li>✓ Ongoing cost monitoring and alerts</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+      <!-- Security & SOC Section -->
+      <div id="security" class="mb-16 mt-16">
+        <h3 class="text-2xl font-bold mb-8 text-center" style="border-bottom: 2px solid rgba(239,68,68,0.3); padding-bottom: 1rem; display: inline-block;">Security & SOC Services</h3>
+        <p class="text-center text-slate-400 mb-8 max-w-2xl mx-auto">Multi-layered cybersecurity with 24/7 Security Operations Center (SOC) monitoring. Protect your business from threats and ensure compliance.</p>
+
+        <div class="grid md:grid-cols-2 gap-8 mb-8">
+          <!-- Cybersecurity -->
+          <div class="card">
+            <img src="https://www.bluechip-gulf.ae/wp-content/uploads/2024/09/Cybersecurity-Solutions-in-Abu-Dhabi.jpg"
+              alt="Cybersecurity Protection" class="service-image" loading="lazy" decoding="async">
+            <h3 class="text-2xl font-bold mb-3">🛡️ Cyber Security Solutions</h3>
+            <p class="text-slate-300 mb-4">Comprehensive security framework protecting your network, endpoints, and data from cyber threats and vulnerabilities.</p>
+            <details>
+              <summary>Security Stack</summary>
+              <ul class="mt-3 space-y-2 text-slate-300">
+                <li>✓ Next-generation firewalls (NGFW)</li>
+                <li>✓ Intrusion Prevention/Detection (IPS/IDS)</li>
+                <li>✓ Endpoint Detection & Response (EDR)</li>
+                <li>✓ Advanced threat protection</li>
+                <li>✓ Web filtering and content security</li>
+                <li>✓ Email security (anti-phishing, anti-spam)</li>
+                <li>✓ Vulnerability scanning and management</li>
+                <li>✓ Security assessments and penetration testing</li>
+                <li>✓ Security awareness training programs</li>
+                <li>✓ Incident response planning and playbooks</li>
+                <li>✓ Compliance frameworks (ISO 27001, GDPR)</li>
+              </ul>
+            </details>
+          </div>
+
+          <!-- SOC Services -->
+          <div class="card">
+            <img src="https://www.spyhunter.com/shm/images/2025/04/03945e08-245f-499c-a8a6-9051597d5593-1024x585.webp"
+              alt="Security Operations Center" class="service-image" loading="lazy" decoding="async">
+            <h3 class="text-2xl font-bold mb-3">🔍 SOC (Security Operations Center)</h3>
+            <p class="text-slate-300 mb-4">24/7 security monitoring, threat detection, and incident response. Proactive protection with round-the-clock SOC services.</p>
+            <details>
+              <summary>SOC Services</summary>
+              <ul class="mt-3 space-y-2 text-slate-300">
+                <li>✓ 24/7 security monitoring and alerting</li>
+                <li>✓ Threat detection and analysis</li>
+                <li>✓ Security incident investigation</li>
+                <li>✓ Real-time threat intelligence</li>
+                <li>✓ SIEM (Security Information & Event Management)</li>
+                <li>✓ Log aggregation and analysis</li>
+                <li>✓ Incident response and remediation</li>
+                <li>✓ Security dashboards and reporting</li>
+                <li>✓ Threat hunting and proactive analysis</li>
+                <li>✓ Compliance monitoring and reporting</li>
+                <li>✓ Monthly security reports and recommendations</li>
+              </ul>
+            </details>
+          </div>
+        </div>
+
+        <!-- CCTV & Physical Security -->
+        <div class="grid md:grid-cols-2 gap-8">
+          <div class="card">
+            <img src="https://t3.ftcdn.net/jpg/08/78/68/08/360_F_878680834_68YZhGSO2IaE9eAGyM1eLT9lfynDVOWX.jpg"
+              alt="CCTV Security Cameras" class="service-image" loading="lazy" decoding="async">
+            <h3 class="text-2xl font-bold mb-3">📹 CCTV & Surveillance</h3>
+            <p class="text-slate-300 mb-4">Advanced IP CCTV systems with remote monitoring, cloud storage, and AI-powered analytics. Keep your premises secure 24/7.</p>
+            <details>
+              <summary>Features</summary>
+              <ul class="mt-3 space-y-2 text-slate-300">
+                <li>✓ IP camera installation and configuration</li>
+                <li>✓ NVR/DVR setup and management</li>
+                <li>✓ Remote viewing via mobile/web apps</li>
+                <li>✓ Cloud storage and backup options</li>
+                <li>✓ Motion detection and alerts</li>
+                <li>✓ Night vision and PTZ cameras</li>
+                <li>✓ Video analytics (face recognition, vehicle tracking)</li>
+                <li>✓ Integration with access control systems</li>
+                <li>✓ Compliance with privacy regulations</li>
+                <li>✓ Maintenance and support contracts</li>
+              </ul>
+            </details>
+          </div>
+
+          <div class="card">
+            <img src="https://media.istockphoto.com/id/1175502114/photo/fingerprint-biometric-digital-scan-technology.jpg?s=612x612&w=0&k=20&c=x6FZ-l-b-oPmAkMjo3qdwAdgWyhzY4Y1qJlza47WOp4="
+              alt="Access Control System" class="service-image" loading="lazy" decoding="async">
+            <h3 class="text-2xl font-bold mb-3">🔐 Access Control & Biometrics</h3>
+            <p class="text-slate-300 mb-4">Biometric access control systems with attendance integration, visitor management, and comprehensive security protocols.</p>
+            <details>
+              <summary>Solutions</summary>
+              <ul class="mt-3 space-y-2 text-slate-300">
+                <li>✓ Biometric readers (fingerprint, face, iris)</li>
+                <li>✓ Card and PIN access systems</li>
+                <li>✓ Attendance and time tracking</li>
+                <li>✓ HR system integration</li>
+                <li>✓ Visitor management systems</li>
+                <li>✓ Door lock and access point integration</li>
+                <li>✓ Access level and zone management</li>
+                <li>✓ Audit logs and reporting</li>
+                <li>✓ Mobile access credentials</li>
+                <li>✓ Emergency lockdown capabilities</li>
+              </ul>
+            </details>
+          </div>
+        </div>
+      </div>
+
+      <!-- Support Models Section -->
+      <div id="support" class="mb-16 mt-16">
+        <h3 class="text-2xl font-bold mb-8 text-center" style="border-bottom: 2px solid rgba(16,185,129,0.3); padding-bottom: 1rem; display: inline-block;">Support Models & Maintenance</h3>
+        <p class="text-center text-slate-400 mb-8 max-w-2xl mx-auto">Flexible support options tailored to your needs. Choose from Annual Maintenance Contracts (AMC) or remote support for cost-effective IT management.</p>
+
+        <div class="grid md:grid-cols-2 gap-8 mb-8">
+          <!-- AMC -->
+          <div class="card" style="border: 2px solid rgba(16,185,129,0.3);">
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ1CWN9Yo5GvAKTSuPNNqolxsYXIkGdQ68AsA&s"
+              alt="IT Maintenance and Support" class="service-image" loading="lazy" decoding="async">
+            <h3 class="text-2xl font-bold mb-3 mt-4">Annual Maintenance Contract (AMC)</h3>
+            <p class="text-slate-300 mb-4">Comprehensive annual support covering all your IT infrastructure needs. Predictable costs with proactive maintenance and priority support.</p>
+            <details>
+              <summary>AMC Benefits</summary>
+              <ul class="mt-3 space-y-2 text-slate-300">
+                <li>✓ Fixed annual pricing for budget planning</li>
+                <li>✓ Priority response times (SLA-based)</li>
+                <li>✓ Proactive monitoring and maintenance</li>
+                <li>✓ Regular health checks and assessments</li>
+                <li>✓ Scheduled preventive maintenance</li>
+                <li>✓ Software updates and patching</li>
+                <li>✓ Hardware warranty management</li>
+                <li>✓ Unlimited remote support (during business hours)</li>
+                <li>✓ On-site support as per contract terms</li>
+                <li>✓ Quarterly reviews and reporting</li>
+                <li>✓ 24/7 emergency support options</li>
+                <li>✓ Cost savings vs. pay-per-incident</li>
+              </ul>
+            </details>
+          </div>
+
+          <!-- Remote Support -->
+          <div class="card" style="border: 2px solid rgba(14,165,233,0.3);">
+            <img src="https://images.unsplash.com/photo-1522071820081-009f0129c71c?auto=format&fit=crop&w=1200&q=80"
+              alt="Remote IT Support" class="service-image" loading="lazy" decoding="async">
+            <h3 class="text-2xl font-bold mb-3 mt-4">Remote Support Services</h3>
+            <p class="text-slate-300 mb-4">Cost-effective remote IT support for day-to-day issues, quick resolutions, and ongoing maintenance. Maximize efficiency while minimizing costs.</p>
+            <details>
+              <summary>Remote Support Features</summary>
+              <ul class="mt-3 space-y-2 text-slate-300">
+                <li>✓ Remote desktop and server access</li>
+                <li>✓ Quick issue resolution (usually within hours)</li>
+                <li>✓ Software installation and updates</li>
+                <li>✓ Configuration and troubleshooting</li>
+                <li>✓ System optimization and tuning</li>
+                <li>✓ Security patch management</li>
+                <li>✓ Backup monitoring and verification</li>
+                <li>✓ User support and training</li>
+                <li>✓ Flexible pricing models (per-hour or monthly)</li>
+                <li>✓ Cost optimization (up to 60% savings vs. on-site)</li>
+                <li>✓ Extended hours support available</li>
+                <li>✓ Documentation and knowledge base access</li>
+              </ul>
+            </details>
+          </div>
+        </div>
+
+        <!-- Support Comparison -->
+        <div class="bg-white/5 rounded-xl p-8 border border-white/10">
+          <h4 class="text-xl font-bold mb-6 text-center">Why Choose Our Support Services?</h4>
+          <div class="grid md:grid-cols-3 gap-6">
+            <div class="text-center">
+              <div class="text-3xl mb-3">💰</div>
+              <h5 class="font-semibold mb-2">Cost Optimization</h5>
+              <p class="text-sm text-slate-400">Save up to 60% with remote support while maintaining high service quality. Flexible pricing to fit your budget.</p>
+            </div>
+            <div class="text-center">
+              <div class="text-3xl mb-3">⚡</div>
+              <h5 class="font-semibold mb-2">Rapid Response</h5>
+              <p class="text-sm text-slate-400">Quick issue resolution with remote access. Most problems solved within hours without waiting for on-site visits.</p>
+            </div>
+            <div class="text-center">
+              <div class="text-3xl mb-3">🛡️</div>
+              <h5 class="font-semibold mb-2">Proactive Management</h5>
+              <p class="text-sm text-slate-400">Prevent issues before they occur with regular monitoring, maintenance, and health checks under AMC plans.</p>
+            </div>
+          </div>
         </div>
       </div>
     </div>
   </section>
 
   <!-- CTA Section -->
-  <section class="section">
+  <section class="section" style="background: linear-gradient(135deg, rgba(14,165,233,0.1) 0%, rgba(16,185,129,0.1) 100%);">
     <div class="max-w-4xl mx-auto px-4 text-center">
-      <h2 class="text-3xl font-bold mb-4">Need Help Choosing the Right Solution?</h2>
-      <p class="text-xl text-slate-300 mb-8">Tell us your requirements and timeline for a tailored proposal.</p>
+      <h2 class="text-3xl font-bold mb-4">Ready to Transform Your IT Infrastructure?</h2>
+      <p class="text-xl text-slate-300 mb-6">Whether you need cloud migration, security services, SOC monitoring, or ongoing IT support, we're here to help.</p>
+      <p class="text-lg text-slate-400 mb-8">Choose from flexible AMC contracts or cost-effective remote support options tailored to your business needs.</p>
       <div class="flex flex-col sm:flex-row gap-4 justify-center">
-        <a href="https://api.whatsapp.com/send?phone=971563536545" class="btn btn-primary text-lg">💬 Chat on
-          WhatsApp</a>
-        <a href="index.html#consultation" class="btn btn-secondary text-lg">📝 Request Quote</a>
+        <a href="https://api.whatsapp.com/send?phone=971563536545" class="btn btn-primary text-lg">💬 Chat on WhatsApp</a>
+        <a href="index.html#consultation" class="btn btn-secondary text-lg">📝 Request Consultation</a>
+      </div>
+      <div class="mt-8 flex flex-wrap justify-center gap-4 text-sm text-slate-400">
+        <span>✓ Free initial consultation</span>
+        <span>✓ Customized proposals</span>
+        <span>✓ Flexible support models</span>
+        <span>✓ Cost optimization guaranteed</span>
       </div>
     </div>
   </section>
@@ -696,7 +1073,7 @@
         <div>
           <div class="flex items-center justify-center gap-3 mb-2">
             <div class="logo"></div>
-            <span class="font-extrabold text-xl">Auxonium Group </span>
+            <span class="font-extrabold text-xl">Auxonium</span>
           </div>
           <p class="text-slate-400 mb-4 text-center"> IT Solutions • AC Mechanics • Electrical Works • Fitouts </p>
         </div>
@@ -738,6 +1115,21 @@
       menu.classList.toggle('active');
       overlay.classList.toggle('active');
       document.body.style.overflow = menu.classList.contains('active') ? 'hidden' : '';
+    }
+
+    // Smooth scroll to section
+    function scrollToSection(sectionId) {
+      const section = document.getElementById(sectionId);
+      if (section) {
+        const offset = 100; // Offset for sticky header
+        const elementPosition = section.getBoundingClientRect().top;
+        const offsetPosition = elementPosition + window.pageYOffset - offset;
+
+        window.scrollTo({
+          top: offsetPosition,
+          behavior: 'smooth'
+        });
+      }
     }
   </script>
 
@@ -926,7 +1318,7 @@
     <div id="chatPanel" class="chatbot-panel hidden">
       <div class="chatbot-header">
         <div class="flex items-center gap-3">
-          <div class="logo"></div><span class="font-semibold">Auxonium Group Assistant</span>
+          <div class="logo"></div><span class="font-semibold">Auxonium Assistant</span>
         </div>
         <button onclick="toggleChat()"
           class="w-8 h-8 flex items-center justify-center bg-white/10 rounded-lg hover:bg-white/20 transition-colors">✕</button>
@@ -937,11 +1329,11 @@
       </div>
       <div class="chatbot-suggestions">
         <button class="suggestion-btn" onclick="sendSuggestion('Office IT setup')">Office setup</button>
-        <button class="suggestion-btn" onclick="sendSuggestion('Networking and cabling')">Networking & cabling</button>
-        <button class="suggestion-btn" onclick="sendSuggestion('Servers or cloud migration')">Servers & cloud</button>
-        <button class="suggestion-btn" onclick="sendSuggestion('CCTV or access control')">CCTV & access</button>
-        <button class="suggestion-btn" onclick="sendSuggestion('Cybersecurity services')">Cybersecurity</button>
-        <button class="suggestion-btn" onclick="sendSuggestion('Hardware or OS installation')">Hardware & OS</button>
+        <button class="suggestion-btn" onclick="sendSuggestion('AWS or Azure cloud services')">Cloud (AWS/Azure)</button>
+        <button class="suggestion-btn" onclick="sendSuggestion('Microsoft 365 migration')">Microsoft 365</button>
+        <button class="suggestion-btn" onclick="sendSuggestion('SOC monitoring services')">SOC & Security</button>
+        <button class="suggestion-btn" onclick="sendSuggestion('CCTV installation')">CCTV</button>
+        <button class="suggestion-btn" onclick="sendSuggestion('AMC or remote support')">AMC/Support</button>
         <button class="suggestion-btn" onclick="sendSuggestion('Request an IT quote')">Request quote</button>
       </div>
       <form id="chatForm" class="chatbot-input-container" onsubmit="sendMessage(event)">
@@ -973,20 +1365,57 @@
       const message = input.value.trim(); if (!message) return; addMessage(message, 'user'); input.value = '';
       setTimeout(() => {
         const lowerMsg = message.toLowerCase(); let response = '';
-        if (lowerMsg.includes('office') && lowerMsg.includes('setup')) response = 'Office IT Setup: Structured cabling, Wi‑Fi, workstations, UPS and documentation. Share your headcount, rooms and timeline.';
-        else if (lowerMsg.includes('network') || lowerMsg.includes('cabling') || lowerMsg.includes('lan') || lowerMsg.includes('wifi')) response = 'Networking & Cabling: LAN/WLAN design, Cat6/Cat7 cabling, AP placement and segmentation. Provide floorplan (if available) and approximate area.';
-        else if (lowerMsg.includes('server') || lowerMsg.includes('cloud') || lowerMsg.includes('migration')) response = 'Servers & Cloud: Windows/Linux servers, virtualization, backups and cloud migration. What workloads and target cloud do you have in mind?';
-        else if (lowerMsg.includes('cctv') || lowerMsg.includes('access')) response = 'CCTV & Access Control: Cameras, NVR, remote viewing, door access. How many cameras/doors and where located?';
-        else if (lowerMsg.includes('security') || lowerMsg.includes('cyber') || lowerMsg.includes('edr') || lowerMsg.includes('firewall')) response = 'Cybersecurity: NGFW, EDR, vulnerability management, awareness training. Share current stack and key risks to address.';
-        else if (lowerMsg.includes('hardware') || lowerMsg.includes('os') || lowerMsg.includes('install')) response = 'Hardware & OS: Procurement, Windows/Linux installs, drivers and optimization. Quantity and models needed?';
-        else if (lowerMsg.includes('quote') || lowerMsg.includes('estimate') || lowerMsg.includes('price') || lowerMsg.includes('cost')) response = 'Great! Please share your location, scope (setup/network/cloud/CCTV/security/hardware) and timeline, or click "Request Quote" above.';
-        else response = 'Thanks! Please describe your IT requirement (setup, networking, servers/cloud, CCTV, cybersecurity, hardware/OS) and your location.';
+        
+        // Enhanced IT-specific responses with accurate data
+        if (lowerMsg.includes('office') && lowerMsg.includes('setup')) {
+          response = '🏢 Office IT Setup Services:\n📋 Complete Solutions:\n• Structured cabling (Cat6/Cat7)\n• Enterprise Wi-Fi design\n• Workstation deployment\n• UPS & power protection\n• Network documentation\n\n📍 Service Coverage:\n• Abu Dhabi: 1-2 hours\n• Dubai/Sharjah: 2-3 hours\n• All UAE Emirates\n\n📦 Projects: 25+ completed\n💰 Starting: AED 350 base + AED 30/sqm\n✅ Warranty: 12 months\n\nShare your headcount, rooms and timeline for exact quote!';
+        }
+        else if (lowerMsg.includes('aws') || (lowerMsg.includes('azure') && !lowerMsg.includes('365'))) {
+          response = '☁️ Cloud Services (AWS/Azure):\n🔧 Solutions Offered:\n• Infrastructure provisioning\n• Migration planning\n• Cost optimization\n• Managed services\n• Security configuration\n\n🏢 For Businesses:\n• Startups\n• Enterprises\n• Government\n• Healthcare\n\n📊 Experience:\n• 30+ cloud projects\n• 20+ in Abu Dhabi\n• 24/7 monitoring\n\nWhich cloud platform are you interested in?';
+        }
+        else if (lowerMsg.includes('microsoft 365') || lowerMsg.includes('m365') || lowerMsg.includes('office 365')) {
+          response = '💼 Microsoft 365 Solutions:\n📋 Services Include:\n• Tenant setup & configuration\n• Email/file migration\n• Teams deployment\n• Entra ID (Azure AD)\n• Security hardening\n• Ongoing support\n\n🏢 Deployment Types:\n• Small businesses\n• Enterprises\n• Educational institutions\n\n⏱️ Implementation: 3-7 days\n📍 Equal pricing across UAE\n\nWhat is your current email system?';
+        }
+        else if (lowerMsg.includes('soc') || (lowerMsg.includes('security') && lowerMsg.includes('monitor'))) {
+          response = '🛡️ SOC (Security Operations):\n24/7 Monitoring Services:\n• Threat detection & response\n• SIEM implementation\n• Incident management\n• Vulnerability scanning\n• Compliance reporting\n\n🏢 For Organizations:\n• Financial services\n• Healthcare\n• Government\n• Retail\n\n⚡ Response Times:\n• Critical alerts: 15 minutes\n• Standard issues: 2 hours\n• Abu Dhabi: 1-2 hours\n\nWhat assets need monitoring?';
+        }
+        else if (lowerMsg.includes('network') || lowerMsg.includes('cabling') || lowerMsg.includes('lan') || lowerMsg.includes('wifi')) {
+          response = '🌐 Networking & Cabling:\n📋 Infrastructure Services:\n• LAN/WLAN design\n• Cat6/Cat7 cabling\n• AP placement & optimization\n• Network segmentation\n• Performance testing\n\n🏢 Applications:\n• Corporate offices\n• Educational campuses\n• Retail chains\n• Industrial sites\n\n📊 Portfolio:\n• 50+ networks deployed\n• 15+ in Dubai\n• 20+ in Abu Dhabi\n\nProvide floorplan (if available) and approximate area!';
+        }
+        else if (lowerMsg.includes('server') || (lowerMsg.includes('cloud') && !lowerMsg.includes('aws') && !lowerMsg.includes('azure'))) {
+          response = '🖥️ Servers & Virtualization:\n🔧 Services Offered:\n• Windows/Linux servers\n• VMware/Hyper-V setup\n• Backup solutions\n• Cloud migration\n• Performance tuning\n\n🏢 Server Types:\n• Physical servers\n• Virtual machines\n• Hybrid environments\n• Disaster recovery\n\n⏱️ Deployment: 2-5 days\n💰 Pricing: AED 350 base + AED 30/sqm\n\nWhat workloads and target environment?';
+        }
+        else if (lowerMsg.includes('cctv') || lowerMsg.includes('surveillance')) {
+          response = '📹 CCTV & Surveillance:\n📋 Installation Services:\n• IP camera deployment\n• NVR setup & configuration\n• Remote viewing apps\n• Cloud storage options\n• Motion detection\n• Analytics integration\n\n🏢 Applications:\n• Corporate security\n• Retail loss prevention\n• Residential\n• Industrial sites\n\n📊 Experience:\n• 40+ installations\n• 15+ in Sharjah\n• Mobile app access\n\nHow many cameras and what locations?';
+        }
+        else if (lowerMsg.includes('amc') || (lowerMsg.includes('support') && lowerMsg.includes('contract'))) {
+          response = '📋 Annual Maintenance Contracts:\n🔧 Comprehensive Coverage:\n• Fixed pricing plans\n• Priority support\n• Proactive monitoring\n• Scheduled maintenance\n• 24/7 emergency\n\n🏢 Flexible Options:\n• Small business packages\n• Enterprise solutions\n• Government contracts\n• Educational institutions\n\n💰 Cost Savings:\n• Up to 40% vs ad-hoc\n• Predictable expenses\n• Equal pricing UAE\n\nWhat infrastructure needs coverage?';
+        }
+        else if (lowerMsg.includes('remote support') || (lowerMsg.includes('support') && !lowerMsg.includes('amc'))) {
+          response = '💻 Remote IT Support:\n💰 Cost-Effective Solutions:\n• Quick issue resolution\n• System maintenance\n• Software updates\n• Troubleshooting\n• Security patches\n\n🏢 For Organizations:\n• SMEs\n• Remote teams\n• Branch offices\n• Startups\n\n📊 Benefits:\n• Save up to 60% vs on-site\n• 15-minute average response\n• 24/7 availability\n\nWhat services do you need?';
+        }
+        else if (lowerMsg.includes('security') || lowerMsg.includes('cyber') || lowerMsg.includes('edr') || lowerMsg.includes('firewall')) {
+          response = '🔒 Cybersecurity Solutions:\n🛡️ Protection Services:\n• Next-gen firewalls\n• EDR (Endpoint Detection)\n• Vulnerability management\n• Security awareness training\n• Penetration testing\n\n🏢 For Industries:\n• Banking & Finance\n• Healthcare\n• Education\n• Government\n\n📋 Compliance:\n• ISO 27001\n• GDPR\n• Local regulations\n• Industry standards\n\nShare current stack and key risks to address!';
+        }
+        else if (lowerMsg.includes('access') || lowerMsg.includes('biometric')) {
+          response = '🚪 Access Control Systems:\n🔐 Security Solutions:\n• Biometric readers\n• Card/PIN systems\n• Attendance tracking\n• HR integration\n• Visitor management\n\n🏢 Applications:\n• Corporate offices\n• Educational campuses\n• Healthcare facilities\n• Residential complexes\n\n📊 Portfolio:\n• 30+ installations\n• Integration expertise\n• Mobile management\n\nHow many access points?';
+        }
+        else if (lowerMsg.includes('hardware') || lowerMsg.includes('os') || lowerMsg.includes('install')) {
+          response = '🖥️ Hardware & OS Services:\n🔧 Procurement & Setup:\n• Laptop/desktop procurement\n• Windows/Linux installation\n• Driver updates\n• System optimization\n• Performance tuning\n\n🏢 For:\n• Businesses\n• Educational institutions\n• Government\n• Individuals\n\n⏱️ Turnaround: Same-day\n📍 Service: All UAE\n\nQuantity and models needed?';
+        }
+        else if (lowerMsg.includes('quote') || lowerMsg.includes('estimate') || lowerMsg.includes('price') || lowerMsg.includes('cost')) {
+          response = '💰 IT Service Pricing:\n\n💻 Competitive UAE Rates:\n• Base Call-out: AED 350\n• Per Square Meter: AED 30\n• Remote Support: From AED 150/hr\n• Cloud Setup: From AED 1,000\n• CCTV Installation: From AED 200/camera\n• AMC Packages: From AED 500/month\n\n✨ EQUAL PRICING:\nNo location surcharges across UAE!\n\n📝 Please share:\n1. Service type needed\n2. Project size/location\n3. Timeline requirements\n\nOr click "Request Quote" above for detailed proposal!';
+        }
+        else {
+          response = '💻 Auxonium IT Specialists:\n\nWe provide comprehensive IT solutions:\n\n🏢 Office Setup\n☁️ Cloud Services (AWS/Azure)\n💼 Microsoft 365\n🛡️ Security & SOC\n🌐 Networking & Cabling\n🖥️ Servers & Virtualization\n📹 CCTV & Surveillance\n📋 AMC & Remote Support\n\n📍 Coverage: All UAE Emirates\n📦 Projects: 30+ completed\n👷 Operator: Sayed (2-min response)\n\nWhat specific IT service do you need?';
+        }
         addMessage(response, 'bot');
       }, 500);
     }
     // Close chat when clicking outside
     document.addEventListener('click', function (e) { const chatPanel = document.getElementById('chatPanel'); const container = document.querySelector('.chatbot-container'); if (chatPanel && !chatPanel.classList.contains('hidden')) { if (!container.contains(e.target)) toggleChat(); } });
   </script>
+  
 </body>
 
 </html>
